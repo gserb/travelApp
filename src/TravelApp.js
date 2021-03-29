@@ -64,7 +64,7 @@ export class TravelApp extends LitElement {
         <div class="logo">${openWcLogo}</div>
         <h1>${this.title}</h1>
 
-        <p>Welcome traveler !</p>
+        <p>Welcome traveller !</p>
       </main>
 
       <!-- <p class="app-footer">
