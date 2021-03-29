@@ -55,7 +55,7 @@ export class TravelApp extends LitElement {
 
   constructor() {
     super();
-    this.title = 'My app';
+    this.title = 'DevSchool app';
   }
 
   render() {
@@ -64,26 +64,18 @@ export class TravelApp extends LitElement {
         <div class="logo">${openWcLogo}</div>
         <h1>${this.title}</h1>
 
-        <p>Edit <code>src/TravelApp.js</code> and save to reload.</p>
-        <a
-          class="app-link"
-          href="https://open-wc.org/guides/developing-components/code-examples/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Code examples
-        </a>
+        <p>Welcome traveler !</p>
       </main>
 
-      <p class="app-footer">
-        🚽 Made with love by
+      <!-- <p class="app-footer">
+        Made using
         <a
           target="_blank"
           rel="noopener noreferrer"
           href="https://github.com/open-wc"
           >open-wc</a
         >.
-      </p>
+      </p> -->
     `;
   }
 }
