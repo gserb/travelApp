@@ -2,8 +2,7 @@
   <img width="200" src="https://open-wc.org/hero.png"></img>
 </p>
 <<<<<<< HEAD
-[Link to live server](https://clever-einstein-4de949.netlify.app/)
-=======
+[Link to live server ](https://clever-einstein-4de949.netlify.app/)
 
 
 #[My live link](https://clever-einstein-4de949.netlify.app/)
