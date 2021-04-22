@@ -3,7 +3,7 @@
 </p>
 
 
-#[My live link](https://github.com/gserb/travelApp.git)
+#[My live link](https://blissful-goldberg-ef0ff7.netlify.app)
 
 
 ## Travel App
