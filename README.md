@@ -2,7 +2,7 @@
   <img width="200" src="https://open-wc.org/hero.png"></img>
 </p>
 
-# [My live link](https://naughty-jepsen-237a46.netlify.app/)
+# [My live link](https://travelaapp.netlify.app/)
 
 ## Travel App
 
@@ -10,7 +10,7 @@
 
 ## Quickstart
 
-Welcome to TravelApp starter kit ! You will implement features for the app while learning about frontend development. 
+Welcome to TravelApp starter kit ! You will implement features for the app while learning about frontend development.
 
 ## Scripts
 
