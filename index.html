@@ -8,19 +8,188 @@
   <base href="/">
 
   <style>
+    *{
+      text-align:center;
+      box-sizing: border-box;
+    }
     html,
     body {
       margin: 0;
       padding: 0;
       font-family: sans-serif;
       background-color: #ededed;
+      
+    }
+    section.header h1{
+      font-weight: lighter;
+      color:#FFF;
+    }
+    section.header nav{
+      padding:8px 72px 48px 72px;
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    section.header li{
+      padding:10px;
+      display:inline-block;
+    }
+    section.header a{
+      text-decoration: none;
+      color:black;
+    }
+    span.bookNow{
+      border:1px solid black;
+      border-radius: 12px;
+      background-color:#FFF;
+      font-weight: bold;
+      color:rgb(10, 126, 87);
+      padding:8px 16px;
+    }
+    section.header p{
+      font-size:48px;
+      font-weight: bold;
+      color:#FFF;
+      margin:0;
+    }
+      button{
+      margin-top:20px;
+      padding:24px 36px;
+      border:1px solid black;
+      background-color: rgb(10, 126, 87);
+      color:#FFF;
+      border-radius:12px;
+      cursor: pointer;
+    }
+    .header{
+      margin:0 36px 0 36px;
+      padding-bottom: 300px;
+      background-image: url('https://images.unsplash.com/photo-1498429089284-41f8cf3ffd39?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80');
+      background-repeat:no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position:center;
+    }
+
+    .travelForm{
+      background-color: #FFF;
+      position:absolute;
+      top:60%;
+      left:0;
+      right:0;
+      width: 80%;
+      margin: 0 auto;
+      padding:50px;
+      border: 4px solid grey;
+      border-radius:48px;
+    }
+    section.travelForm div{
+      float:left;
+      margin:10px;
+    }
+    .travelForm input{
+      padding:16px;
+      border:2px solid grey;
+      border-radius: 12px;
+    }
+    .travelForm select{
+      padding:16px;
+      border:2px solid grey;
+      border-radius: 12px;
+    }
+    .travelForm label{
+      font-weight: bold;
+      text-align: left;
+      display:block;
+      margin-bottom: 16px;
+    }
+    footer{
+      padding:200px 72px 0 72px;
+      background-color:rgb(10, 126, 87);
+      margin: 0 36px 0 36px;
+      color:#FFF;
+    }
+    footer nav{
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    footer li{
+      padding:10px;
+      display:inline-block;
+      cursor: pointer;
+    }
+    p.credits a{
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.671);
+    }
+    p.credits a:hover{
+      color:#FFF;
     }
   </style>
   <title>travel-app</title>
 </head>
-
 <body>
   <travel-app></travel-app>
+
+  <section class="header">
+    <header>
+      <nav>
+        <h1>My Travel App ✌</h1>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="">Tour</a></li>
+          <li><a href="">Hotel</a></li>
+          <li><a href="">Places</a></li>
+          <li><a href="">Contact Us</a></li>
+          <li><a href=""><span class="bookNow">Book now</span></a></li>
+        </ul>
+      </nav>
+    </header>
+    <p>Discover The World</p>
+    <p>With Us</p>
+    <button type="button">Start Tour</button>
+  </section>
+  <form>
+    <section class="travelForm">
+      <div>
+        <label for="destination">Destination</label>
+        <select name="destination">
+          <option value="Paris">Paris</option>
+          <option value="Rome">Rome</option>
+          <option value="Bucharest">Bucharest</option>
+        </select>
+      </div>
+      <div>
+        <label for="members">Members</label>
+        <input type="number" min="1" name="members">
+      </div>
+      <div>
+        <label for="checkIn">Check In Date</label>
+        <input type="date" name="checkIn">
+      </div>
+      <div>
+        <label for="checkOut">Check Out Date</label>
+        <input type="date" name="checkOut">
+      </div>
+        <button type="button">Book Now</button>
+    </section>
+  </form>
+
+  <footer>
+    <p class="credits"><a href="https://unsplash.com/photos/M6XC789HLe8">Image by Aniket Deole</a> </p>
+    <nav>
+      <p>&copy; 2021 ING DevSchool</p>
+      <ul>
+        <li><a>Home</a></li>
+        <li><a>Tour</a></li>
+        <li><a>Hotel</a></li>
+        <li><a>Places</a></li>
+        <li><a>Contact Us</a></li>
+      </ul>
+    </nav>
+  </footer>
+
 
   <script type="module" src="./src/travel-app.js"></script>
 </body>
