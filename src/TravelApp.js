@@ -65,6 +65,7 @@ export class TravelApp extends LitElement {
         <h1>${this.title}</h1>
 
         <p>Welcome traveller 👍👍👍!</p>
+
       </main>
 
       <!-- <p class="app-footer">
