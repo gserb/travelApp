@@ -12,11 +12,10 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: sans-serif;
+      font-family: 'Trebuchet MS';
       background-color: #ededed;
     }
     header{
-      font-family: 'Trebuchet MS';
       font-size: 32px;
       display: flex;
       position: fixed;
@@ -34,9 +33,14 @@
       font-size: 20px;
     }
     ul{
-      width: 50vw;
+      width: 60vw;
       display: flex;
       justify-content: space-around;
+      padding-inline-start: 0;
+    }
+    li{
+      display: inline-flex;
+      padding: 5px;
     }
     .hero-image{
       background-image: url("https://images.unsplash.com/photo-1535191059345-c16453b851b2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80");
@@ -100,6 +104,47 @@
       font-size: 16px;
       text-transform: uppercase;
       border-radius: 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .newsletter{
+      height: 500px;
+      width: auto;
+      background-image: url("https://images.unsplash.com/photo-1495145910046-717b12bffcf7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
+      background-position: center;
+      background-size: cover;
+      text-align: center;
+    }
+
+    .newsletter-title{
+      height: 200px;
+      line-height: 300px;
+      font-size: 36px;
+      color: #000;
+    }
+    .newsletter-form-input{
+      width: 50%;
+      height: 50px;
+      background: rgba(255,255,255,0.5);
+      padding: 10px;
+      margin: 10px;
+      border: none;
+      outline: none;
+      padding-left: 22px;
+      color: #FFFFFF;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .newsletter-button {
+      width: 150px;
+      height: 50px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.5);
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
+      text-transform: uppercase;
       border: none;
       cursor: pointer;
     }
@@ -173,6 +218,7 @@
           <form id="newsletterForm">
             <input type="text" class="newsletter-form-input" placeholder="Name" required="required">
             <input type="text" class="newsletter-form-input" placeholder="Your e-mail" required="required">
+            <br>
             <button class="newsletter-button">Subscribe</button>
           </form>
         </div>
