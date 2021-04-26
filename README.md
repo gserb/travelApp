@@ -2,7 +2,7 @@
   <img width="200" src="https://open-wc.org/hero.png"></img>
 </p>
 
-# [My live link](https://naughty-jepsen-237a46.netlify.app/)
+# [My live link]()
 
 ## Travel App
 
