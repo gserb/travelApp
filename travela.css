@@ -135,3 +135,43 @@ img {
   border-style: none;
   cursor: pointer;
 }
+.contentDescription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contentDescription img {
+  width: 50vw;
+  height: 100vh;
+  border-radius: 0% 200% 70% 0%;
+  border-bottom: 10px solid rgb(55, 88, 220);
+}
+.contentDescription .mainContent {
+  width: 50vw;
+  margin-left: 5em;
+  margin-top: 5em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.contentDescription .mainContent h1 {
+  margin-bottom: 0.2em;
+  font-size: 5em;
+}
+.contentDescription .mainContent p {
+  margin-bottom: 0.2em;
+  font-size: 1.2em;
+  color: rgb(155, 155, 155);
+  width: 30vw;
+  line-height: 2em;
+}
+.contentDescription .mainContent input {
+  margin-top: 3em;
+  padding: 1.5em 3em;
+  border-radius: 1.5em;
+  background-color: white;
+  border: 3px solid blue;
+  color: blue;
+  font-weight: bold;
+  font-size: 1.2em;
+  cursor: pointer;
+  box-shadow: 0px 0px 50px -20px blue;
+}
