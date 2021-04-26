@@ -8,86 +8,11 @@
     />
     <meta name="Description" content="Put your description here." />
     <link rel="stylesheet" href="travela.css" />
-
+    <script
+      src="https://kit.fontawesome.com/ff4f5d5ed6.js"
+      crossorigin="anonymous"
+    ></script>
     <title>travel-app</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        overflow-x: hidden;
-        font-family: sans-serif;
-      }
-
-      img {
-        background-size: cover;
-        height: 100vh;
-        width: 100vw;
-      }
-      .headerText {
-        position: absolute;
-        top: 10%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: flex;
-        width: 100vw;
-        justify-content: space-around;
-      }
-      .headerText h1 {
-        color: white;
-        font-size: 3em;
-      }
-      .headerText ul {
-        display: flex;
-        align-items: center;
-      }
-      .headerText ul li {
-        list-style-type: none;
-        margin-right: 1em;
-        font-size: 1.5em;
-        font-weight: 600;
-      }
-      .headerText ul li a {
-        text-decoration: none;
-        color: black;
-      }
-      .headerText ul input {
-        padding: 1em 2em;
-        border-radius: 1em;
-        font-size: 1.3em;
-        border-style: none;
-        color: blue;
-        font-weight: 600;
-        cursor: pointer;
-      }
-      .descriptionTour {
-        position: absolute;
-        top: 35%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 40vw;
-      }
-      .descriptionTour h1 {
-        font-size: 5em;
-        text-align: center;
-        color: white;
-      }
-      .descriptionTour input {
-        padding: 1.7em 3.5em;
-        border-radius: 1em;
-        border-style: none;
-        color: white;
-        background-color: blue;
-        font-size: large;
-        position: relative;
-        left: 50%;
-        transform: translate(-50%);
-        margin-top: 2em;
-        cursor: pointer;
-      }
-    </style>
   </head>
 
   <body>
@@ -114,10 +39,12 @@
       </div>
     </header>
     <article class="travelForm">
-      <div class="destionations">
-        <label for="locationsToTravel">Destionation</label>
+      <div class="destinations">
+        <label for="locationsToTravel">Destination</label>
         <select class="locationsToTravel">
-          <option value=""></option>
+          <option value="" id="defaultOption" disabled selected hidden>
+            <span>Select Location</span>
+          </option>
           <option value="New York">New York</option>
           <option value="Paris">Paris</option>
           <option value="London">London</option>
@@ -129,11 +56,14 @@
         <label for="member">Member</label>
         <input type="number" name="member" id="member" />
       </div>
-      <div class="checkInDates">
-        <label for="checkIn">Check In Date</label>
-        <input type="date" name="checkIn" id="checkIn" />
-        <label for="checkOut">Check Out Date</label>
-        <input type="date" name="checkOut" id="checkOut" />
+
+      <div class="checkIn">
+        <label for="checkIn">Check in Date</label>
+        <input type="date" name="checkIn" />
+      </div>
+      <div class="checkOut">
+        <label for="checkOut">Check out Date</label>
+        <input type="date" name="checkOut" />
       </div>
       <input type="button" value="Book Now" />
     </article>
