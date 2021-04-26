@@ -160,7 +160,6 @@ img {
   margin-bottom: 0.2em;
   font-size: 1.2em;
   color: rgb(155, 155, 155);
-  width: 30vw;
   line-height: 2em;
 }
 .contentDescription .mainContent input {
@@ -174,4 +173,99 @@ img {
   font-size: 1.2em;
   cursor: pointer;
   box-shadow: 0px 0px 50px -20px blue;
+}
+
+@media only screen and (max-width: 1500px) {
+  .travelForm {
+    width: auto;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .travelForm {
+    display: inline-block;
+    font-size: 0.7em;
+    position: absolute;
+    left: 75%;
+    top: 90%;
+  }
+
+  header .descriptionTour h1 {
+    font-size: 3em;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .contentDescription {
+    font-size: 0.5em;
+    display: inline-block;
+  }
+  .contentDescription .mainContent {
+    text-align: center;
+    width: 100vw;
+  }
+}
+@media only screen and (max-width: 768px) {
+  header .headerText {
+    display: block;
+    text-align: center;
+  }
+  header .headerText ul {
+    width: 100%;
+    height: auto;
+    font-size: 0.7em;
+    justify-content: center;
+  }
+  .travelForm {
+    width: auto;
+  }
+}
+@media only screen and (max-width: 425px) {
+  header .headerText {
+    margin-top: 3em;
+    line-height: 2em;
+    height: 25%;
+  }
+  header .headerText h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+  header .descriptionTour h1 {
+    margin-top: 12em;
+    font-size: 1.5em;
+  }
+  header .headerText ul {
+    display: block;
+    margin-left: 0.5em;
+  }
+  header .headerText ul input {
+    margin-right: 1em;
+    margin-top: 2em;
+  }
+  .contentDescription img {
+    height: 100vh;
+    width: 100vw;
+    border-radius: 0;
+  }
+  .travelForm {
+    position: relative;
+    text-align: center;
+    left: 50%;
+    border: none;
+    background-color: rgba(226, 185, 146, 0.2);
+    width: 100vw;
+    border-radius: 0;
+  }
+  .travelForm input,
+  select {
+    width: 70%;
+    margin-bottom: 0.5em;
+  }
+  .travelForm input[type='button'] {
+    margin-top: 1em;
+  }
+  .travelForm label {
+    font-size: 1.2em;
+  }
+  .contentDescription .mainContent {
+    margin: 0 auto;
+  }
 }
