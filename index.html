@@ -7,28 +7,97 @@
   <meta name="Description" content="Put your description here.">
   <base href="/">
 
-  <style>
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      background-color: #ededed;
-    }
-  </style>
+  
   <title>travel-app</title>
 </head>
 
 <body>
-  <travel-app></travel-app>
-:))
-:))
-:))
-:))
-:))
-:))
-:))
-:))
+  <!-- <travel-app></travel-app> -->
+<header>
+      <img
+        src="https://images.unsplash.com/photo-1522205787843-417a637f4c30?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80"
+        alt="Person reading a map on a mountain"
+      />
+      <div class="headerText">
+        <h1>Travela</h1>
+        <ul>
+          <li>Home</li>
+          <li>Tour</li>
+          <li>Hotel</li>
+          <li>Places</li>
+          <li>Contact Us</li>
+          <input type="button" value="Book now" />
+        </ul>
+      </div>
+      <div class="descriptionTour">
+        <h1>Discov er the world with us</h1>
+        <input type="button" value="Start Tour" />
+      </div>
+    </header>
+    <article class="travelForm">
+      <div class="destionations">
+        <label for="locationsToTravel">Destionation</label>
+        <select class="locationsToTravel">
+          <option value=""></option>
+          <option value="New York">New York</option>
+          <option value="Paris">Paris</option>
+          <option value="London">London</option>
+          <option value="Tokyo">Tokyo</option>
+          <option value="Los Angeles">Los Angeles</option>
+        </select>
+      </div>
+      <div class="members">
+        <label for="member">Member</label>
+        <input type="number" name="member" id="member" />
+      </div>
+      <div class="checkInDates">
+        <label for="checkIn">Check In Date</label>
+        <input type="date" name="checkIn" id="checkIn" />
+        <label for="checkOut">Check Out Date</label>
+        <input type="date" name="checkOut" id="checkOut" />
+      </div>
+      <input type="button" value="Book Now" />
+    </article>
+    <article class="contentDescription">
+      <img
+        src="https://image.shutterstock.com/shutterstock/photos/1646465944/display_1500/stock-vector-man-on-the-top-of-the-mountain-winner-concept-with-a-hands-up-man-happy-tourist-with-a-backpack-1646465944.jpg"
+        alt="Hiking Person"
+      />
+      <div class="mainContent">
+        <h1>Amazing places to enjoy your travel</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis
+          velit incidunt ut deleniti voluptates consectetur nemo reprehenderit
+          culpa dolor laborum.
+        </p>
+        <input type="button" value="Explore More" />
+      </div>
+    </article>
+    <footer>
+      <div class="getInTouch">
+        <h1>Get in touch</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, quae!
+        </p>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter your email adress"
+        />
+        <input type="button" value="Subscribe" />
+      </div>
+      <div class="contacts">
+        <h3>&#169; 2020 india cafe all rights reserved</h3>
+        <ul>
+          <li>Home</li>
+          <li>Tour</li>
+          <li>Hotel</li>
+          <li>Places</li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+    </footer>
   <script type="module" src="./src/travel-app.js"></script>
 </body>
 
