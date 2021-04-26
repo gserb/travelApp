@@ -36,6 +36,10 @@ img {
   font-size: 1.5em;
   font-weight: 600;
 }
+.headerText ul li a {
+    text-decoration: none;
+    color: black;
+}
 .headerText ul input {
   padding: 1em 2em;
   border-radius: 1em;
