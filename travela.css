@@ -197,15 +197,17 @@ footer .getInTouch p {
 footer .getInTouch input[type='email'] {
   padding: 3em 0em;
   width: 40%;
-  border-radius: 3em;
+  border-radius: 4em;
   position: relative;
+  border: none;
 }
 footer .getInTouch input::placeholder {
   font-size: 1.2em;
   font-weight: bold;
   width: 100vw;
-  padding-left: 1em;
+  padding-left: 3em;
   position: fixed;
+  color: #8d98bd;
 }
 footer .getInTouch input[type='button'] {
   padding: 1.7em 3em;
@@ -217,6 +219,7 @@ footer .getInTouch input[type='button'] {
   position: absolute;
   right: 30%;
   margin-top: 0.2em;
+  border: none;
 }
 
 footer .contacts {
