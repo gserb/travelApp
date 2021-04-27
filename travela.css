@@ -267,6 +267,23 @@ footer .contacts ul li {
     width: 100vw;
   }
 }
+@media only screen and (max-width: 1288px) {
+  header .hero h1 {
+    font-size: 4em;
+  }
+}
+@media only screen and (max-width: 1160px) {
+  .travelForm {
+    font-size: 0.5em;
+  }
+}
+@media only screen and (max-width: 1130px) {
+  footer .getInTouch input[type='button'] {
+    display: block;
+    background-color: green;
+    font-size: 0.8em;
+  }
+}
 @media only screen and (max-width: 850px) {
   header .headerText {
     display: block;
@@ -278,8 +295,51 @@ footer .contacts ul li {
     font-size: 0.7em;
     justify-content: center;
   }
+  header .hero h1 {
+    font-size: 3em;
+  }
   .travelForm {
     width: auto;
+  }
+  footer .contacts {
+    flex-direction: column;
+    text-align: center;
+  }
+  footer .contacts ul {
+    justify-content: center;
+    margin-top: 1em;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .contentDescription img {
+    width: 100vw;
+    border-radius: 0;
+  }
+  .travelForm {
+    font-size: 0.5em;
+    position: relative;
+    left: 50%;
+    width: 100vw;
+    text-align: center;
+    border-radius: 0;
+    border: none;
+  }
+  .travelForm input {
+    width: 50%;
+  }
+  .travelForm select {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  footer .getInTouch input[type='email'] {
+    font-size: 0.5em;
+    width: 50%;
+  }
+  footer .getInTouch input[type='email']::placeholder {
+    left: -10%;
   }
 }
 @media only screen and (max-width: 535px) {
@@ -298,7 +358,7 @@ footer .contacts ul li {
     margin-bottom: 0.5em;
   }
   header .hero h1 {
-    margin-top: 15em;
+    margin-top: 16em;
     font-size: 1.5em;
   }
   header .headerText ul {
@@ -320,14 +380,15 @@ footer .contacts ul li {
     text-align: center;
     left: 50%;
     border: none;
-    background-color: rgba(226, 185, 146, 0.2);
     width: 100vw;
     border-radius: 0;
   }
-  .travelForm input,
-  select {
+  .travelForm input {
     width: 70%;
     margin-bottom: 0.5em;
+  }
+  .travelForm select {
+    width: 70%;
   }
   .travelForm input[type='button'] {
     margin-top: 1em;
@@ -337,5 +398,14 @@ footer .contacts ul li {
   }
   .contentDescription .mainContent {
     margin: 0 auto;
+  }
+  footer .contacts {
+    font-size: 1.2em;
+  }
+  footer .contacts ul {
+    flex-direction: column;
+  }
+  footer .contacts ul li {
+    margin: 0.5em;
   }
 }
