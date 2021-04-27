@@ -75,10 +75,11 @@ img {
   cursor: pointer;
 }
 .travelForm {
-  display: flex;
-  width: 70vw;
+  /* display: flex; */
+  display: inline;
+  width: 70%;
   margin: 0 auto;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   border: 5px solid rgba(60, 60, 255, 0.2);
   padding: 5em 4em;
   border-radius: 3em;
@@ -89,47 +90,30 @@ img {
   background-color: white;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.travelForm .destinations select {
-  padding: 1.3em 4em;
-  border-radius: 1em;
+section.travelForm div {
+  float: left;
+  margin: 10px;
+}
+.travelForm select,
+input {
+  padding: 1.2em 2.5em;
+  border-radius: 1.5em;
+  outline: none;
   border: 3px solid rgb(200, 200, 200);
   color: rgba(200, 200, 200, 0.9);
   font-weight: bold;
 }
-.travelForm .destinations,
-.members {
+.travelForm label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: bold;
   font-size: 1.2em;
-  font-weight: bold;
 }
-.travelForm .destinations label {
-  display: block;
-  margin-bottom: 0.4em;
-}
-.travelForm .members label {
-  display: block;
-  margin-bottom: 0.4em;
-}
-.travelForm input {
-  padding: 1.2em;
-  border-radius: 1em;
-  border: 3px solid rgb(200, 200, 200);
-  color: rgba(200, 200, 200, 0.9);
-  font-weight: bold;
-}
-.travelForm .members input {
-  padding: 1.4em;
-}
-.travelForm .checkIn label,
-.checkOut label {
-  display: block;
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-bottom: 0.4em;
-}
+
 .travelForm input[type='button'] {
   font-size: 1.5em;
-  padding: 1em 2em;
-  border-radius: 1em;
+  padding: 1.5em 2em;
+  border-radius: 1.5em;
   color: white;
   background-color: blue;
   border-style: none;
@@ -238,23 +222,12 @@ footer .contacts ul li {
   margin-right: 2em;
   font-weight: bold;
 }
-
-@media only screen and (max-width: 1500px) {
-  .travelForm {
-    width: auto;
-  }
-}
 @media only screen and (max-width: 1024px) {
-  .travelForm {
-    display: inline-block;
-    font-size: 0.7em;
-    position: absolute;
-    left: 75%;
-    top: 90%;
-  }
-
   header .hero h1 {
     font-size: 3em;
+  }
+  .travelForm {
+    font-size: 0.5em;
   }
 }
 @media only screen and (max-width: 1440px) {
@@ -270,11 +243,6 @@ footer .contacts ul li {
 @media only screen and (max-width: 1288px) {
   header .hero h1 {
     font-size: 4em;
-  }
-}
-@media only screen and (max-width: 1160px) {
-  .travelForm {
-    font-size: 0.5em;
   }
 }
 @media only screen and (max-width: 1130px) {
@@ -298,9 +266,6 @@ footer .contacts ul li {
   header .hero h1 {
     font-size: 3em;
   }
-  .travelForm {
-    width: auto;
-  }
   footer .contacts {
     flex-direction: column;
     text-align: center;
@@ -315,21 +280,6 @@ footer .contacts ul li {
   .contentDescription img {
     width: 100vw;
     border-radius: 0;
-  }
-  .travelForm {
-    font-size: 0.5em;
-    position: relative;
-    left: 50%;
-    width: 100vw;
-    text-align: center;
-    border-radius: 0;
-    border: none;
-  }
-  .travelForm input {
-    width: 50%;
-  }
-  .travelForm select {
-    width: 50%;
   }
 }
 
@@ -374,27 +324,6 @@ footer .contacts ul li {
     height: 100vh;
     width: 100vw;
     border-radius: 0;
-  }
-  .travelForm {
-    position: relative;
-    text-align: center;
-    left: 50%;
-    border: none;
-    width: 100vw;
-    border-radius: 0;
-  }
-  .travelForm input {
-    width: 70%;
-    margin-bottom: 0.5em;
-  }
-  .travelForm select {
-    width: 70%;
-  }
-  .travelForm input[type='button'] {
-    margin-top: 1em;
-  }
-  .travelForm label {
-    font-size: 1.2em;
   }
   .contentDescription .mainContent {
     margin: 0 auto;
