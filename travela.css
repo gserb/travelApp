@@ -297,7 +297,7 @@ footer .contacts ul li {
     font-size: 2em;
   }
 }
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 445px) {
   header .headerText {
     margin-top: 3em;
     line-height: 2em;
@@ -319,6 +319,10 @@ footer .contacts ul li {
   header .headerText ul input {
     margin-right: 1em;
     margin-top: 0.5em;
+  }
+  .travelForm input,
+  select {
+    width: 80%;
   }
   .contentDescription img {
     height: 100vh;
