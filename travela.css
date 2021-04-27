@@ -49,6 +49,11 @@ img {
   font-weight: 600;
   cursor: pointer;
 }
+.headerText ul input:hover {
+  background-color: blue;
+  color: white;
+  transition: 1s;
+}
 .hero {
   position: absolute;
   top: 35%;
@@ -73,6 +78,11 @@ img {
   transform: translate(-50%);
   margin-top: 2em;
   cursor: pointer;
+}
+.hero input:hover {
+  background-color: white;
+  color: blue;
+  transition: 1s;
 }
 .travelForm {
   /* display: flex; */
@@ -102,6 +112,11 @@ input {
   border: 3px solid rgb(200, 200, 200);
   color: rgba(200, 200, 200, 0.9);
   font-weight: bold;
+}
+.travelForm input[type='button']:hover {
+  background-color: lightseagreen;
+  color: black;
+  transition: 1s;
 }
 .travelForm label {
   display: block;
@@ -158,6 +173,11 @@ input {
   cursor: pointer;
   box-shadow: 0px 0px 50px -20px blue;
 }
+.contentDescription .mainContent input:hover {
+  background-color: blue;
+  color: white;
+  transition: 1s;
+}
 
 footer {
   background-color: rgba(0, 82, 254, 255);
@@ -204,6 +224,12 @@ footer .getInTouch input[type='button'] {
   right: 30%;
   margin-top: 0.2em;
   border: none;
+  cursor: pointer;
+}
+footer .getInTouch input[type='button']:hover {
+  background-color: magenta;
+  color: white;
+  transition: 1s;
 }
 
 footer .contacts {
