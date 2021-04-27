@@ -16,12 +16,12 @@
       background-color: #ededed;
     }
     header{
-      font-size: 32px;
+      top: 0;
+      width: 100%;
       display: flex;
       position: fixed;
-      width: 100%;
-      top: 0;
       background-color: rgba(133, 133, 133, 0.4);
+      font-size: 32px;
       align-items: center;
       justify-content: space-around;
     }
@@ -127,7 +127,7 @@
 
     .newsletter-title{
       height: 200px;
-      line-height: 300px;
+      line-height: 200px;
       font-size: 36px;
       color: #000;
     }
@@ -143,6 +143,9 @@
       color: #FFFFFF;
       font-size: 14px;
       font-weight: bold;
+    }
+    .newsletter-form{
+      padding: 20px;
     }
     .newsletter-button {
       width: 150px;
@@ -225,7 +228,7 @@
   <!-- FOOTER-->
     <footer>
       <section class="newsletter">
-        <h2 class="newsletter-title">Subscribe to our newsletter to get the latest trends & news</h2>
+        <h2 class="newsletter-title">Subscribe to our newsletter to get the latest trends & news:</h2>
         <div class="newsletter-form">
           <form id="newsletterForm">
             <input type="text" class="newsletter-form-input" placeholder="Name" required="required">
