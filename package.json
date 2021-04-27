@@ -24,7 +24,7 @@
     "start": "web-dev-server"
   },
   "name": "travel-app",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Webcomponent travel-app following open-wc recommendations",
   "author": "travel-app",
   "license": "MIT",
