@@ -24,7 +24,7 @@
     "start": "web-dev-server"
   },
   "name": "travel-app",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Webcomponent travel-app following open-wc recommendations",
   "author": "travel-app",
   "license": "MIT",
@@ -45,7 +45,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "test"
+      "pre-push": "npm run test"
     }
   },
   "lint-staged": {
