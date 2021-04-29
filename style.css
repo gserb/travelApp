@@ -9,7 +9,7 @@ body {
 body {
   display: grid;
   grid-template-columns: 200px 1fr 1fr;
-  grid-template-rows: 100px 500px 1fr 500px;
+  grid-template-rows: 100px 500px 1fr 300px;
   grid-template-areas: 
     "header header header"
     "hero hero hero"
@@ -143,47 +143,66 @@ nav a:hover{
 
 footer{
   grid-area: footer;
+  background-color: #283D3B;
+  height: 300px;
 }
+
 .newsletter{
-  height: 500px;
-  width: auto;
-  background-image: url("https://images.unsplash.com/photo-1495145910046-717b12bffcf7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
-  background-position: center;
-  background-size: cover;
+  border-bottom: 1px solid #243634;
+  width: 100%;
   text-align: center;
+  justify-self: center;
+  margin-top: 50px;
 }
 
 .newsletter-title{
-  height: 200px;
-  line-height: 200px;
-  font-size: 36px;
-  color: #000;
+  font-size: 20px;
+  width: 100%;
 }
 .newsletter-form-input{
-  width: 50%;
-  height: 50px;
-  background: rgba(255,255,255,0.5);
-  padding: 10px;
-  margin: 10px;
+  height: 30px;
+  width: 150px;
+  background: #f2f5f6;
   border: none;
-  outline: none;
-  padding-left: 22px;
-  color: #FFFFFF;
+  padding-left: 20px;
   font-size: 14px;
   font-weight: bold;
+  color: #72728c;
+  display: inline-block;
 }
 .newsletter-form{
   padding: 20px;
 }
 .newsletter-button {
-  width: 150px;
-  height: 50px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.5);
-  font-size: 16px;
-  font-weight: bold;
-  color: #000;
+  width: 100px;
+  height: 40px;
+  margin: 10px;
+  background: #181818;
+  color: #FFFFFF;
+  font-size: 12px;
   text-transform: uppercase;
+  border-radius: 5px;
   border: none;
   cursor: pointer;
+}
+
+.credits{
+  float: left;
+  font-size: 16px;
+  padding: 10px;
+  margin-left: 25px;
+}
+
+.social{
+  float: right;
+}
+
+.social ul{
+  margin: 0;
+  padding: 0;
+}
+.fa{
+  text-decoration: none;
+  padding: 10px;
+  width: 50px;
 }
