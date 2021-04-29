@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="Description" content="Put your description here.">
   <base href="/">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="C:\Users\bodes\travelApp\style.css" type="text/css">
   <title>travel-app</title>
 </head>
 
@@ -14,7 +14,7 @@
   <!-- <travel-app></travel-app> -->
   <!-- HEADER -->
   <header>
-    <div class="logo">✈ Travel App</div>
+    <div class="logo">✈ | Travel App</div>
     <nav class="nav-bar">
       <ul>
         <li>
@@ -40,26 +40,32 @@
   <div class="hero">
     <div class="hero-image">
       <div class="hero-content">
-        <p>Life is short and world is wide!</p>
+        <h1>Life is short and world is wide!</h1>
       </div>
     </div>
   </div>
 
   <!-- TRAVEL DESTINATION FORM -->
-  <form>
-    <section class="travel-destination-form">
-      <h1 class="search-destination-title">Let us take you away</h1>
-      <div class="search-destination-content">
-        <input type="text" class="search-input" placeholder="City" required="required">
-        <input type="text" class="search-input" placeholder="Departure" required="required">
-        <input type="text" class="search-input" placeholder="Arival" required="required">
-        <input type="text" class="search-input" placeholder="Budget" required="required">
-        <button class="home-search-button">search</button>
-      </div>
-    </section>
+  <form class="travel-destination-form">
+    <div class="travel-destination-title">
+     <h1>Let us take you away</h1>
+    </div>
+    <div class="search-destination-content">
+      <input type="text" class="search-input" placeholder="From" required="required">
+      <input type="text" class="search-input" placeholder="Anywhere" required="required">
+      <input type="date" class="search-input" placeholder="Departure" required="required">
+      <input type="number" min="100" class="search-input" placeholder="Budget " required="required">
+      <label for="budget"></label>
+      <select id="budget" name="budget" class="search-input">
+        <option value="EUR">EUR</option>
+        <option value="EUR">USD</option>
+        <option value="EUR">LEI</option>
+      </select>
+      <button class="home-search-button">search</button>
+    </div>
   </form>
 
-  <!-- CONTENT DESCRIPTION -->
+  <!-- CONTENT DESCRIPTION --> 
   <article class="about-us">
     <section>
       <h2 class="about-us-title">A few words about us</h2>
@@ -71,10 +77,10 @@
     </section>
   </article>
 
-  <!-- FOOTER-->
+  <!-- FOOTER -->
     <footer>
       <section class="newsletter">
-        <h2 class="newsletter-title">Subscribe to our newsletter to get the latest trends & news:</h2>
+        <h2 class="newsletter-title">Subscribe to our newsletter to get the best deals anywhere:</h2>
         <div class="newsletter-form">
           <form id="newsletterForm">
             <input type="text" class="newsletter-form-input" placeholder="Name" required="required">
@@ -84,7 +90,7 @@
           </form>
         </div>
       </section>
-    </footer>
+    </footer> 
   <script type="module" src="./src/travel-app.js"></script>
 </body>
 
