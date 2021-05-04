@@ -6,109 +6,201 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="Description" content="Put your description here.">
   <base href="/">
-  <link rel="stylesheet" href="C:\Users\bodes\travelApp\style.css" type="text/css">
+  <link rel="stylesheet" href="style.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   <title>travel-app</title>
 </head>
 
 <body>
   <!-- <travel-app></travel-app> -->
-  <!-- HEADER -->
-  <header>
-    <div class="logo">✈ | Travel App</div>
-    <nav class="nav-bar">
-      <ul>
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="index.html">Menu 1</a>
-        </li>
-        <li>
-          <a href="index.html">Menu 2</a>
-        </li>
-        <li>
-          <a href="index.html">Menu 3</a>
-        </li>
-        <li>
-          <a href="index.html">Menu   4</a>
-        </li>
-      </ul>
-    </nav>
+  <!-----    HEADER   ----->
+    <header>
+      <!-----    NAV-BAR   ----->
+      <nav class="main-nav">
+        <div class="logo"><a href="index.html">✈ | Travel App</a></div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+      <!-----    HERO   ----->
+      <div class="hero-text">
+        <h1>WORLD is wide and LIFE is short</h1> 
+      </div>
+      <div class="hero-image-source">
+        Photo by 
+          <a href="https://unsplash.com/@timgarifov"><em>Timur Garifov</em></a>  on  
+          <a href="https://unsplash.com/"><em>Unsplash</em></a>
+      </div>
+      
+      <!----- TRAVEL DESTINATION FORM ----->
+      <form class="travel-destination-form">
+        <div class="travel-destination-title">
+          <h1>Let us take you away</h1>
+        </div>
+        <div class="search-destination-content">
+          <div class="input-grp">
+            <label>From:</label>
+            <input type="text" class="search-input" placeholder="City" required="required">
+          </div>
+          <div class="input-grp">
+            <label>To:</label>
+            <input type="text" class="search-input" placeholder="City" required="required">
+          </div>
+          <div class="input-grp"> 
+            <label>Departing:</label>
+            <input type="date" class="search-input" required="required">
+          </div>
+          <div class="input-grp">
+            <label for="budget">Budget:</label>
+            <input type="number" min="100" class="search-input" placeholder="Budget " required="required">
+            <select id="budget" name="budget" class="search-input">
+              <option value="EUR">EUR</option>
+              <option value="EUR">USD</option>
+              <option value="EUR">LEI</option>
+            </select>
+          </div class="input-grp">
+        </div>
+        <div>
+        <br>
+          <button class="home-search-button">search</button>
+        </div>
+      </form>
+    </section>
   </header>
 
-  <!-- HERO -->
-  <div class="hero">
-    <div class="hero-image">
-      <div class="hero-content">
-        <h1>Life is short and world is wide!</h1>
-      </div>
-    </div>
-  </div>
+  <main class="wrapper">
+    <!----- Side BAR ----->
+    <section class="side-bar">
+      <ul>
+        <h2>News</h2>
+        <li><h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, amet.</h4></li>
+        <li><h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, amet.</h4></li>
+        <li><h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, amet.</h4></li>
+        <li><h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, amet.</h4></li>
+        <li><h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, amet.</h4></li>
+        <li><h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, amet.</h4></li>
+      </ul>
 
-  <!-- TRAVEL DESTINATION FORM -->
-  <form class="travel-destination-form">
-    <div class="travel-destination-title">
-     <h1>Let us take you away</h1>
-    </div>
-    <div class="search-destination-content">
-      <input type="text" class="search-input" placeholder="From" required="required">
-      <input type="text" class="search-input" placeholder="Anywhere" required="required">
-      <input type="date" class="search-input" placeholder="Departure" required="required">
-      <input type="number" min="100" class="search-input" placeholder="Budget " required="required">
-      <label for="budget"></label>
-      <select id="budget" name="budget" class="search-input">
-        <option value="EUR">EUR</option>
-        <option value="EUR">USD</option>
-        <option value="EUR">LEI</option>
-      </select>
-      <button class="home-search-button">search</button>
-    </div>
-  </form>
-
-  <!-- CONTENT DESCRIPTION --> 
-  <article class="about-us">
-    <section>
-      <h2 class="about-us-title">A few words about us</h2>
-      <p class="about-us-content">Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet .Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu laoreet ante, sollicitudin volutpat quam. Vestibulum posuere malesuada ultrices. In pulvinar rhoncus lacus at aliquet. Nunc vitae lacus varius, auctor nisi sit amet, consectetur mauris. Curabitur sodales semper est, vel faucibus urna laoreet vel. Ut justo diam, sodales non pulvinar at, vulputate quis neque. Etiam aliquam purus vel ultricies consequat.
-      Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet .Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu laoreet ante, sollicitudin volutpat quam. Vestibulum posuere malesuada ultrices. In pulvinar rhoncus lacus at aliquet. Nunc vitae lacus varius, auctor nisi sit amet, consectetur mauris. Curabitur sodales semper est, vel faucibus urna laoreet vel. Ut justo diam, sodales non pulvinar at, vulputate quis neque. Etiam aliquam purus vel ultricies consequat.
-      Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet .Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu laoreet ante, sollicitudin volutpat quam. Vestibulum posuere malesuada ultrices. In pulvinar rhoncus lacus at aliquet. Nunc vitae lacus varius, auctor nisi sit amet, consectetur mauris. Curabitur sodales semper est, vel faucibus urna laoreet vel. Ut justo diam, sodales non pulvinar at, vulputate quis neque. Etiam aliquam purus vel ultricies consequat.
-      Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet .Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu laoreet ante, sollicitudin volutpat quam. Vestibulum posuere malesuada ultrices. In pulvinar rhoncus lacus at aliquet. Nunc vitae lacus varius, auctor nisi sit amet, consectetur mauris. Curabitur sodales semper est, vel faucibus urna laoreet vel. Ut justo diam, sodales non pulvinar at, vulputate quis neque. Etiam aliquam purus vel ultricies consequat. Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet .Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu laoreet ante, sollicitudin volutpat quam. Vestibulum posuere malesuada ultrices. In pulvinar rhoncus lacus at aliquet. Nunc vitae lacus varius, auctor nisi sit amet, consectetur mauris. Curabitur sodales semper est, vel faucibus urna laoreet vel. Ut justo diam, sodales non pulvinar at, vulputate quis neque. Etiam aliquam purus vel ultricies consequat.Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet .Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu laoreet ante, sollicitudin volutpat quam. Vestibulum posuere malesuada ultrices. In pulvinar rhoncus lacus at aliquet. Nunc vitae lacus varius, auctor nisi sit amet, consectetur mauris. Curabitur sodales semper est, vel faucibus urna laoreet vel. Ut justo diam, sodales non pulvinar at, vulputate quis neque. Etiam aliquam purus vel ultricies consequat.</p>
-      <h2 class="why-us">Why choose us?</h2>
-      <p class="about-us-content">Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet .Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu laoreet ante, sollicitudin volutpat quam. Vestibulum posuere malesuada ultrices. In pulvinar rhoncus lacus at aliquet. Nunc vitae lacus varius, auctor nisi sit amet, consectetur mauris. Curabitur sodales semper est, vel faucibus urna laoreet vel. Ut justo diam, sodales non pulvinar at, vulputate quis neque. Etiam aliquam purus vel ultricies consequat.
-      Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet .Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu laoreet ante, sollicitudin volutpat quam. Vestibulum posuere malesuada ultrices. In pulvinar rhoncus lacus at aliquet. Nunc vitae lacus varius, auctor nisi sit amet, consectetur mauris. Curabitur sodales semper est, vel faucibus urna laoreet vel. Ut justo diam, sodales non pulvinar at, vulputate quis neque. Etiam aliquam purus vel ultricies consequat.
-      Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet .Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu laoreet ante, sollicitudin volutpat quam. Vestibulum posuere malesuada ultrices. In pulvinar rhoncus lacus at aliquet. Nunc vitae lacus varius, auctor nisi sit amet, consectetur mauris. Curabitur sodales semper est, vel faucibus urna laoreet vel. Ut justo diam, sodales non pulvinar at, vulputate quis neque. Etiam aliquam purus vel ultricies consequat.
-      Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet .Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu laoreet ante, sollicitudin volutpat quam. Vestibulum posuere malesuada ultrices. In pulvinar rhoncus lacus at aliquet. Nunc vitae lacus varius, auctor nisi sit amet, consectetur mauris. Curabitur sodales semper est, vel faucibus urna laoreet vel. Ut justo diam, sodales non pulvinar at, vulputate quis neque. Etiam aliquam purus vel ultricies consequat.
-      Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet .Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu laoreet ante, sollicitudin volutpat quam. Vestibulum posuere malesuada ultrices. In pulvinar rhoncus lacus at aliquet. Nunc vitae lacus varius, auctor nisi sit amet, consectetur mauris. Curabitur sodales semper est, vel faucibus urna laoreet vel. Ut justo diam, sodales non pulvinar at, vulputate quis neque. Etiam aliquam purus vel ultricies consequat.
-      Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet .Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu laoreet ante, sollicitudin volutpat quam. Vestibulum posuere malesuada ultrices. In pulvinar rhoncus lacus at aliquet. Nunc vitae lacus varius, auctor nisi sit amet, consectetur mauris. Curabitur sodales semper est, vel faucibus urna laoreet vel. Ut justo diam, sodales non pulvinar at, vulputate quis neque. Etiam aliquam purus vel ultricies consequat.</p>
     </section>
-  </article>
+    <!----- CONTENT DESCRIPTION -----> 
+    <section class="about-us">
+      <h1>A few words about us</h1>
+      <p class="about-us-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates asperiores perspiciatis quidem voluptatem accusantium minima ea earum quod, error autem cupiditate vitae voluptas pariatur aperiam perferendis fuga ex cumque neque itaque provident exercitationem voluptatum quae non! Dolor sint consectetur aperiam?</p>
+      <h1>Why choose us?</h1>
+      <div class="row">
+        <div class="reason-col">
+          <h2>Reason 1</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quis expedita eaque dolor. Et quae officiis sunt autem iure unde delectus voluptates, iste voluptatem asperiores. Numquam similique vel in tempore veritatis iusto aspernatur repellat. Perspiciatis pariatur commodi consequatur quas. Possimus.</p>
+        </div>
+        <div class="reason-col">
+          <h2>Reason 2</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quis expedita eaque dolor. Et quae officiis sunt autem iure unde delectus voluptates, iste voluptatem asperiores. Numquam similique vel in tempore veritatis iusto aspernatur repellat. Perspiciatis pariatur commodi consequatur quas. Possimus.</p>
+        </div>
+        <div class="reason-col">
+          <h2>Reason 3</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quis expedita eaque dolor. Et quae officiis sunt autem iure unde delectus voluptates, iste voluptatem asperiores. Numquam similique vel in tempore veritatis iusto aspernatur repellat. Perspiciatis pariatur commodi consequatur quas. Possimus.</p>
+        </div>
+      </div>
+    </section>
+    <!-- POPULAR PLACES -->
+    <section class="places">
+    <h1>Popular Places</h1> 
+    <section class="cards-wrapper">
+      <div class="card-grid-space">
+        <a class="card"   
+          href="#" 
+          style="--bg-img: url('https://images.unsplash.com/photo-1535892449425-d45bdcb2d016?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80')">
+          <div>
+            <h1>New York</h1>
+            <div class="tags"> 
+              <div class="tag">Unspalsh</div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="card-grid-space">
+        <a class="card" 
+          href="#" 
+          style="--bg-img: url('https://images.unsplash.com/photo-1577901051898-c174f226c8ac?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1044&q=80')">
+          <div>
+            <h1>Dubai</h1>
+            <div class="tags">
+              <div class="tag">Unsplash</div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="card-grid-space">
+        <a class="card" 
+          href="#" 
+          style="--bg-img: url('https://images.unsplash.com/photo-1523304867125-2293c498e08a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80')">
+          <div>
+            <h1>London</h1>
+            <div class="tags">
+              <div class="tag">Unsplash</div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="card-grid-space">
+        <a class="card" 
+          href="#" 
+          style="--bg-img: url('https://images.unsplash.com/photo-1581948355501-c721e309caa8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80')">
+          <div>
+            <h1>Instanbul</h1>
+            <div class="tags">
+              <div class="tag">Unsplash</div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="card-grid-space">
+        <a class="card" 
+          href="#" 
+          style="--bg-img: url('https://images.unsplash.com/photo-1507062916289-6af3d3e05386?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')">
+          <div>
+            <h1>Paris</h1>
+            <div class="tags">
+              <div class="tag">Unsplash</div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+  </section>
+  </main>
 
-  <!-- FOOTER -->
-    <footer>
-      <section class="newsletter">
-        <h2 class="newsletter-title">Subscribe to our newsletter to get the best deals anywhere:</h2>
-        <div class="newsletter-form">
-          <form id="newsletterForm">
-            <input type="text" class="newsletter-form-input" placeholder="Name" required="required">
-            <input type="text" class="newsletter-form-input" placeholder="Your e-mail" required="required">
-            <br>
-            <button class="newsletter-button">Subscribe</button>
-          </form>
-        </div>
-      </section>
-      <section class="credits-social-media">
-        <div class="credits">© 2021 DevSchool ING</div>
-        <div class="social">
-          <ul class="social-media-icons">
-            <li class="facebook fa fa-facebook"><a target="_blank" alt="facebook" href="#"></a></li>
-            <li class="Twitter fa fa-twitter"><a target="_blank" alt="twitter" href="#"></a></li>
-            <li class="Instagram fa fa-instagram"><a target="_blank" alt="instagram" href="#"></a></li>
-          </ul>
-        </div>
-      </section>
-    </footer> 
+  <!----- FOOTER -----> 
+  <footer class="footer">
+    <h2 class="newsletter-title">Newsletter Sign up:
+      <div class="newsletter-text">Subscribe to our newsletter to get the best deals anywhere</div></h2>
+    <div class="newsletter-form">
+      <form id="newsletterForm">
+        <input type="text" class="newsletter-form-input" placeholder="Your Email Address" required="required">         
+        <button class="newsletter-button">→</button>
+      </form>
+    </div>
+    <div class="credits">© 2021 DevSchool ING ⋅ All Rights Reserved</div>
+    <div class="social">
+      <ul class="social-media-icons">
+        <li class="facebook fa fa-facebook"><a target="_blank" alt="facebook" href="#"></a></li>
+        <li class="Twitter fa fa-twitter"><a target="_blank" alt="twitter" href="#"></a></li>
+        <li class="Instagram fa fa-instagram"><a target="_blank" alt="instagram" href="#"></a></li>
+      </ul>
+    </div>
+  </footer> 
+
   <script type="module" src="./src/travel-app.js"></script>
+
 </body>
 
 </html>
