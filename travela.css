@@ -85,11 +85,11 @@ img {
   transition: 1s;
 }
 .travelForm {
-  /* display: flex; */
-  display: inline;
+  display: flex;
   width: 70%;
   margin: 0 auto;
-  /* justify-content: space-evenly; */
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   border: 5px solid rgba(60, 60, 255, 0.2);
   padding: 5em 4em;
   border-radius: 3em;
@@ -248,7 +248,7 @@ footer .contacts ul li {
   margin-right: 2em;
   font-weight: bold;
 }
-@media only screen and (max-width: 1024px) {
+/* @media only screen and (max-width: 1024px) {
   header .hero h1 {
     font-size: 3em;
   }
@@ -366,5 +366,192 @@ footer .contacts ul li {
   }
   footer .contacts ul li {
     margin: 0.5em;
+  }
+} */
+@media screen and (min-width: 1201px) {
+  .headerText {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .headerText {
+    max-width: 900px;
+  }
+  .hero h1 {
+    font-size: 3.5em;
+  }
+  .travelForm {
+    position: relative;
+    width: 100vw;
+    /* font-size: 0.5em; */
+    border: none;
+  }
+  .travelForm input,
+  select {
+    width: 60vw;
+  }
+  footer .getInTouch input[type='email'] {
+    width: 60vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .headerText {
+    font-size: 0.7em;
+  }
+  .hero h1 {
+    font-size: 3em;
+  }
+  .travelForm {
+    position: relative;
+    width: 100vw;
+    border: none;
+    font-size: 0.8em;
+  }
+  .travelForm input,
+  select {
+    width: 60vw;
+  }
+  .contentDescription {
+    display: flex;
+    flex-direction: column;
+  }
+  .contentDescription img {
+    width: 100vw;
+    height: auto;
+    border-radius: 0;
+  }
+  .contentDescription .mainContent {
+    width: 100vw;
+    text-align: center;
+    margin: 0;
+    margin-top: 1em;
+  }
+  footer .getInTouch input[type='button'] {
+    position: relative;
+    left: 5%;
+    background-color: red;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .headerText {
+    font-size: 1em;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 5em;
+  }
+  .headerText ul {
+    flex-direction: column;
+  }
+  .headerText ul li {
+    margin-left: 1em;
+    line-height: 1.5em;
+  }
+  .hero h1 {
+    font-size: 1.8em;
+    margin-top: 10em;
+  }
+  .travelForm {
+    position: relative;
+    width: 100vw;
+    border: none;
+  }
+  .travelForm input,
+  select {
+    width: 60vw;
+  }
+  .contentDescription {
+    display: flex;
+    flex-direction: column;
+  }
+  .contentDescription img {
+    width: 100vw;
+    height: auto;
+    border-radius: 0;
+  }
+  .contentDescription .mainContent {
+    width: 100vw;
+    text-align: center;
+    margin: 0;
+    margin-top: 1em;
+    font-size: 0.7em;
+  }
+  footer .getInTouch {
+    font-size: 0.7em;
+    justify-content: center;
+  }
+  footer .getInTouch input[type='email'] {
+    display: block;
+    width: 60vw;
+    font-size: 1em;
+  }
+  footer .getInTouch input[type='button'] {
+    position: relative;
+    left: 20%;
+    background-color: red;
+  }
+  footer .contacts {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .headerText {
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 5em;
+    text-align: center;
+  }
+  .headerText ul {
+    flex-direction: column;
+  }
+  .headerText ul li {
+    margin-left: 1em;
+    line-height: 1.5em;
+  }
+  .hero h1 {
+    font-size: 2em;
+    margin-top: 12em;
+  }
+  .travelForm {
+    position: relative;
+    border: none;
+    margin: 0;
+  }
+  .travelForm input,
+  select {
+    width: 60vw;
+  }
+  .contentDescription {
+    display: flex;
+    flex-direction: column;
+  }
+  .contentDescription img {
+    width: 100vw;
+    height: auto;
+    border-radius: 0;
+  }
+  .contentDescription .mainContent {
+    width: 100vw;
+    text-align: center;
+    margin: 0;
+    margin-top: 1em;
+    font-size: 0.7em;
+  }
+  footer .getInTouch {
+    font-size: 0.7em;
+    justify-content: center;
+  }
+  footer .getInTouch input[type='email'] {
+    display: block;
+    width: 60vw;
+    font-size: 0.7em;
+  }
+  footer .getInTouch input[type='button'] {
+    position: relative;
+    left: 20%;
+    background-color: red;
+  }
+  footer .contacts {
+    flex-wrap: wrap;
+    font-size: 0.7em;
   }
 }
