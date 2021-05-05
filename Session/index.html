@@ -6,116 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Exercises</title>
     <style>
-      h1 {
-        color: tomato;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        text-transform: uppercase;
-        line-height: 20px;
-        letter-spacing: 5px;
-        text-decoration: line-through;
-      }
-
-      .class-name {
-        color: lightgreen;
-      }
-
-      p {
-        color: lightblue;
-      }
-
-      #p1 {
-        color: lightcoral;
-      }
-
-      [lang='ro'] {
-        color: black;
-      }
-
-      div {
-        color: crimson;
-      }
-
-      /* li:not(:last-child):after {
-        content: ',';
-      } */
-
-      nav {
-        padding: 10px 20px;
-        border: 1px solid tomato;
-      }
-
-      nav ul {
-        display: flex;
-        justify-content: space-evenly;
-        list-style: none;
-      }
-
-      nav li {
-        border: 1px solid lightsalmon;
-        flex: 0 1 10%;
-      }
-
-      nav li a {
-        padding: 20px;
-        display: block;
-      }
-
-      .burger {
-        display: none;
-      }
-
-      @media screen and (max-width: 480px) {
-        nav ul {
-          flex-direction: column;
-          margin: 0;
-          padding: 0;
-        }
-
-        nav {
-          position: relative;
-          padding: 0;
-        }
-
-        nav li a {
-          text-align: center;
-        }
-
-        .burger {
-          display: initial;
-          width: 40px;
-          height: 40px;
-          border: 1px solid tomato;
-          position: absolute;
-          top: 7px;
-          right: 7px;
-        }
-
-        .burger span {
-          display: block;
-          margin: 5px auto 0;
-          border: 1px solid tomato;
-          width: calc(100% - 10px);
-        }
-
-        .burger span:nth-of-type(2) {
-          margin-top: 10px;
-        }
-        .burger span:nth-of-type(3) {
-          margin-top: 10px;
-        }
+      .span-class{
+        color: magenta;
       }
     </style>
   </head>
   <body>
     <nav>
-      <!-- 
-        •container with a top and bottom padding of 10px and left and right padding of 20px
-        •an image serving as the page logo and also as a link
-        •5  other links
-        •all links should have equal size and be spaced evenly
-        •the links should have a border for better visualization
-        •the content should be centered vertically
-      -->
       <ul>
         <li href="#">
           <a href=""><img src="" alt="Logo" /></a>
@@ -134,14 +31,29 @@
       </div>
     </nav>
 
-    <!-- <h1>Hello World!</h1>
-    <p class="class-name" id="p1" lang="ro">Lorem ipsum dolor</p> -->
-    <!-- <div>Hello World!</div>
-    <ul>
-      <li>First</li>
-      <li>Second</li>
-      <li>Third</li>
-      <li>Fourth</li>
-    </ul> -->
+    <word-definition></word-definition>
   </body>
+  <script>
+    class WordDefinition extends HTMLElement{
+      static get observedAttributes(){
+        return ['hidden']
+      }
+      constructor(){
+        super();
+        console.log('Constructed');
+      }
+      connectedCallback(){
+        console.log('Connected!');
+        const shadow = this.attachShadow({mode: 'open'});
+        shadow.innerHTML = `<p><span class="span-class">Content added</span><p>`;
+      }
+      disconnectedCallback(){
+        console.log('Disconnected callback');
+      }
+      attributeChangedback(attributeName, oldValue, newValue){
+        console.log(`Attribute changed ${attributeName}, ${oldValue}, ${newValue}`);
+      }
+    }
+    customElements.define('word-definition', WordDefinition)
+  </script>
 </html>
