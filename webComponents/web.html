@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="web.css" />
+  </head>
+  <body>
+    <word-definition></word-definition>
+  </body>
+  <script>
+    class WordDefinition extends HTMLElement {
+      static get observedAttributes() {
+        return ['hidden'];
+      }
+      constructor() {
+        super();
+        console.log('constructed');
+      }
+      connectedCallback() {
+        console.log('connected');
+        const shadow = this.attachShadow({ mode: 'open' });
+        shadow.innerHTML = '<p><span class="span-class">Hello World</span></p>';
+        this.innerHTML = '<p><span class="span-class">Hello World</span></p>';
+      }
+      disconnectedCallback() {
+        console.log('disconnected');
+      }
+      attributeChangedCallback(attributeName, oldValue, newValue) {
+        console.log(
+          `attribute changed ${attributeName}, ${oldValue}, ${newValue}`
+        );
+      }
+    }
+    customElements.define('word-definition', WordDefinition);
+  </script>
+</html>
