@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Exercises</title>
+    <style>
+      .span-class{
+        color: magenta;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li href="#">
+          <a href=""><img src="" alt="Logo" /></a>
+        </li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+      </ul>
+
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <h1>Lorem 
+      <span aria-describedby="definition-ipsum">Ipsum</span> 
+      dolor 
+      <span aria-describedby="definition-sit">sit</span> 
+      amet consectetur adipisicing elit. Sint, cumque.</h1>
+    <word-definition id="definition-ipsum">
+      <h1 slot="header">Title Ipsum</h1>
+      <p>Definition</p>
+    </word-definition>
+
+    <word-definition id="definition-sit">
+      <h1 slot="header">Title Sit</h1>
+      <p>Definition</p>
+    </word-definition>
+
+  </body>
+
+  <script>
+    class WordDefinition extends HTMLElement{
+      static get observedAttributes(){
+        return ['hidden']
+      }
+      constructor(){
+        super();
+        this._show = this._show.bind(this); /*oricand si oriunde te ai apela this - word-def */
+        this._hide = this._hide.bind(this);
+        this.hidden=true;
+        console.log('Constructed');
+      }
+      connectedCallback(){
+        const target = document.querySelector(`[aria-describedby=${this.id}]`);
+        target.addEventListener('mouseenter', this._show);
+        target.addEventListener('mouseleave', this._hide);
+        const shadow = this.attachShadow({mode: 'open'});
+        shadow.innerHTML = `
+        <style>
+
+          .span-class{
+            color: blue;
+          }
+
+          :host{
+            background-color: yellow;
+            display: hidden;
+          }
+
+          :host:hover{
+            display: block;
+          }
+
+          [name="header"]{
+            display: block;
+            border-bottom: 1px solid gray;
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+          }
+          
+        </style>
+        <slot name="header"></slot>
+        <slot></slot>
+        <p><span class="span-class"></span><p>`;
+      }
+
+      disconnectedCallback(){
+        console.log('Disconnected callback');
+      }
+
+      attributeChangedback(attributeName, oldValue, newValue){
+        console.log(`Attribute changed ${attributeName}, ${oldValue}, ${newValue}`);
+      }
+
+      _show(){
+        this.hidden=false;
+      }
+
+      _hide(){
+        this.hidden=true;
+      }
+
+    }
+    customElements.define('word-definition', WordDefinition)
+  </script>
+</html>
