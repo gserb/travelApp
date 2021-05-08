@@ -8,7 +8,7 @@ class TravelCity extends LitElement {
   static get styles() {
     return css`
       img {
-        height: 500px;
+        height: 333px;
         width: 500px;
       }
       h3 {

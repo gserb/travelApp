@@ -55,8 +55,7 @@ class TravelCard extends LitElement {
   }
   async fetchData() {
     this.loading = true;
-    const apiId = '-M_A-3tKcLZY74ExjpMj';
-    // const id1 = '-M_1T5CuukdiyEaHSLhm';
+    const apiId = '-M_ADKocOYMhOJwa8ZR9';
     const response = await fetch(
       ` https://devschool-2020.firebaseio.com/Vlad/places/${apiId}.json`
     );
