@@ -145,6 +145,8 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(245, 245, 245, 255);
+  width: 100vw;
 }
 .contentDescription img {
   width: 50vw;
@@ -190,11 +192,11 @@ footer {
   /* background-color: rgba(0, 82, 254, 255); */
   background-color: rgb(38, 134, 113);
   color: white;
+  width: 100vw;
 }
 
 footer .getInTouch {
   text-align: center;
-  margin-top: 5em;
   margin-bottom: 5em;
 }
 footer .getInTouch h1 {
