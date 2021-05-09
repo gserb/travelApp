@@ -464,10 +464,6 @@ button {
   }
 
   /*------------------------- FOOTER ----------------------------*/
-  .footer {
-    margin: 0 5%;
-  }
-
   .footer #newsletterForm {
     display: flex;
   }
@@ -533,6 +529,7 @@ button {
   }
 
   /*------------------------- FOOTER ----------------------------*/
+
   .footer {
     display: flex;
     flex-direction: column;
