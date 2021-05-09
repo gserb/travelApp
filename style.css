@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 :root {
-  --primary: #ddd;
-  --dark: #062230;
   --light: #fff;
+  --bg-color: #c5c3c4;
+  --yellow: #9a7417;
+  --orange: #c66b3d;
+  --blue: #023c40;
+  --dark: #000;
   --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
-  --light-blue: rgb(69, 183, 219);
-  --yellow: rgb(229, 211, 82);
   --bg-filter-opacity: 0.3;
 }
 
@@ -18,18 +19,23 @@
 
 html {
   box-sizing: border-box;
-  color: var(--dark);
+  color: var(--blue);
   font-size: 16px;
   font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
-  background: #ccc;
+  background: var(--bg-color);
   margin: 0;
 }
 
 img {
   max-width: 100%;
+}
+
+.word-highlighter {
+  color: var(--yellow);
+  font-weight: bold;
 }
 
 header {
@@ -359,7 +365,7 @@ button:hover {
     'credits social';
   align-items: stretch;
   justify-items: stretch;
-  background: var(--dark);
+  background: var(--blue);
 }
 
 .footer .newsletter-title {
@@ -413,7 +419,7 @@ button {
   border-color: var(--light);
   border-width: 2px;
   color: var(--light);
-  background: var(--dark);
+  background: var(--blue);
   transition: all 0.3s ease 0s;
   font-size: 30px;
   padding: 0 10px;
