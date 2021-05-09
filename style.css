@@ -223,11 +223,9 @@ button:hover {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 20% 1fr;
-  grid-template-rows: 1fr 1fr;
   grid-template-areas:
     'side-bar content1'
-    'content2 content2'
-    'footer footer';
+    'content2 content2';
   row-gap: 1%;
   column-gap: 5%;
   margin: 0 10%;
@@ -359,28 +357,33 @@ button:hover {
 }
 
 /*-------------------------------- FOOTER --------------------------------*/
+footer {
+  background: var(--blue);
+  grid-area: footer;
+}
+
 .footer {
   display: grid;
-  grid-gap: 20px;
-  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+  grid-template-columns: 1.5fr 1fr;
   grid-template-rows: 70% 15%;
   grid-template-areas:
     'title register'
     'credits social';
   align-items: stretch;
   justify-items: stretch;
-  background: var(--blue);
+  margin: 0 10%;
+  padding: 20px 0;
 }
 
 .footer .newsletter-title {
   grid-area: title;
-  font-size: 42px;
+  font-size: 32px;
   color: var(--light);
-  margin-left: 30%;
   align-self: center;
 }
 .footer .newsletter-title .newsletter-text {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .footer .newsletter-form {
@@ -388,13 +391,12 @@ button:hover {
   align-self: flex-end;
   margin-bottom: 40px;
   justify-self: flex-end;
-  margin-right: 30%;
 }
 
 .footer .newsletter-form .newsletter-form-input {
   border: none;
   border-bottom: 2px var(--light) solid;
-  font-size: 20px;
+  font-size: 16px;
   background: none;
 }
 
@@ -407,7 +409,6 @@ button:hover {
   color: var(--light);
   align-self: center;
   justify-self: flex-start;
-  margin-left: 30%;
 }
 
 .footer .social {
@@ -415,7 +416,6 @@ button:hover {
   grid-area: social;
   align-self: center;
   justify-self: flex-end;
-  margin-right: 30%;
 }
 
 button {
@@ -433,20 +433,15 @@ button {
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 1500px) {
-  .cards-wrapper {
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-between;
-  }
 }
 
 @media screen and (max-width: 1024px) {
+  /*------------------------- NAV-BAR----------------------------*/
   .main-nav a {
     font-size: 16px;
   }
 
-  .cards-wrapper {
-    grid-template-columns: 1fr 1fr;
-  }
+  /*------------------------- HERO ----------------------------*/
   .hero-text h1 {
     font-size: 40px;
   }
@@ -457,6 +452,8 @@ button {
   .travel-destination-form {
     top: 35%;
   }
+
+  /*------------------------- MAIN ----------------------------*/
   .side-bar {
     margin: auto 0;
     display: none;
@@ -465,32 +462,19 @@ button {
     grid-template-columns: 0% 1fr;
     grid-gap: 0;
   }
+
+  /*------------------------- FOOTER ----------------------------*/
+  .footer {
+    margin: 0 5%;
+  }
+
+  .footer #newsletterForm {
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  .hero-text {
-    top: 10%;
-  }
-  .hero-text h1 {
-    font-size: 30px;
-    padding: 8%;
-  }
-
-  .hero-image-source {
-    font-size: 8px;
-    top: 98%;
-  }
-
-  .travel-destination-form {
-    top: 30%;
-  }
-  .cards-wrapper {
-    padding: 4rem 2rem;
-  }
-  .card {
-    max-width: calc(100vw - 4rem);
-  }
-
+  /*------------------------- NAV_BAR ----------------------------*/
   .main-nav ul {
     display: none;
   }
@@ -517,18 +501,29 @@ button {
     display: inline-block;
   }
 
+  /*------------------------- HERO ----------------------------*/
+  .hero-text {
+    top: 10%;
+  }
+  .hero-text h1 {
+    font-size: 30px;
+    padding: 8%;
+  }
+  .hero-image-source {
+    font-size: 8px;
+    top: 98%;
+  }
+  .travel-destination-form {
+    top: 30%;
+  }
+
+  /*------------------------- MAIN ----------------------------*/
   .row {
     flex-direction: column;
   }
   .reason-col {
     margin: 10px 0;
   }
-  .cards-wrapper {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    margin: auto;
-  }
-
   .side-bar {
     display: none;
   }
@@ -537,36 +532,31 @@ button {
     grid-gap: 0;
   }
 
+  /*------------------------- FOOTER ----------------------------*/
   .footer {
-    display: inline-flex;
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     margin: auto;
   }
-
   .footer .newsletter-title {
     display: block;
-    font-size: 20px;
-    margin: auto;
+    font-size: 24px;
     padding: 8% 8% 0;
   }
-
   .footer .newsletter-title .newsletter-text,
   .footer .newsletter-form .newsletter-form-input {
-    font-size: 12px;
+    font-size: 18px;
     font-weight: normal;
   }
-
   .newsletter-button {
     font-size: 18px;
-    margin-left: ;
   }
   .footer .newsletter-form {
-    display: flex;
     margin: auto;
   }
   .footer .credits,
   .footer .social {
-    font-size: 12px;
-    margin: auto;
+    font-size: 16px;
   }
 }
