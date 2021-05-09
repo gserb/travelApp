@@ -33,11 +33,6 @@ img {
   max-width: 100%;
 }
 
-.word-highlighter {
-  color: var(--yellow);
-  font-weight: bold;
-}
-
 header {
   min-height: 100vh;
   width: 100%;
@@ -50,6 +45,15 @@ header {
   background-position: center;
   background-size: cover;
   position: relative;
+}
+
+.word-highlighter {
+  color: var(--yellow);
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 30px;
 }
 
 .main-nav {
