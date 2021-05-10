@@ -7,6 +7,9 @@ import {
 class TravelCity extends LitElement {
   static get styles() {
     return css`
+      :host {
+        font-size: 16px;
+      }
       img {
         height: 333px;
         width: 500px;

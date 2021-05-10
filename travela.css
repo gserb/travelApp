@@ -104,7 +104,7 @@ img {
   top: 70%;
   left: 50%;
   transform: translate(-50%);
-  background-color: rgba(50, 230, 190, 0.7);
+  background-color: rgba(240, 240, 240, 0.8);
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 section.travelForm div {
@@ -152,7 +152,7 @@ input {
   width: 50vw;
   height: 100vh;
   border-radius: 0% 200% 70% 0%;
-  border-bottom: 10px solid rgb(55, 230, 220);
+  border-bottom: 10px solid rgb(38, 38, 204);
 }
 .contentDescription .mainContent {
   width: 50vw;
@@ -175,22 +175,22 @@ input {
   padding: 1.5em 3em;
   border-radius: 1.5em;
   background-color: white;
-  border: 3px solid rgb(38, 134, 113);
-  color: green;
+  border: 3px solid rgb(38, 38, 204);
+  color: rgb(38, 38, 204);
   font-weight: bold;
   font-size: 1.2em;
   cursor: pointer;
-  box-shadow: 0px 0px 50px -20px rgb(38, 134, 113);
 }
 .contentDescription .mainContent input:hover {
-  background-color: rgb(38, 134, 113);
+  background-color: rgb(38, 38, 204);
   color: white;
   transition: 1s;
+  border: none;
 }
 
 footer {
-  /* background-color: rgba(0, 82, 254, 255); */
-  background-color: rgb(38, 134, 113);
+  background-color: rgba(0, 82, 254, 255);
+  /* background-color: rgb(38, 38, 204); */
   color: white;
   width: 100vw;
 }
@@ -227,7 +227,7 @@ footer .getInTouch input[type='button'] {
   padding: 1.7em 3em;
   border-radius: 3em;
   /* background-color: rgba(0, 82, 254, 255); */
-  background-color: rgb(38, 134, 113);
+  background-color: rgb(38, 38, 204);
   color: white;
   font-weight: bold;
   font-size: 1.2em;
@@ -238,7 +238,7 @@ footer .getInTouch input[type='button'] {
   cursor: pointer;
 }
 footer .getInTouch input[type='button']:hover {
-  background-color: blue;
+  background-color: rgba(60, 60, 255, 0.2);
   color: white;
   transition: 1s;
 }

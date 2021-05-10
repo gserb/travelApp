@@ -8,6 +8,9 @@ import './travelCity';
 class TravelCard extends LitElement {
   static get styles() {
     return css`
+      :host {
+        font-size: 16px;
+      }
       div {
         background-color: rgba(245, 245, 245, 255);
         width: 100vw;
@@ -43,7 +46,7 @@ class TravelCard extends LitElement {
   static get properties() {
     return {
       loading: { type: Boolean },
-      data: { type: Object },
+      data: { type: Array },
     };
   }
 
@@ -70,7 +73,7 @@ class TravelCard extends LitElement {
     }
     return html`
       <div>
-        <h1>Destionations to explore!</h1>
+        <h1>Destinations to explore!</h1>
         <h2>Locations</h2>
         <ul>
           ${this.data.map(
