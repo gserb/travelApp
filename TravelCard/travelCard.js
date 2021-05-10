@@ -55,13 +55,14 @@ class TravelCard extends LitElement {
   }
   async fetchData() {
     this.loading = true;
-    const apiId = '-M_ADKocOYMhOJwa8ZR9';
+    const apiId = '-M_KOtLXkTMooTyQBVJi';
     const response = await fetch(
-      ` https://devschool-2020.firebaseio.com/Vlad/places/${apiId}.json`
+      `https://devschool-2020.firebaseio.com/Vlad/places/${apiId}.json`
     );
     const jsonResponse = await response.json();
     this.data = jsonResponse;
     this.loading = false;
+    console.log(jsonResponse);
   }
   render() {
     if (this.loading) {
