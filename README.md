@@ -20,9 +20,9 @@ Welcome to TravelApp starter kit ! You will implement features for the app while
 - `test` runs your test suite with Web Test Runner
 - `lint` runs the linter for your project
 
-API assignment
+## API assignment
 
-Get all the locations to travel
+## Get all the locations to travel
 
 ### Request 
 
