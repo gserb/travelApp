@@ -67,31 +67,13 @@ GET 'https://devschool-2020.firebaseio.com/Vlad/places.json'
 ### Request
 
 ```
-'[{
+'{
     "country": "USA",
     "description": "City that never sleeps",
     "imageUrl": "https://images.unsplash.com/photo-1534430480872-3498386e7856?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "name": "New York"
-  },
-   {
-    "country": "Romania",
-    "description": "Little Paris",
-    "imageUrl": "https://images.unsplash.com/photo-1609670275055-ba1c0c246a63?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=636&q=80",
-    "name": "Bucuresti"
-  },
- {
-    "country": "Romania",
-    "description": "Most beautiful city in Romania",
-    "imageUrl": "https://images.unsplash.com/photo-1558253347-fb1128610003?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80",
-    "name": "Brasov"
-  },
- {
-    "country": "Japan",
-    "description": "The largest city in the world",
-    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1371&q=80",
-    "name": "Tokyo"
-  
-}]'  'https://devschool-2020.firebaseio.com/Vlad/places/.json'
+  }`
+   'https://devschool-2020.firebaseio.com/Vlad/places/.json'
 ```
 ### Response
 
@@ -105,125 +87,34 @@ GET 'https://devschool-2020.firebaseio.com/Vlad/places.json'
 ### Request
 
 ```
- [
-    {
-      "country": "USA",
-      "description": "City that never sleeps",
-      "imageUrl": "https://images.unsplash.com/photo-1534430480872-3498386e7856?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-      "name": "New York"
-    },
-    {
-      "country": "Romania",
-      "description": "Little Paris",
-      "imageUrl": "https://images.unsplash.com/photo-1609670275055-ba1c0c246a63?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=636&q=80",
-      "name": "Bucuresti"
-    },
     {
       "country": "Romania",
       "description": "Most beautiful city in Romania",
       "imageUrl": "https://images.unsplash.com/photo-1558253347-fb1128610003?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80",
       "name": "Iasi"
     },
-    {
-      "country": "Japan",
-      "description": "The largest city in the world",
-      "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1371&q=80",
-      "name": "Tokyo"
-    }
-  ]
 ```
 
 ### Response
 
 ```
- [
-    {
-      "country": "USA",
-      "description": "City that never sleeps",
-      "imageUrl": "https://images.unsplash.com/photo-1534430480872-3498386e7856?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-      "name": "New York"
-    },
-    {
-      "country": "Romania",
-      "description": "Little Paris",
-      "imageUrl": "https://images.unsplash.com/photo-1609670275055-ba1c0c246a63?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=636&q=80",
-      "name": "Bucuresti"
-    },
-    {
-      "country": "Romania",
-      "description": "Most beautiful city in Romania",
-      "imageUrl": "https://images.unsplash.com/photo-1558253347-fb1128610003?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80",
-      "name": "Brasov"
-    },
-    {
-      "country": "Japan",
-      "description": "The largest city in the world",
-      "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1371&q=80",
-      "name": "Tokyo"
-    }
-  ]
-```
-
-### Update the imageURL of Iasi to Brasov 
-
-```
-[
-    {
-      "country": "USA",
-      "description": "City that never sleeps",
-      "imageUrl": "https://images.unsplash.com/photo-1534430480872-3498386e7856?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-      "name": "New York"
-    },
-    {
-      "country": "Romania",
-      "description": "Little Paris",
-      "imageUrl": "https://images.unsplash.com/photo-1609670275055-ba1c0c246a63?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=636&q=80",
-      "name": "Bucuresti"
-    },
     {
       "country": "Romania",
       "description": "Most beautiful city in Romania",
       "imageUrl": "https://images.unsplash.com/photo-1613667514864-3cfc757961cd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
       "name": "Brasov"
     },
-    {
-      "country": "Japan",
-      "description": "The largest city in the world",
-      "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1371&q=80",
-      "name": "Tokyo"
-    }
-  ]
   ```
   
   ### Response
   
   ```
-  [
-    {
-      "country": "USA",
-      "description": "City that never sleeps",
-      "imageUrl": "https://images.unsplash.com/photo-1534430480872-3498386e7856?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-      "name": "New York"
-    },
-    {
-      "country": "Romania",
-      "description": "Little Paris",
-      "imageUrl": "https://images.unsplash.com/photo-1609670275055-ba1c0c246a63?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=636&q=80",
-      "name": "Bucuresti"
-    },
     {
       "country": "Romania",
       "description": "Most beautiful city in Romania",
       "imageUrl": "https://images.unsplash.com/photo-1558253347-fb1128610003?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80",
       "name": "Brasov"
     },
-    {
-      "country": "Japan",
-      "description": "The largest city in the world",
-      "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1371&q=80",
-      "name": "Tokyo"
-    }
-  ]
   ```
   
   ### Delete a specific key (example Tokyo)
