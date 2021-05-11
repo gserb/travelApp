@@ -29,10 +29,6 @@ body {
   margin: 0;
 }
 
-img {
-  max-width: 100%;
-}
-
 header {
   min-height: 100vh;
   width: 100%;
@@ -47,6 +43,10 @@ header {
   position: relative;
 }
 
+img {
+  max-width: 100%;
+}
+
 .word-highlighter {
   color: var(--yellow);
   font-weight: bold;
@@ -56,12 +56,13 @@ header {
   font-size: 30px;
 }
 
+/*-------------------------------- NAV-BAR --------------------------------*/
 .main-nav {
   height: 5vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2% 10%;
+  padding: 4% 10%;
   letter-spacing: 5px;
 }
 
@@ -265,17 +266,10 @@ button:hover {
 .places {
   grid-area: content2;
   text-align: center;
+  padding-bottom: 40px;
 }
 
-.card-places {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
-}
-
+/*
 .card-places .card {
   position: relative;
   max-width: 300px;
@@ -320,8 +314,8 @@ button:hover {
 .card-places .card .card-text {
   display: relative;
   padding: 10px 15px;
-  text-align: center;
-  color: #111;
+  text-align: left;
+  color: var(--light);
   visibility: hidden;
   opacity: 0;
   transform: translateY(30px);
@@ -331,21 +325,9 @@ button:hover {
 .card-places .card:hover .card-text {
   visibility: visible;
   opacity: 1;
-  transition-delay: 0.3s;
-}
-
-.card-places .card .card-text {
-  position: relative;
-  text-align: start;
-  z-index: 3;
-  color: var(--light);
-  transform: translateY(30px);
-  transition: 0.5;
-}
-
-.card-places .card:hover .card-text {
-  z-index: 3;
   transform: translateY(0);
+  transition-delay: 0.3s;
+  z-index: 3;
 }
 
 .btn {
@@ -355,7 +337,7 @@ button:hover {
 .places .card .card-text a {
   text-decoration: none;
 }
-
+*/
 /*-------------------------------- FOOTER --------------------------------*/
 footer {
   background: var(--blue);
@@ -373,7 +355,7 @@ footer {
   align-items: stretch;
   justify-items: stretch;
   margin: 0 10%;
-  padding: 20px 0;
+  padding: 20px 0 30px;
 }
 
 .footer .newsletter-title {

@@ -13,6 +13,7 @@
 </head>
 
 <body>
+  <script src="./travelCard.js" type="module"></script>
   <!-- <travel-app></travel-app> -->
   <!-----    HEADER   ----->
     <header>
@@ -42,7 +43,7 @@
       </div>
       
       <!----- TRAVEL DESTINATION FORM ----->
-      <form class="travel-destination-form">
+      <form id="#" class="travel-destination-form">
         <div class="travel-destination-title">
           <h1>Let us take you away</h1>
         </div>
@@ -116,6 +117,9 @@
       <h1 class="subtitle">Popular 
         <span class="word-highlighter">places</span></h1>
       <div class="card-places">
+      <travel-card></travel-card>
+        
+   <!--  
       <div class="card">
         <div class="card-img">
             <img src="https://images.unsplash.com/photo-1535892449425-d45bdcb2d016?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" 
@@ -132,7 +136,7 @@
       <div class="card">
         <div class="card-img">
           <a href="#">
-            <img src=" https://images.unsplash.com/photo-1577901051898-c174f226c8ac?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1044&q=80" 
+            <img src="https://images.unsplash.com/photo-1577901051898-c174f226c8ac?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1044&q=80" 
             alt="Dubai City"></a>
         </div>
         <div class="card-text">
@@ -179,8 +183,8 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, assumenda commodi. Eos distinctio sunt cumque.</p>
             <button href="#" class="btn">Book now</button>
         </div>
-      </div>
-    </div>
+      </div>-->
+    </div> 
   </section>
   </main>
 
@@ -207,6 +211,7 @@
   </footer> 
 
   <!--  <script type="module" src="./src/travel-app.js"></script> -->
+
   <script>
     fetch('https://devschool-2020.firebaseio.com/ana/places.json')
       .then(response => response.json())
