@@ -7,13 +7,16 @@ body {
   overflow-x: hidden;
   font-family: sans-serif;
 }
-
-img {
+.parallax {
+  background-image: url(img/image.jfif);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   height: 80vh;
   width: 100vw;
 }
-.headerText {
+.navigationBar {
   position: absolute;
   top: 10%;
   left: 50%;
@@ -22,32 +25,32 @@ img {
   width: 100vw;
   justify-content: space-around;
 }
-.headerText h1 {
+.navigationBar h1 {
   color: white;
   font-size: 3em;
 }
-.headerText ul {
+.navigationBar ul {
   display: flex;
   align-items: center;
 }
-.headerText ul li {
+.navigationBar ul li {
   list-style-type: none;
   margin-right: 1em;
   font-size: 1.5em;
   font-weight: 600;
 }
-.headerText ul li:hover {
+.navigationBar ul li:hover {
   transform: scale(1.3);
   transition: 0.5s;
 }
-.headerText ul li a:hover {
+.navigationBar ul li a:hover {
   color: pink;
 }
-.headerText ul li a {
+.navigationBar ul li a {
   text-decoration: none;
   color: black;
 }
-.headerText ul input {
+.navigationBar ul input {
   padding: 1em 2em;
   border-radius: 1em;
   font-size: 1.3em;
@@ -57,7 +60,7 @@ img {
   font-weight: 600;
   cursor: pointer;
 }
-.headerText ul input:hover {
+.navigationBar ul input:hover {
   background-color: #d0d3df;
   color: #5b6bb1;
   transition: 1s;
@@ -271,12 +274,12 @@ footer .contacts ul li:hover {
 }
 
 @media screen and (min-width: 1201px) {
-  .headerText {
+  .navigationBar {
     width: 80%;
   }
 }
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
-  .headerText {
+  .navigationBar {
     max-width: 900px;
   }
   .hero h1 {
@@ -297,7 +300,7 @@ footer .contacts ul li:hover {
   }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  .headerText {
+  .navigationBar {
     font-size: 0.7em;
   }
   .hero h1 {
@@ -335,16 +338,16 @@ footer .contacts ul li:hover {
   }
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
-  .headerText {
+  .navigationBar {
     font-size: 1em;
     flex-direction: column;
     text-align: center;
     margin-top: 5em;
   }
-  .headerText ul {
+  .navigationBar ul {
     flex-direction: column;
   }
-  .headerText ul li {
+  .navigationBar ul li {
     margin-left: 1em;
     line-height: 1.5em;
   }
@@ -396,16 +399,16 @@ footer .contacts ul li:hover {
   }
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .headerText {
+  .navigationBar {
     flex-wrap: wrap;
     flex-direction: column;
     margin-top: 5em;
     text-align: center;
   }
-  .headerText ul {
+  .navigationBar ul {
     flex-direction: column;
   }
-  .headerText ul li {
+  .navigationBar ul li {
     margin-left: 1em;
     line-height: 1.5em;
   }
