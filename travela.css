@@ -289,6 +289,7 @@ footer .contacts ul li:hover {
     width: 100vw;
     /* font-size: 0.5em; */
     border: none;
+    border-radius: 0;
   }
   .travelForm input,
   select {
@@ -310,6 +311,7 @@ footer .contacts ul li:hover {
     width: 100vw;
     border: none;
     font-size: 0.8em;
+    border-radius: 0;
   }
   .travelForm input,
   select {
@@ -358,6 +360,7 @@ footer .contacts ul li:hover {
     position: relative;
     width: 100vw;
     border: none;
+    border-radius: 0;
   }
   .travelForm input,
   select {
@@ -419,6 +422,8 @@ footer .contacts ul li:hover {
     position: relative;
     border: none;
     margin: 0;
+    width: 100vw;
+    border-radius: 0;
   }
   .travelForm input,
   select {
