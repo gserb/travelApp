@@ -11,8 +11,8 @@ class TravelCity extends LitElement {
         font-size: 16px;
       }
       img {
-        height: 333px;
-        width: 500px;
+        height: 260px;
+        width: 510px;
       }
       h3 {
         color: rgb(80, 80, 80);
@@ -20,6 +20,17 @@ class TravelCity extends LitElement {
       p {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         color: grey;
+      }
+      @media screen and (min-width: 320px) and (max-width: 768px) {
+        img {
+          width: 100%;
+          height: 30vh;
+        }
+        h1,
+        h3,
+        p {
+          font-size: 1.2em;
+        }
       }
     `;
   }
