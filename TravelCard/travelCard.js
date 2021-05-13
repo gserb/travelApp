@@ -74,6 +74,7 @@ class TravelCard extends LitElement {
       }
     `;
   }
+
   static get properties() {
     return {
       loading: { type: Boolean },
@@ -87,6 +88,7 @@ class TravelCard extends LitElement {
       this.fetchData();
     }
   }
+
   async fetchData() {
     this.loading = true;
     const apiId = '-M_KgYuxrPPMlPcuhWQ_';
@@ -99,23 +101,22 @@ class TravelCard extends LitElement {
   }
 
   render() {
-    if (this.loading) {
-      return html` <p>Loading...</p> `;
-    }
     return html`
-      <div>
-        <h1>Destinations to explore!</h1>
-        <h2>Locations</h2>
-        <ul>
-          ${this.data.map(
-            item => html`
-              <li class="box">
-                <travel-city .cityTravel=${item}> </travel-city>
-              </li>
-            `
-          )}
-        </ul>
-      </div>
+      ${this.loading
+        ? html` <p>Loading...</p> `
+        : html`<div>
+            <h1>Destinations to explore!</h1>
+            <h2>Locations</h2>
+            <ul>
+              ${this.data.map(
+                item => html`
+                  <li class="box">
+                    <travel-city .cityTravel=${item}> </travel-city>
+                  </li>
+                `
+              )}
+            </ul>
+          </div>`}
     `;
   }
 }
