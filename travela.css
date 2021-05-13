@@ -15,7 +15,7 @@ body {
   height: 80vh;
   width: 100vw;
 }
-.navigationBar {
+nav {
   position: absolute;
   top: 10%;
   left: 50%;
@@ -24,32 +24,32 @@ body {
   width: 100vw;
   justify-content: space-around;
 }
-.navigationBar h1 {
+nav h1 {
   color: white;
   font-size: 3em;
 }
-.navigationBar ul {
+nav ul {
   display: flex;
   align-items: center;
 }
-.navigationBar ul li {
+nav ul li {
   list-style-type: none;
   margin-right: 1em;
   font-size: 1.5em;
   font-weight: 600;
 }
-.navigationBar ul li:hover {
+nav ul li:hover {
   transform: scale(1.3);
   transition: 0.5s;
 }
-.navigationBar ul li a:hover {
+nav ul li a:hover {
   color: pink;
 }
-.navigationBar ul li a {
+nav ul li a {
   text-decoration: none;
   color: black;
 }
-.navigationBar ul input {
+nav ul input {
   padding: 1em 2em;
   border-radius: 1em;
   font-size: 1.3em;
@@ -59,7 +59,7 @@ body {
   font-weight: 600;
   cursor: pointer;
 }
-.navigationBar ul input:hover {
+nav ul input:hover {
   background-color: #d0d3df;
   color: #5b6bb1;
   transition: 1s;
@@ -273,7 +273,7 @@ footer .contacts ul li:hover {
 }
 
 @media screen and (min-width: 1201px) {
-  .navigationBar {
+  nav {
     width: 80%;
   }
   .parallax {
@@ -281,7 +281,7 @@ footer .contacts ul li:hover {
   }
 }
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
-  .navigationBar {
+  nav {
     max-width: 900px;
   }
   .hero h1 {
@@ -306,7 +306,7 @@ footer .contacts ul li:hover {
   }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  .navigationBar {
+  nav {
     font-size: 0.7em;
   }
   .parallax {
@@ -348,21 +348,22 @@ footer .contacts ul li:hover {
   }
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
-  .navigationBar {
-    font-size: 1em;
-    flex-direction: column;
+  nav {
     text-align: center;
     margin-top: 5em;
   }
-  .navigationBar ul {
+  nav ul {
+    font-size: 1em;
     flex-direction: column;
   }
   .parallax {
     background-attachment: fixed;
+    padding-bottom: 400px;
   }
-  .navigationBar ul li {
+  nav ul li {
     margin-left: 1em;
     line-height: 1.5em;
+    display: inline-block;
   }
   .hero h1 {
     font-size: 1.8em;
@@ -413,7 +414,7 @@ footer .contacts ul li:hover {
   }
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .navigationBar {
+  nav {
     flex-wrap: wrap;
     flex-direction: column;
     margin-top: 5em;
@@ -421,11 +422,12 @@ footer .contacts ul li:hover {
   }
   .parallax {
     background-attachment: fixed;
+    padding-bottom: 400px;
   }
-  .navigationBar ul {
+  nav ul {
     flex-direction: column;
   }
-  .navigationBar ul li {
+  nav ul li {
     margin-left: 1em;
     line-height: 1.5em;
   }
