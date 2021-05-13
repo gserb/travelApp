@@ -29,6 +29,7 @@
   "author": "travel-app",
   "license": "MIT",
   "dependencies": {
+    "cp": "^0.2.0",
     "lit-html": "^1.3.0",
     "lit-element": "^2.4.0"
   },
@@ -36,7 +37,10 @@
     "extends": [
       "@open-wc/eslint-config",
       "eslint-config-prettier"
-    ]
+    ],
+    "rules": {
+      "import/extensions": "off"
+    }
   },
   "prettier": {
     "singleQuote": true,
