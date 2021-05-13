@@ -22,11 +22,9 @@ class TravelCard extends LitElement {
         margin-top: 0;
         padding-top: 1em;
         text-align: center;
-        margin-left: 1em;
       }
       h2 {
         margin-bottom: 2em;
-        margin-left: 1em;
       }
       ul {
         max-width: 1200px;
@@ -34,6 +32,7 @@ class TravelCard extends LitElement {
         grid-template-columns: 1fr 1fr;
         grid-gap: 3em;
         margin: 0 auto;
+        padding: 0;
       }
       ul li {
         background-color: white;
