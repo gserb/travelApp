@@ -276,6 +276,9 @@ footer .contacts ul li:hover {
   .navigationBar {
     width: 80%;
   }
+  .parallax {
+    background-attachment: fixed;
+  }
 }
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
   .navigationBar {
@@ -283,6 +286,9 @@ footer .contacts ul li:hover {
   }
   .hero h1 {
     font-size: 3.5em;
+  }
+  .parallax {
+    background-attachment: fixed;
   }
   .travelForm {
     position: relative;
@@ -302,6 +308,9 @@ footer .contacts ul li:hover {
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .navigationBar {
     font-size: 0.7em;
+  }
+  .parallax {
+    background-attachment: fixed;
   }
   .hero h1 {
     font-size: 3em;
@@ -347,6 +356,9 @@ footer .contacts ul li:hover {
   }
   .navigationBar ul {
     flex-direction: column;
+  }
+  .parallax {
+    background-attachment: fixed;
   }
   .navigationBar ul li {
     margin-left: 1em;
@@ -406,6 +418,9 @@ footer .contacts ul li:hover {
     flex-direction: column;
     margin-top: 5em;
     text-align: center;
+  }
+  .parallax {
+    background-attachment: fixed;
   }
   .navigationBar ul {
     flex-direction: column;
