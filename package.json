@@ -19,24 +19,29 @@
     "format": "eslint --ext .js,.html . --fix --ignore-path .gitignore && prettier \"**/*.js\" --write --ignore-path .gitignore",
     "test": "web-test-runner --coverage",
     "test:watch": "web-test-runner --watch",
-    "build": "rimraf dist && rollup -c rollup.config.js",
+    "build": "rimraf dist && rollup -c rollup.config.js && cp travela.css dist",
     "start:build": "npm run build && web-dev-server --root-dir dist --app-index index.html --open --compatibility none",
     "start": "web-dev-server"
   },
   "name": "travel-app",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "description": "Webcomponent travel-app following open-wc recommendations",
   "author": "travel-app",
   "license": "MIT",
   "dependencies": {
-    "lit-html": "^1.3.0",
-    "lit-element": "^2.4.0"
+    "@lion/form": "^0.11.1",
+    "cp": "^0.2.0",
+    "lit-element": "^2.4.0",
+    "lit-html": "^1.3.0"
   },
   "eslintConfig": {
     "extends": [
       "@open-wc/eslint-config",
       "eslint-config-prettier"
-    ]
+    ],
+    "rules": {
+      "import/extensions": "off"
+    }
   },
   "prettier": {
     "singleQuote": true,

@@ -1,35 +1,116 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="Description" content="Put your description here." />
+    <link rel="stylesheet" href="travela.css" />
+    <script
+      src="https://kit.fontawesome.com/ff4f5d5ed6.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./TravelCard/travelCard.js" type="module" defer></script>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="Description" content="Put your description here.">
-  <base href="/">
+    <title>travel-app</title>
+  </head>
 
-  <style>
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      background-color: #ededed;
-    }
-  </style>
-  <title>travel-app</title>
-</head>
+  <body>
+    <header>
+      <div class="parallax"></div>
+      <nav>
+        <h1>Travela</h1>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#">Tour</a></li>
+          <li>
+            <a href="./AddDestionation/addDestionation.html">Destinations</a>
+          </li>
+          <li><a href="#">Hotel</a></li>
+          <li><a href="#placesToTravel">Places to travel</a></li>
+          <li><a href="#contacts">Contact Us</a></li>
+          <input type="button" value="Book now" />
+        </ul>
+      </nav>
+      <div class="hero">
+        <h1>Discover the world with us</h1>
+        <input type="button" value="Start Tour" />
+      </div>
+    </header>
+    <form>
+      <section class="travelForm">
+        <div class="destinations">
+          <label for="locationsToTravel">Destination</label>
+          <select class="locationsToTravel">
+            <option value="" id="defaultOption" disabled selected hidden>
+              <span>Select Location</span>
+            </option>
+            <option value="New York">New York</option>
+            <option value="Paris">Paris</option>
+            <option value="London">London</option>
+            <option value="Tokyo">Tokyo</option>
+            <option value="Los Angeles">Los Angeles</option>
+          </select>
+        </div>
+        <div class="members">
+          <label for="member">Member</label>
+          <input type="number" name="member" id="member" />
+        </div>
 
-<body>
-  <travel-app></travel-app>
-:))
-:))
-:))
-:))
-:))
-:))
-:))
-:))
-  <script type="module" src="./src/travel-app.js"></script>
-</body>
-
+        <div class="checkIn">
+          <label for="checkIn">Check in Date</label>
+          <input type="date" name="checkIn" />
+        </div>
+        <div class="checkOut">
+          <label for="checkOut">Check out Date</label>
+          <input type="date" name="checkOut" />
+        </div>
+        <input type="button" value="Book Now" />
+      </section>
+    </form>
+    <article class="contentDescription">
+      <img
+        src="https://images.unsplash.com/photo-1568454537842-d933259bb258?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+        alt="Hiking Person"
+      />
+      <div class="mainContent">
+        <h1>Amazing places to <br />enjoy your travel</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br />
+          Veritatis velit incidunt ut deleniti voluptates <br />
+          consectetur nemo reprehenderit culpa dolor laborum.
+        </p>
+        <input type="button" value="Explore More" />
+      </div>
+    </article>
+    <travel-card id="placesToTravel"></travel-card>
+    <footer id="contacts">
+      <div class="getInTouch">
+        <h1>Get in touch</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, quae!
+        </p>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter your email address"
+        />
+        <input type="button" value="Subscribe" />
+      </div>
+      <div class="contacts">
+        <h3>&#169; 2020 india cafe all rights reserved</h3>
+        <ul>
+          <li>Home</li>
+          <li>Tour</li>
+          <li>Hotel</li>
+          <li>Places</li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+    </footer>
+    <!-- <script type="module" src="./src/travel-app.js"></script> -->
+  </body>
 </html>
