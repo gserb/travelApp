@@ -25,8 +25,8 @@ class DestinationForm extends LitElement {
             label="Location's name"
           ></travela-lion-input>
           <travela-lion-input
-            name="type"
-            label="Location's type"
+            name="country"
+            label="Location's country"
           ></travela-lion-input>
           <travela-lion-input
             name="description"
@@ -34,7 +34,7 @@ class DestinationForm extends LitElement {
           ></travela-lion-input>
           <travela-lion-input
             name="imageUrl"
-            label="Location's picture"
+            label="Location's image"
           ></travela-lion-input>
           <travela-lion-button type="submit">Add location</travela-lion-button>
         </form>
