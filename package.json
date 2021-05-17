@@ -29,6 +29,7 @@
   "author": "travel-app",
   "license": "MIT",
   "dependencies": {
+    "@lion/ajax": "^0.11.0",
     "@lion/button": "^0.12.0",
     "@lion/core": "^0.17.0",
     "@lion/fieldset": "^0.19.1",
@@ -63,5 +64,4 @@
       "prettier --write"
     ]
   }
-  
 }

@@ -2,6 +2,7 @@ import { LitElement, css, html } from '@lion/core';
 import './TravelaLionButton';
 import './TravelaLionForm';
 import './TravelaLionInput';
+import { ajax } from '@lion/ajax';
 
 class DestinationForm extends LitElement {
   static get styles() {
@@ -10,6 +11,12 @@ class DestinationForm extends LitElement {
         padding: 50px;
       }
     `;
+  }
+
+  static get properties() {
+    return {
+      destinations: { type: Object },
+    };
   }
 
   connectedCallback() {
@@ -40,6 +47,25 @@ class DestinationForm extends LitElement {
         </form>
       </travela-lion-form>
     `;
+  }
+
+  _handleFormSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+    this.destinations = Object.fromEntries(formData);
+    this._postDestinations(this.destinations);
+  }
+
+  async _postDestinations() {
+    const { response } = await ajax.fetchJson(
+      `https://devschool-2020.firebaseio.com/Vlad/places.json`,
+      {
+        method: 'POST',
+        body: this.destinations,
+      }
+    );
+    console.log(response);
   }
 }
 
