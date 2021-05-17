@@ -3,6 +3,8 @@ import './TravelaLionButton';
 import './TravelaLionForm';
 import './TravelaLionInput';
 import { ajax } from '@lion/ajax';
+import './inputValidator';
+import { MinLength, MaxLength } from '@lion/form-core';
 
 class DestinationForm extends LitElement {
   static get styles() {
@@ -57,6 +59,16 @@ class DestinationForm extends LitElement {
           <travela-lion-input
             name="name"
             label="Location's name"
+            .validators=${[
+              new MinLength(6, {
+                getMessage: () =>
+                  'Please enter a correct MinLength (at least 6 characters).',
+              }),
+              new MaxLength(20, {
+                getMessage: () =>
+                  'Please enter a correct MaxLength (up to 20 characters).',
+              }),
+            ]}
           ></travela-lion-input>
           <travela-lion-input
             name="country"
@@ -65,6 +77,16 @@ class DestinationForm extends LitElement {
           <travela-lion-input
             name="description"
             label="Location's description"
+            .validators=${[
+              new MinLength(6, {
+                getMessage: () =>
+                  'Please enter a correct MinLength (at least 6 characters).',
+              }),
+              new MaxLength(50, {
+                getMessage: () =>
+                  'Please enter a correct MaxLength (up to 20 characters).',
+              }),
+            ]}
           ></travela-lion-input>
           <travela-lion-input
             name="imageUrl"
