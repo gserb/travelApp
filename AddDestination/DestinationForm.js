@@ -7,8 +7,35 @@ import { ajax } from '@lion/ajax';
 class DestinationForm extends LitElement {
   static get styles() {
     return css`
-      lion-button {
-        padding: 50px;
+      travela-lion-form {
+        background-color: rgba(245, 245, 245, 255);
+      }
+      form {
+        width: 30vw;
+        margin: 0 auto;
+        line-height: 2em;
+        padding: 2em 0;
+      }
+      travela-lion-input[label] {
+        font-weight: bold;
+        font-size: 1.3em;
+        padding: 1em 0;
+      }
+
+      travela-lion-button {
+        margin-top: 1em;
+        color: white;
+        background-color: #5b6bb1;
+        border-radius: 2em;
+        padding: 1em 2em;
+        font-weight: bold;
+      }
+      travela-lion-button:hover {
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 1s;
       }
     `;
   }
