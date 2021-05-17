@@ -132,7 +132,7 @@ GET 'https://devschool-2020.firebaseio.com/Vlad/places.json'
   ### Delete a specific key (example Tokyo)
   
   ```
-   https://devschool-2020.firebaseio.com/Vlad/places/-M_PVbI-yigbxL5feIsf.json
+   https://devschool-2020.firebaseio.com/Vlad/places.json
    ```
    
    ### Response
