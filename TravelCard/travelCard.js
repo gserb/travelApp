@@ -91,12 +91,12 @@ class TravelCard extends LitElement {
 
   async fetchData() {
     this.loading = true;
-    const apiId = '-M_KgYuxrPPMlPcuhWQ_';
     const response = await fetch(
-      `https://devschool-2020.firebaseio.com/Vlad/places/${apiId}.json`
+      `https://devschool-2020.firebaseio.com/Vlad/places.json`
     );
     const jsonResponse = await response.json();
     this.data = jsonResponse;
+    this.data = Object.values(this.data);
     this.loading = false;
   }
 
