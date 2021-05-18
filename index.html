@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <script src="./travelCard.js" type="module"></script>
+  <script src="src/travelCard.js" type="module"></script>
   <!-- <travel-app></travel-app> -->
   <!-----    HEADER   ----->
     <header>
@@ -26,7 +26,7 @@
           <li><a href="#">Services</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
-        <div class="burger">
+        <div class="burger" href="javascript:void(0);" onclick="ResponsiveNavBar()">
           <div class="line1"></div>
           <div class="line2"></div>
           <div class="line3"></div>
@@ -219,6 +219,16 @@
       console.log(data)
       })
     .catch(error => console.error(error))
+
+    function ResponsiveNavBar{
+      var x = document.getElementsByClassName("main-nav")
+      if(x.className === "main-nav")  {
+        x.className = x.className + " responsive";
+      }
+      else {
+        x.className = "main-nav";
+      }
+    }
   </script>
 
 </body>
