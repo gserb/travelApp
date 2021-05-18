@@ -272,6 +272,14 @@ footer .contacts ul li:hover {
   transform: scale(1.5);
   transition: 0.5s;
 }
+destination-form {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+.second-parallax {
+  height: 85vh;
+}
 
 @media screen and (min-width: 1201px) {
   nav {

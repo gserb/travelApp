@@ -13,19 +13,19 @@ class DestinationForm extends LitElement {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       }
       travela-lion-form {
-        background-color: rgba(245, 245, 245, 255);
-        border-top: 1px solid rgba(245, 245, 245, 255);
+        // background-color: rgba(245, 245, 245, 0.2);
+        padding: 1em 3em;
       }
       form {
         width: 30vw;
         margin: 0 auto;
-        line-height: 2em;
-        padding: 3em 0;
+        padding: 1em 0;
       }
       travela-lion-input {
         font-weight: bold;
-        font-size: 1.3em;
+        font-size: 1.4em;
         padding: 1em 0;
+        color: white;
       }
 
       travela-lion-button {
