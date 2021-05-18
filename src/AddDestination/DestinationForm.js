@@ -9,28 +9,36 @@ import { MinLength, MaxLength } from '@lion/form-core';
 class DestinationForm extends LitElement {
   static get styles() {
     return css`
+      :host {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
       travela-lion-form {
         background-color: rgba(245, 245, 245, 255);
+        border-top: 1px solid rgba(245, 245, 245, 255);
       }
       form {
         width: 30vw;
         margin: 0 auto;
         line-height: 2em;
-        padding: 2em 0;
+        padding: 3em 0;
       }
-      travela-lion-input[label] {
+      travela-lion-input {
         font-weight: bold;
         font-size: 1.3em;
         padding: 1em 0;
       }
 
       travela-lion-button {
-        margin-top: 1em;
+        margin-top: 2em;
         color: white;
         background-color: #5b6bb1;
         border-radius: 2em;
-        padding: 1em 2em;
+        padding: 1.5em 3em;
         font-weight: bold;
+        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+          0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+          0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+          0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
       }
       travela-lion-button:hover {
         background-color: white;
@@ -38,6 +46,23 @@ class DestinationForm extends LitElement {
         cursor: pointer;
         font-weight: bold;
         transition: 1s;
+      }
+      h1 {
+        margin: 0;
+        text-align: center;
+        padding-top: 1em;
+      }
+      input {
+        border-radius: 1.5em;
+        padding: 1em 0;
+        border: 1px solid rgba(230, 230, 230, 255);
+        outline: none;
+        margin-top: 0.3em;
+        cursor: pointer;
+        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+          0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+          0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+          0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
       }
     `;
   }
@@ -55,10 +80,12 @@ class DestinationForm extends LitElement {
   render() {
     return html`
       <travela-lion-form>
+        <h1>Add a destination!</h1>
         <form @submit=${this._handleFormSubmit}>
           <travela-lion-input
             name="name"
             label="Location's name"
+            type="text"
             .validators=${[
               new MinLength(6, {
                 getMessage: () =>

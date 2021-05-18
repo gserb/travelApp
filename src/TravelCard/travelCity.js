@@ -1,8 +1,4 @@
-import {
-  LitElement,
-  html,
-  css,
-} from '../node_modules/lit-element/lit-element.js';
+import { LitElement, html, css } from 'lit-element';
 
 class TravelCity extends LitElement {
   static get styles() {
@@ -18,7 +14,6 @@ class TravelCity extends LitElement {
         color: rgb(80, 80, 80);
       }
       p {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         color: grey;
       }
       @media screen and (min-width: 320px) and (max-width: 768px) {
