@@ -285,8 +285,8 @@ destination-form {
   nav {
     width: 80%;
   }
-  .parallax {
-    background-attachment: fixed;
+  destination-form {
+    font-size: small;
   }
 }
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
@@ -296,8 +296,8 @@ destination-form {
   .hero h1 {
     font-size: 3.5em;
   }
-  .parallax {
-    background-attachment: fixed;
+  destination-form {
+    font-size: small;
   }
   .travelForm {
     position: relative;
@@ -318,8 +318,8 @@ destination-form {
   nav {
     font-size: 0.7em;
   }
-  .parallax {
-    background-attachment: fixed;
+  destination-form {
+    font-size: small;
   }
   .hero h1 {
     font-size: 3em;
@@ -364,6 +364,9 @@ destination-form {
   nav ul {
     font-size: 1em;
     flex-direction: column;
+  }
+  destination-form {
+    font-size: 0.7em;
   }
   .parallax {
     background-attachment: fixed;
@@ -432,6 +435,10 @@ destination-form {
   .parallax {
     background-attachment: fixed;
     padding-bottom: 400px;
+  }
+  destination-form {
+    font-size: 0.6em;
+    width: 50vw;
   }
   nav ul {
     flex-direction: column;
