@@ -25,7 +25,6 @@ class DestinationForm extends LitElement {
         font-weight: bold;
         font-size: 1.4em;
         padding: 1em 0;
-        color: white;
       }
 
       travela-lion-button {
