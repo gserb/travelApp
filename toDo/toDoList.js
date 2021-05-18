@@ -18,20 +18,7 @@ class TodoList extends LitElement {
 
   constructor() {
     super();
-    this._todos = [
-      {
-        text: 'lorem ipsum',
-        done: true,
-      },
-      {
-        text: 'dolor sit',
-        done: false,
-      },
-      {
-        text: 'amet',
-        done: true,
-      },
-    ];
+    this._todos = JSON.parse(localStorage.getItem('todoValue'));
   }
 
   connectedCallback() {
@@ -85,8 +72,12 @@ class TodoList extends LitElement {
       { ...Object.fromEntries(formData), done: false },
     ];
 
-    this.requestUpdate();
+    this._updateMyStorage();
     form.reset();
+  }
+
+  _updateMyStorage() {
+    localStorage.setItem('todoValue', JSON.stringify(this._todos));
   }
 
   _handleUpdateTodo(index, event) {
@@ -98,6 +89,7 @@ class TodoList extends LitElement {
       },
       ...this._todos.slice(index + 1),
     ];
+    this._updateMyStorage();
   }
 }
 
