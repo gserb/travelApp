@@ -1,24 +1,19 @@
-// import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
+// import { Validator } from '@lion/form-core';
 
-// export const customValidators = () => {
-//   const isInitialsRegex = /^([A-Z]\.)+$/;
-//   class IsInitialsExample extends Validator {
-//     static get validatorName() {
-//       return 'IsExampleInitials';
+// export class MyValidator extends Validator {
+//   execute(modelValue, param) {
+//     const hasFeedback = false;
+//     if (modelValue === param) {
+//       hasFeedback = true;
 //     }
-
-//     execute(value) {
-//       let hasFeedback = false;
-//       const isStringValidator = new IsString();
-//       if (isStringValidator.execute(value) || !isInitialsRegex.test(value)) {
-//         hasFeedback = true;
-//       }
-//       return hasFeedback;
-//     }
-
-//     static getMessage({ fieldName }) {
-//       return `Please enter a valid ${fieldName} in the format "L.I.".`;
-//     }
+//     return hasFeedback;
 //   }
-//   customElements.define()
-// };
+
+//   static get validatorName() {
+//     return 'Required';
+//   }
+
+//   static getMessage({ fieldName }) {
+//     return `Please fill in ${fieldName}`;
+//   }
+// }

@@ -2,9 +2,10 @@ import { LitElement, css, html } from '@lion/core';
 import './TravelaLionButton';
 import './TravelaLionForm';
 import './TravelaLionInput';
-import { ajax } from '@lion/ajax';
 import './inputValidator';
-import { MinLength, MaxLength } from '@lion/form-core';
+
+import { ajax } from '@lion/ajax';
+import { MinMaxLength, Required, MinLength } from '@lion/form-core';
 
 class DestinationForm extends LitElement {
   static get styles() {
@@ -63,12 +64,21 @@ class DestinationForm extends LitElement {
           0 22.3px 17.9px rgba(0, 0, 0, 0.072),
           0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
       }
+      [type='error'] {
+        color: red;
+      }
+      .validator {
+        color: red;
+      }
     `;
   }
 
   static get properties() {
     return {
       destinations: { type: Object },
+      _getMessage: {
+        type: String,
+      },
     };
   }
 
@@ -84,34 +94,36 @@ class DestinationForm extends LitElement {
           <travela-lion-input
             name="name"
             label="Location's name"
-            type="text"
             .validators=${[
-              new MinLength(6, {
-                getMessage: () =>
-                  'Please enter a correct MinLength (at least 6 characters).',
-              }),
-              new MaxLength(20, {
-                getMessage: () =>
-                  'Please enter a correct MaxLength (up to 20 characters).',
-              }),
+              new MinMaxLength(
+                { min: 5, max: 20 },
+                {
+                  getMessage: () => 'Please enter between 5 and 20 characters!',
+                }
+              ),
+              new Required(this._getMessage),
             ]}
           ></travela-lion-input>
           <travela-lion-input
             name="country"
             label="Location's country"
+            .validators=${[
+              new MinLength(2, {
+                getMessage: () => 'Please enter at least 2 characters',
+              }),
+            ]}
           ></travela-lion-input>
           <travela-lion-input
             name="description"
             label="Location's description"
             .validators=${[
-              new MinLength(6, {
-                getMessage: () =>
-                  'Please enter a correct MinLength (at least 6 characters).',
-              }),
-              new MaxLength(50, {
-                getMessage: () =>
-                  'Please enter a correct MaxLength (up to 20 characters).',
-              }),
+              new MinMaxLength(
+                { min: 5, max: 100 },
+                {
+                  getMessage: () =>
+                    'Please enter between 5 and 100 characters!',
+                }
+              ),
             ]}
           ></travela-lion-input>
           <travela-lion-input
@@ -122,6 +134,10 @@ class DestinationForm extends LitElement {
         </form>
       </travela-lion-form>
     `;
+  }
+
+  static async _getMessage({ fieldName }) {
+    return `Please fill in ${fieldName}`;
   }
 
   _handleFormSubmit(e) {
