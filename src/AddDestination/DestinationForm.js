@@ -6,6 +6,8 @@ import './inputValidator';
 
 import { ajax } from '@lion/ajax';
 import { MinMaxLength, Required, MinLength } from '@lion/form-core';
+import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
+import { IsRomania } from './isRomania';
 
 class DestinationForm extends LitElement {
   static get styles() {
@@ -67,9 +69,6 @@ class DestinationForm extends LitElement {
       [type='error'] {
         color: red;
       }
-      .validator {
-        color: red;
-      }
     `;
   }
 
@@ -84,6 +83,7 @@ class DestinationForm extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
+    loadDefaultFeedbackMessages();
   }
 
   render() {
@@ -101,7 +101,8 @@ class DestinationForm extends LitElement {
                   getMessage: () => 'Please enter between 5 and 20 characters!',
                 }
               ),
-              new Required(this._getMessage),
+              new Required(),
+              new IsRomania(),
             ]}
           ></travela-lion-input>
           <travela-lion-input
@@ -111,6 +112,7 @@ class DestinationForm extends LitElement {
               new MinLength(2, {
                 getMessage: () => 'Please enter at least 2 characters',
               }),
+              new Required(),
             ]}
           ></travela-lion-input>
           <travela-lion-input
@@ -124,11 +126,13 @@ class DestinationForm extends LitElement {
                     'Please enter between 5 and 100 characters!',
                 }
               ),
+              new Required(),
             ]}
           ></travela-lion-input>
           <travela-lion-input
             name="imageUrl"
             label="Location's image"
+            .validators=${[new Required()]}
           ></travela-lion-input>
           <travela-lion-button type="submit">Add location</travela-lion-button>
         </form>
