@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 body {
   overflow-x: hidden;
@@ -271,13 +272,25 @@ footer .contacts ul li:hover {
   transform: scale(1.5);
   transition: 0.5s;
 }
+destination-form {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: rgba(240, 240, 240, 0.8);
+  border: 5px solid rgba(60, 60, 255, 0.2);
+  padding: 1em 2em;
+  border-radius: 2em;
+}
+.second-parallax {
+  height: 85vh;
+}
 
 @media screen and (min-width: 1201px) {
   nav {
     width: 80%;
   }
-  .parallax {
-    background-attachment: fixed;
+  destination-form {
+    font-size: small;
   }
 }
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
@@ -287,8 +300,8 @@ footer .contacts ul li:hover {
   .hero h1 {
     font-size: 3.5em;
   }
-  .parallax {
-    background-attachment: fixed;
+  destination-form {
+    font-size: small;
   }
   .travelForm {
     position: relative;
@@ -309,8 +322,8 @@ footer .contacts ul li:hover {
   nav {
     font-size: 0.7em;
   }
-  .parallax {
-    background-attachment: fixed;
+  destination-form {
+    font-size: small;
   }
   .hero h1 {
     font-size: 3em;
@@ -355,6 +368,9 @@ footer .contacts ul li:hover {
   nav ul {
     font-size: 1em;
     flex-direction: column;
+  }
+  destination-form {
+    font-size: 0.7em;
   }
   .parallax {
     background-attachment: fixed;
@@ -423,6 +439,10 @@ footer .contacts ul li:hover {
   .parallax {
     background-attachment: fixed;
     padding-bottom: 400px;
+  }
+  destination-form {
+    font-size: 0.6em;
+    width: 50vw;
   }
   nav ul {
     flex-direction: column;

@@ -1,8 +1,4 @@
-import {
-  LitElement,
-  html,
-  css,
-} from '../node_modules/lit-element/lit-element.js';
+import { LitElement, html, css } from 'lit-element';
 import './travelCity';
 
 class TravelCard extends LitElement {
@@ -10,12 +6,12 @@ class TravelCard extends LitElement {
     return css`
       :host {
         font-size: 16px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       }
       div {
         background-color: rgba(245, 245, 245, 255);
         width: 100vw;
         padding-bottom: 5em;
-        font-family: sans-serif;
       }
       div h1,
       h2 {
