@@ -146,9 +146,6 @@ destination-form {
   select {
     width: 60vw;
   }
-  footer .getInTouch input[type='email'] {
-    width: 60vw;
-  }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   destination-form {
@@ -181,17 +178,11 @@ destination-form {
     margin: 0;
     margin-top: 1em;
   }
-  footer .getInTouch input[type='button'] {
-    position: relative;
-    left: 5%;
-    background-color: red;
-  }
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
   destination-form {
     font-size: 0.7em;
   }
-
   .travelForm {
     position: relative;
     width: 100vw;
@@ -217,23 +208,6 @@ destination-form {
     margin: 0;
     margin-top: 1em;
     font-size: 0.7em;
-  }
-  footer .getInTouch {
-    font-size: 0.7em;
-    justify-content: center;
-  }
-  footer .getInTouch input[type='email'] {
-    display: block;
-    width: 60vw;
-    font-size: 1em;
-  }
-  footer .getInTouch input[type='button'] {
-    position: relative;
-    left: 20%;
-    background-color: red;
-  }
-  footer .contacts {
-    flex-wrap: wrap;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
@@ -266,24 +240,6 @@ destination-form {
     text-align: center;
     margin: 0;
     margin-top: 1em;
-    font-size: 0.7em;
-  }
-  footer .getInTouch {
-    font-size: 0.7em;
-    justify-content: center;
-  }
-  footer .getInTouch input[type='email'] {
-    display: block;
-    width: 60vw;
-    font-size: 0.7em;
-  }
-  footer .getInTouch input[type='button'] {
-    position: relative;
-    left: 20%;
-    background-color: red;
-  }
-  footer .contacts {
-    flex-wrap: wrap;
     font-size: 0.7em;
   }
 }
