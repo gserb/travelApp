@@ -153,14 +153,13 @@ class NavBar extends LitElement {
     `;
   }
 
-  connectedCallback() {
-    super.connectedCallback();
-  }
-
   static get properties() {
     return {
       _isLoading: { type: Boolean },
     };
+  }
+  connectedCallback() {
+    super.connectedCallback();
   }
 
   render() {
@@ -173,7 +172,7 @@ class NavBar extends LitElement {
         <h1>Travela</h1>
         <ul>
           <li><a href="./index.html">Home</a></li>
-          <li><a href="#">Tour</a></li>
+          <li><a href="/tour">Tour</a></li>
           <li><a href="#">Hotel</a></li>
           <li><a href="#placesToTravel">Places to travel</a></li>
           <li><a href="#contacts">Contact Us</a></li>

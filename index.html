@@ -12,69 +12,38 @@
       src="https://kit.fontawesome.com/ff4f5d5ed6.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./src/TravelCard/travelCard.js" type="module" defer></script>
+    <!-- <script
+      src="./src/MyComponents/TravelCard/travelCard.js"
+      type="module"
+      defer
+    ></script>
     <script
-      src="./src/AddDestination/DestinationForm.js"
+      src="./src/LionComponents/AddDestination/DestinationForm.js"
       type="module"
     ></script>
-    <script src="./src/navBar/navBar.js" type="module"></script>
-    <script src="./src/footer/footer.js" type="module"></script>
+    <script src="./src/MyComponents/navBar/navBar.js" type="module"></script>
+    <script src="./src/MyComponents/footer/footer.js" type="module"></script>
+    <script
+      src="./src/MyComponents/travelForm/travelForm.js"
+      type="module"
+    ></script>
+    <script
+      src="./src/MyComponents/contentDescription/contentDescription.js"
+      type="module"
+    ></script> -->
+    <script src="./src/index.js" type="module"></script>
     <title>travel-app</title>
   </head>
 
   <body>
-    <navbar-component></navbar-component>
-    <form>
-      <section class="travelForm">
-        <div class="destinations">
-          <label for="locationsToTravel">Destination</label>
-          <select class="locationsToTravel">
-            <option value="" id="defaultOption" disabled selected hidden>
-              <span>Select Location</span>
-            </option>
-            <option value="New York">New York</option>
-            <option value="Paris">Paris</option>
-            <option value="London">London</option>
-            <option value="Tokyo">Tokyo</option>
-            <option value="Los Angeles">Los Angeles</option>
-          </select>
-        </div>
-        <div class="members">
-          <label for="member">Member</label>
-          <input type="number" name="member" id="member" />
-        </div>
-
-        <div class="checkIn">
-          <label for="checkIn">Check in Date</label>
-          <input type="date" name="checkIn" />
-        </div>
-        <div class="checkOut">
-          <label for="checkOut">Check out Date</label>
-          <input type="date" name="checkOut" />
-        </div>
-        <input type="button" value="Book Now" />
-      </section>
-    </form>
-    <article class="contentDescription">
-      <img
-        src="https://images.unsplash.com/photo-1568454537842-d933259bb258?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-        alt="Hiking Person"
-      />
-      <div class="mainContent">
-        <h1>Amazing places to <br />enjoy your travel</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br />
-          Veritatis velit incidunt ut deleniti voluptates <br />
-          consectetur nemo reprehenderit culpa dolor laborum.
-        </p>
-        <input type="button" value="Explore More" />
-      </div>
-    </article>
+    <my-application></my-application>
+    <!-- <navbar-component></navbar-component>
+    <travel-form></travel-form>
+    <content-description></content-description>
     <travel-card id="placesToTravel"></travel-card>
 
     <destination-form></destination-form>
-    <div class="parallax second-parallax"></div>
-    <footer-component></footer-component>
+    <footer-component></footer-component> -->
     <!-- <script type="module" src="./src/travel-app.js"></script> -->
   </body>
 </html>

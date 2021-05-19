@@ -16,102 +16,6 @@ body {
   height: 80vh;
   width: 100vw;
 }
-.travelForm {
-  display: flex;
-  width: 70%;
-  margin: 0 auto;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  border: 5px solid rgba(60, 60, 255, 0.2);
-  padding: 5em 4em;
-  border-radius: 3em;
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%);
-  background-color: rgba(240, 240, 240, 0.8);
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-section.travelForm div {
-  float: left;
-  margin: 10px;
-}
-.travelForm select,
-input {
-  padding: 1.2em 2.5em;
-  border-radius: 1.5em;
-  outline: none;
-  border: 3px solid rgb(200, 200, 200);
-  color: rgba(200, 200, 200, 0.9);
-  font-weight: bold;
-}
-.travelForm input[type='button']:hover {
-  background-color: lightseagreen;
-  color: black;
-  transition: 1s;
-}
-.travelForm label {
-  display: block;
-  margin-bottom: 0.5em;
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
-.travelForm input[type='button'] {
-  font-size: 1.5em;
-  padding: 1.5em 2em;
-  border-radius: 1.5em;
-  color: white;
-  background-color: #5b6bb1;
-  border-style: none;
-  cursor: pointer;
-}
-.contentDescription {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(245, 245, 245, 255);
-  width: 100vw;
-}
-.contentDescription img {
-  width: 50vw;
-  height: 100vh;
-  border-radius: 0% 200% 70% 0%;
-  background-color: #5b6bb1;
-}
-.contentDescription .mainContent {
-  width: 50vw;
-  margin-left: 5em;
-  margin-top: 5em;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.contentDescription .mainContent h1 {
-  margin-bottom: 0.2em;
-  font-size: 5em;
-}
-.contentDescription .mainContent p {
-  margin-bottom: 0.2em;
-  font-size: 1.2em;
-  color: rgb(155, 155, 155);
-  line-height: 2em;
-}
-.contentDescription .mainContent input {
-  margin-top: 3em;
-  padding: 1.5em 3em;
-  border-radius: 1.5em;
-  color: white;
-  background-color: #5b6bb1;
-  font-weight: bold;
-  font-size: 1.2em;
-  cursor: pointer;
-  border: none;
-}
-.contentDescription .mainContent input:hover {
-  color: black;
-  background-color: green;
-  transition: 1s;
-  border: none;
-}
 
 destination-form {
   position: absolute;
@@ -122,9 +26,9 @@ destination-form {
   padding: 1em 2em;
   border-radius: 2em;
 }
-.second-parallax {
+/* .second-parallax {
   height: 85vh;
-}
+} */
 
 @media screen and (min-width: 1201px) {
   destination-form {
@@ -135,34 +39,12 @@ destination-form {
   destination-form {
     font-size: small;
   }
-  .travelForm {
-    position: relative;
-    width: 100vw;
-    /* font-size: 0.5em; */
-    border: none;
-    border-radius: 0;
-  }
-  .travelForm input,
-  select {
-    width: 60vw;
-  }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   destination-form {
     font-size: small;
   }
 
-  .travelForm {
-    position: relative;
-    width: 100vw;
-    border: none;
-    font-size: 0.8em;
-    border-radius: 0;
-  }
-  .travelForm input,
-  select {
-    width: 60vw;
-  }
   .contentDescription {
     display: flex;
     flex-direction: column;
@@ -183,16 +65,7 @@ destination-form {
   destination-form {
     font-size: 0.7em;
   }
-  .travelForm {
-    position: relative;
-    width: 100vw;
-    border: none;
-    border-radius: 0;
-  }
-  .travelForm input,
-  select {
-    width: 60vw;
-  }
+
   .contentDescription {
     display: flex;
     flex-direction: column;
@@ -215,17 +88,7 @@ destination-form {
     font-size: 0.6em;
     width: 50vw;
   }
-  .travelForm {
-    position: relative;
-    border: none;
-    margin: 0;
-    width: 100vw;
-    border-radius: 0;
-  }
-  .travelForm input,
-  select {
-    width: 60vw;
-  }
+
   .contentDescription {
     display: flex;
     flex-direction: column;
