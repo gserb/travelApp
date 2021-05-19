@@ -17,28 +17,13 @@
       src="./src/AddDestination/DestinationForm.js"
       type="module"
     ></script>
+    <script src="./src/navBar/navBar.js" type="module"></script>
+    <script src="./src/footer/footer.js" type="module"></script>
     <title>travel-app</title>
   </head>
 
   <body>
-    <header>
-      <div class="parallax"></div>
-      <nav>
-        <h1>Travela</h1>
-        <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="#">Tour</a></li>
-          <li><a href="#">Hotel</a></li>
-          <li><a href="#placesToTravel">Places to travel</a></li>
-          <li><a href="#contacts">Contact Us</a></li>
-          <input type="button" value="Book now" />
-        </ul>
-      </nav>
-      <div class="hero">
-        <h1>Discover the world with us</h1>
-        <input type="button" value="Start Tour" />
-      </div>
-    </header>
+    <navbar-component></navbar-component>
     <form>
       <section class="travelForm">
         <div class="destinations">
@@ -89,31 +74,7 @@
 
     <destination-form></destination-form>
     <div class="parallax second-parallax"></div>
-    <footer id="contacts">
-      <div class="getInTouch">
-        <h1>Get in touch</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, quae!
-        </p>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Enter your email address"
-        />
-        <input type="button" value="Subscribe" />
-      </div>
-      <div class="contacts">
-        <h3>&#169; 2020 india cafe all rights reserved</h3>
-        <ul>
-          <li>Home</li>
-          <li>Tour</li>
-          <li>Hotel</li>
-          <li>Places</li>
-          <li>Contact Us</li>
-        </ul>
-      </div>
-    </footer>
+    <footer-component></footer-component>
     <!-- <script type="module" src="./src/travel-app.js"></script> -->
   </body>
 </html>
