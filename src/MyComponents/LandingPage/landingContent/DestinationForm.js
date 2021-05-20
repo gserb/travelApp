@@ -6,7 +6,7 @@ import '../../AddDestination/TravelaLionInput';
 import { ajax } from '@lion/ajax';
 import { MinMaxLength, Required, MinLength } from '@lion/form-core';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
-import { IsRomania } from './AddDestination/isRomania';
+import { IsRomania } from '../../AddDestination/isRomania';
 
 class DestinationForm extends LitElement {
   static get styles() {
