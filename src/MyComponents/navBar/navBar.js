@@ -136,22 +136,28 @@ class NavBar extends LitElement {
       }
       @media screen and (min-width: 320px) and (max-width: 480px) {
         nav {
-          flex-wrap: wrap;
           flex-direction: column;
           margin-top: 5em;
           text-align: center;
         }
         nav ul {
           flex-direction: column;
+          margin: -2em;
         }
         nav ul li {
-          margin-left: 1em;
           line-height: 1.5em;
         }
-
+        nav ul input {
+          margin-right: 1.5em;
+        }
+        .hero {
+          margin-top: 13em;
+        }
         .hero h1 {
           font-size: 2em;
-          margin-top: 12em;
+        }
+        .hero input {
+          margin-top: 0;
         }
       }
     `;
@@ -162,6 +168,7 @@ class NavBar extends LitElement {
       _isLoading: { type: Boolean },
     };
   }
+
   render() {
     if (this._isLoading) {
       return 'Loading...';
