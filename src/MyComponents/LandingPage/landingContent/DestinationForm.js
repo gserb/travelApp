@@ -1,13 +1,12 @@
-import { LitElement, css, html } from '@lion/core';
-import './TravelaLionButton';
-import './TravelaLionForm';
-import './TravelaLionInput';
-import './inputValidator';
+import { LitElement, css, html } from 'lit-element';
+import '../../AddDestination/TravelaLionButton';
+import '../../AddDestination/TravelaLionForm';
+import '../../AddDestination/TravelaLionInput';
 
 import { ajax } from '@lion/ajax';
 import { MinMaxLength, Required, MinLength } from '@lion/form-core';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
-import { IsRomania } from './isRomania';
+import { IsRomania } from '../../AddDestination/isRomania';
 
 class DestinationForm extends LitElement {
   static get styles() {
@@ -16,11 +15,12 @@ class DestinationForm extends LitElement {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       }
       travela-lion-form {
-        // background-color: rgba(245, 245, 245, 0.2);
+        background-color: rgba(245, 245, 245, 255);
         padding: 1em 3em;
       }
       form {
         width: 30vw;
+
         margin: 0 auto;
         padding: 1em 0;
       }
