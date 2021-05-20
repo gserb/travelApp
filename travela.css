@@ -17,19 +17,6 @@ body {
   width: 100vw;
 }
 
-destination-form {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  background-color: rgba(240, 240, 240, 0.8);
-  border: 5px solid rgba(60, 60, 255, 0.2);
-  padding: 1em 2em;
-  border-radius: 2em;
-}
-/* .second-parallax {
-  height: 85vh;
-} */
-
 @media screen and (min-width: 1201px) {
   destination-form {
     font-size: small;

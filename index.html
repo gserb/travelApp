@@ -12,38 +12,40 @@
       src="https://kit.fontawesome.com/ff4f5d5ed6.js"
       crossorigin="anonymous"
     ></script>
-    <!-- <script
-      src="./src/MyComponents/TravelCard/travelCard.js"
-      type="module"
-      defer
-    ></script>
-    <script
-      src="./src/LionComponents/AddDestination/DestinationForm.js"
-      type="module"
-    ></script>
-    <script src="./src/MyComponents/navBar/navBar.js" type="module"></script>
-    <script src="./src/MyComponents/footer/footer.js" type="module"></script>
-    <script
-      src="./src/MyComponents/travelForm/travelForm.js"
-      type="module"
-    ></script>
-    <script
-      src="./src/MyComponents/contentDescription/contentDescription.js"
-      type="module"
-    ></script> -->
-    <script src="./src/index.js" type="module"></script>
+
     <title>travel-app</title>
   </head>
 
   <body>
-    <my-application></my-application>
-    <!-- <navbar-component></navbar-component>
-    <travel-form></travel-form>
-    <content-description></content-description>
-    <travel-card id="placesToTravel"></travel-card>
+    <navbar-component></navbar-component>
+    <main></main>
+    <footer-component></footer-component>
 
-    <destination-form></destination-form>
-    <footer-component></footer-component> -->
-    <!-- <script type="module" src="./src/travel-app.js"></script> -->
+    <script src="./src/MyComponents/navBar/navBar.js" type="module"></script>
+    <script
+      src="./src/MyComponents/LandingPage/LandingPage.js"
+      type="module"
+    ></script>
+    <script
+      src="./src/MyComponents/LandingPage/landingContent/DestinationForm.js"
+      type="module"
+    ></script>
+    <script
+      src="./src/MyComponents/LandingPage/landingContent/travelCard.js"
+      type="module"
+    ></script>
+    <script src="./src/MyComponents/footer/footer.js" type="module"></script>
+
+    <script type="module">
+      import { Router } from '@vaadin/router';
+
+      const main = document.querySelector('main');
+      const router = new Router(main);
+      router.setRoutes([
+        { path: '/', component: 'landing-page' },
+        { path: '/places-to-travel', component: 'travel-card' },
+        { path: '/add-destination', component: 'destination-form' },
+      ]);
+    </script>
   </body>
 </html>

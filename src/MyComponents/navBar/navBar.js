@@ -19,6 +19,7 @@ class NavBar extends LitElement {
       nav ul {
         display: flex;
         align-items: center;
+        margin-top: 2.2em;
       }
       nav ul li {
         list-style-type: none;
@@ -52,6 +53,7 @@ class NavBar extends LitElement {
         color: #5b6bb1;
         transition: 1s;
       }
+
       .hero {
         position: absolute;
         top: 35%;
@@ -126,6 +128,7 @@ class NavBar extends LitElement {
           line-height: 1.5em;
           display: inline-block;
         }
+
         .hero h1 {
           font-size: 1.8em;
           margin-top: 10em;
@@ -145,6 +148,7 @@ class NavBar extends LitElement {
           margin-left: 1em;
           line-height: 1.5em;
         }
+
         .hero h1 {
           font-size: 2em;
           margin-top: 12em;
@@ -158,10 +162,6 @@ class NavBar extends LitElement {
       _isLoading: { type: Boolean },
     };
   }
-  connectedCallback() {
-    super.connectedCallback();
-  }
-
   render() {
     if (this._isLoading) {
       return 'Loading...';
@@ -171,10 +171,11 @@ class NavBar extends LitElement {
       <nav>
         <h1>Travela</h1>
         <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="/tour">Tour</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="#">Tour</a></li>
           <li><a href="#">Hotel</a></li>
-          <li><a href="#placesToTravel">Places to travel</a></li>
+          <li><a href="/places-to-travel">Places to travel</a></li>
+          <li><a href="/add-destination">Add Destination</a></li>
           <li><a href="#contacts">Contact Us</a></li>
           <input type="button" value="Book now" />
         </ul>

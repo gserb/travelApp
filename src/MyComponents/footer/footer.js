@@ -136,11 +136,6 @@ class Footer extends LitElement {
       }
     `;
   }
-
-  connectedCallback() {
-    super.connectedCallback();
-  }
-
   static get properties() {
     return {
       _isLoading: {

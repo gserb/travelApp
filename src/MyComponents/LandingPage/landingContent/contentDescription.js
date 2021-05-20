@@ -110,9 +110,6 @@ class ContentDescription extends LitElement {
       _isLoading: { type: Boolean },
     };
   }
-  connectedCallback() {
-    super.connectedCallback();
-  }
 
   render() {
     if (this._isLoading) {

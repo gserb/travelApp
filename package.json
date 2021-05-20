@@ -21,7 +21,7 @@
     "test:watch": "web-test-runner --watch",
     "build": "rimraf dist && rollup -c rollup.config.js && cp travela.css dist",
     "start:build": "npm run build && web-dev-server --root-dir dist --app-index index.html --open --compatibility none",
-    "start": "web-dev-server"
+    "start": "web-dev-server --app-index index.html"
   },
   "name": "travel-app",
   "version": "0.2.0",
