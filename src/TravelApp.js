@@ -78,4 +78,8 @@ export class TravelApp extends LitElement {
       </p> -->
     `;
   }
+
+  _getCustomTitle(newTitle) {
+    return `Your new title is ${newTitle}`;
+  }
 }

@@ -5,6 +5,7 @@ import '../src/travel-app.js';
 describe('TravelApp', () => {
   let element;
   beforeEach(async () => {
+    // arranege
     element = await fixture(html`<travel-app></travel-app>`);
   });
 
@@ -16,5 +17,14 @@ describe('TravelApp', () => {
 
   it('passes the a11y audit', async () => {
     await expect(element).shadowDom.to.be.accessible();
+  });
+
+  it('can compute a custom title', () => {
+    // act
+    let newTitle = element._getCustomTitle('Hey');
+    console.log(newTitle);
+    // assert
+    expect(newTitle).to.not.be.empty;
+    expect(newTitle).to.equal('Your new title is Hey');
   });
 });
