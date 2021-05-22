@@ -149,7 +149,10 @@ class DestinationForm extends LitElement {
     const form = e.target;
     const formData = new FormData(form);
     this.destinations = Object.fromEntries(formData);
-    this._postDestinations(this.destinations);
+    const isFormValid = !form.parentElement.showsFeedbackFor.includes('error');
+    if (isFormValid) {
+      this._postDestinations(this.destinations);
+    }
   }
 
   async _postDestinations() {
