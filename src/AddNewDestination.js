@@ -7,6 +7,7 @@ import { ajax } from '@lion/ajax';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
 import { Required, MinMaxLength, IsString } from '@lion/form-core';
 import { isValidType } from './Validators/isValidType';
+import { isValidUrl } from './Validators/isValidUrl';
 
 class AddNewDestination extends LitElement {
   static get properties() {
@@ -76,9 +77,10 @@ class AddNewDestination extends LitElement {
           ></form-input>
           <form-input
             name="imageUrl"
+            placeholder="Add image URL"
             label="Image URL"
             .fieldName=${'imageUrl'}
-            .validators=${[new Required()]}
+            .validators=${[new Required(), new isValidUrl()]}
           ></form-input>
           <form-button type="submit">Add destination</form-button>
         </form>
@@ -91,7 +93,11 @@ class AddNewDestination extends LitElement {
     const form = event.target;
     const formData = new FormData(form);
     this.destination = Object.fromEntries(formData);
-    this._postDestination(this.destination);
+    const isFormValid = !form.parentElement.showsFeedbackFor.includes('error');
+    if (isFormValid) {
+      this._postDestination(this.destination);
+      form.reset();
+    }
   }
 
   async _postDestination() {
