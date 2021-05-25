@@ -2,18 +2,18 @@
 
 import { Validator } from '@lion/form-core';
 
-export class isRoamnia extends Validator {
+export class isValidType extends Validator {
   static get validatorName() {
     return 'IsRomsnia';
   }
 
   execute(value) {
     let hasError = false;
-    if (value.toUpperCase() !== 'ROMANIA') hasError = true;
+    if (value.toUpperCase() !== ('CITY' || 'RESORT')) hasError = true;
     return hasError;
   }
 
-  static getMessag({ fieldName }) {
-    return `Please enter Romania for input ${fieldName}`;
+  static getMessage({ fieldName }) {
+    return `Please enter a valid ${fieldName}`;
   }
 }

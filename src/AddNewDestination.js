@@ -2,9 +2,11 @@ import { LitElement, css, html } from '@lion/core';
 import './LionWebComponents/lionForm';
 import './LionWebComponents/lionButton';
 import './LionWebComponents/formInput';
+import './Validators/isValidType';
 import { ajax } from '@lion/ajax';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
-import { Required } from '@lion/form-core';
+import { Required, MinMaxLength, IsString } from '@lion/form-core';
+import { isValidType } from './Validators/isValidType';
 
 class AddNewDestination extends LitElement {
   static get properties() {
@@ -45,32 +47,38 @@ class AddNewDestination extends LitElement {
           <form-input
             name="type"
             label="Type"
-            .fieldName="${'type'}"
-            .validators="${[new Required()]}"
+            .fieldName=${'type'}
+            .validators=${[new Required(), new IsString(), new isValidType()]}
           ></form-input>
           <form-input
             name="name"
             label="City"
-            .fieldName="${'name'}"
-            .validators="${[new Required()]}"
+            .fieldName=${'name'}
+            .validators=${[new Required(), new IsString()]}
           ></form-input>
           <form-input
             name="country"
             label="Country"
-            .fieldName="${'country'}"
-            .validators="${[new Required()]}"
+            .fieldName=${'country'}
+            .validators=${[new Required(), new IsString()]}
           ></form-input>
           <form-input
             name="description"
             label="Description"
-            .fieldName="${'description'}"
-            .validators="${[new Required()]}"
+            .fieldName=${'description'}
+            .validators=${[
+              new Required(),
+              new MinMaxLength({
+                min: 10,
+                max: 100,
+              }),
+            ]}
           ></form-input>
           <form-input
             name="imageUrl"
             label="Image URL"
-            .fieldName="${'imageUrl'}"
-            .validators="${[new Required()]}"
+            .fieldName=${'imageUrl'}
+            .validators=${[new Required()]}
           ></form-input>
           <form-button type="submit">Add destination</form-button>
         </form>
