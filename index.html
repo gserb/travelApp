@@ -14,72 +14,69 @@
 
 <body>
   <script src="src/travelCard.js" type="module"></script>
+  <script type="module" src="src/travel-app.js"></script> 
   <!-- <travel-app></travel-app> -->
-  <!-----    HEADER   ----->
-    <header>
-      <!-----    NAV-BAR   ----->
-      <nav class="main-nav">
-        <div class="logo"><a href="index.html">✈ | Travel App</a></div>
-        <ul>
-          <li><a href="addDestinations.html">Add destinations</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <div class="burger" href="javascript:void(0);" onclick="ResponsiveNavBar()">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-      </nav>
-      <!-----    HERO   ----->
-      <div class="hero-text">
-        <h1>WORLD is wide and LIFE is short</h1> 
+
+  <header>
+    <nav class="main-nav">
+      <div class="logo"><a href="index.html">✈ | Travel App</a></div>
+      <ul>
+        <li><a href="addDestinations.html">Add destinations</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="burger" href="javascript:void(0);" onclick="ResponsiveNavBar()">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
       </div>
-      <div class="hero-image-source">
-        Photo by 
-          <a href="https://unsplash.com/@timgarifov"><em>Timur Garifov</em></a>  on  
-          <a href="https://unsplash.com/"><em>Unsplash</em></a>
-      </div>
+    </nav>
+    <div class="hero-text">
+      <h1>WORLD is wide and LIFE is short</h1> 
+    </div>
+    <div class="hero-image-source">
+      Photo by 
+        <a href="https://unsplash.com/@timgarifov"><em>Timur Garifov</em></a>  on  
+        <a href="https://unsplash.com/"><em>Unsplash</em></a>
+    </div>
       
-      <!----- TRAVEL DESTINATION FORM ----->
-      <form id="#" class="travel-destination-form">
-        <div class="travel-destination-title">
-          <h1>Let us take you away</h1>
+    <form id="#" class="travel-destination-form">
+      <div class="travel-destination-title">
+        <h1>Let us take you away</h1>
+      </div>
+      <div class="search-destination-content">
+        <div class="input-grp">
+          <label>From:</label>
+          <input type="text" class="search-input" placeholder="City" required="required">
         </div>
-        <div class="search-destination-content">
-          <div class="input-grp">
-            <label>From:</label>
-            <input type="text" class="search-input" placeholder="City" required="required">
-          </div>
-          <div class="input-grp">
-            <label>To:</label>
-            <input type="text" class="search-input" placeholder="City" required="required">
-          </div>
-          <div class="input-grp"> 
-            <label>Departing:</label>
-            <input type="date" class="search-input" required="required">
-          </div>
-          <div class="input-grp">
-            <label for="budget">Budget:</label>
-            <input type="number" min="100" class="search-input" placeholder="Budget " required="required">
-            <select id="budget" name="budget" class="search-input">
-              <option value="EUR">EUR</option>
-              <option value="EUR">USD</option>
-              <option value="EUR">LEI</option>
-            </select>
-          </div class="input-grp">
+        <div class="input-grp">
+          <label>To:</label>
+          <input type="text" class="search-input" placeholder="City" required="required">
         </div>
-        <div>
-        <br>
-          <button class="home-search-button">search</button>
+        <div class="input-grp"> 
+          <label>Departing:</label>
+          <input type="date" class="search-input" required="required">
         </div>
-      </form>
-    </section>
+        <div class="input-grp">
+          <label for="budget">Budget:</label>
+          <input type="number" min="100" class="search-input" placeholder="Budget " required="required">
+          <select id="budget" name="budget" class="search-input">
+            <option value="EUR">EUR</option>
+            <option value="EUR">USD</option>
+            <option value="EUR">LEI</option>
+          </select>
+        </div class="input-grp">
+      </div>
+      <div>
+      <br>
+        <button class="home-search-button">search</button>
+      </div>
+    </form>
   </header>
 
   <main class="wrapper">
-    <!----- Side BAR ----->
+ 
     <section class="side-bar">
       <ul>
         <h2>News</h2>
@@ -90,9 +87,8 @@
         <li><h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, amet.</h4></li>
         <li><h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, amet.</h4></li>
       </ul>
-
     </section>
-    <!----- CONTENT DESCRIPTION -----> 
+
     <section class="about-us">
       <h1 class="subtitle">A few words <span class="word-highlighter">about us</span></h1>
       <p class="about-us-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates asperiores perspiciatis quidem voluptatem accusantium minima ea earum quod, error autem cupiditate vitae voluptas pariatur aperiam perferendis fuga ex cumque neque itaque provident exercitationem voluptatum quae non! Dolor sint consectetur aperiam?</p>
@@ -112,83 +108,16 @@
         </div>
       </div>
     </section>
-    <!----- POPULAR PLACES ----->
+
     <section class="places">
       <h1 class="subtitle">Popular 
         <span class="word-highlighter">places</span></h1>
       <div class="card-places">
-      <travel-card></travel-card>
-        
-   <!--  
-      <div class="card">
-        <div class="card-img">
-            <img src="https://images.unsplash.com/photo-1535892449425-d45bdcb2d016?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" 
-            alt="New York City">
-        </div>
-        <div class="card-text">
-          <h1>New York</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum corporis vitae totam quisquam, unde quasi.</p>
-            <button href="#" class="btn">Book now</button>
-        </div>
-      </div>
-      
-      
-      <div class="card">
-        <div class="card-img">
-          <a href="#">
-            <img src="https://images.unsplash.com/photo-1577901051898-c174f226c8ac?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1044&q=80" 
-            alt="Dubai City"></a>
-        </div>
-        <div class="card-text">
-          <h1>Dubai</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate saepe perspiciatis quia harum voluptas! Ipsa.</p>
-            <button href="#" class="btn">Book now</button>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-img">
-          <a href="#">
-          <img src="https://images.unsplash.com/photo-1523304867125-2293c498e08a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" 
-            alt="London City"></a>
-          </div>
-          <div class="card-text">
-            <h1>London</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem consequatur fugit rem tempora commodi laborum!</p>
-              <button href="#" class="btn">Book now</button>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-img">
-            <a href="#">
-          <img src="https://images.unsplash.com/photo-1581948355501-c721e309caa8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80" 
-          alt="Istanbul City"></a>
-        </div>
-        <div class="card-text">
-          <h1>Istanbul</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae nihil ad atque nesciunt libero nulla?</p>
-            <button href="#" class="btn">Book now</button>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-img">
-          <a href="#">
-          <img src="https://images.unsplash.com/photo-1507062916289-6af3d3e05386?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-          alt="Paris City"></a>
-        </div>
-        <div class="card-text">
-          <h1>Paris</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, assumenda commodi. Eos distinctio sunt cumque.</p>
-            <button href="#" class="btn">Book now</button>
-        </div>
-      </div>-->
-    </div> 
-  </section>
+        <travel-card></travel-card>
+      </div> 
+    </section>
   </main>
 
-  <!----- FOOTER -----> 
   <footer>
     <section class="footer">
       <h2 class="newsletter-title">Newsletter Sign up
@@ -210,8 +139,6 @@
     </section>
   </footer> 
 
-  <!--  <script type="module" src="./src/travel-app.js"></script> -->
-
   <script>
     fetch('https://devschool-2020.firebaseio.com/ana/places.json')
       .then(response => response.json())
@@ -219,17 +146,6 @@
       console.log(data)
       })
     .catch(error => console.error(error))
-
-    function ResponsiveNavBar{
-      var x = document.getElementsByClassName("main-nav")
-      if(x.className === "main-nav")  {
-        x.className = x.className + " responsive";
-      }
-      else {
-        x.className = "main-nav";
-      }
-    }
   </script>
-
 </body>
 </html>

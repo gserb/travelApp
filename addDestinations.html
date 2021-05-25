@@ -14,7 +14,7 @@
 
 <body>
   <script src="src/travelCard.js" type="module"></script>
-  <script src="src/addDestinationsForm.js" type="module"></script>
+  <script src="./src/AddNewDestination.js" type="module"></script>
   <!-- <travel-app></travel-app> -->
   <!-----    HEADER   ----->
     <header>
@@ -44,7 +44,6 @@
       </div>
       
       <!----- TRAVEL DESTINATION FORM ----->
-      <lion-form>Lion Form</lion-form>
       <form id="#" class="travel-destination-form">
         <div class="travel-destination-title">
           <h1>Let us take you away</h1>
@@ -80,16 +79,7 @@
     </section>
   </header>
 
-  <main class="wrapper">
-    <!----- POPULAR PLACES ----->
-    <section class="places">
-        <h1 class="subtitle">Popular 
-            <span class="word-highlighter">places</span></h1>
-        <div class="card-places">
-            <travel-card></travel-card>
-        </div> 
-    </section>
-  </main>
+  <add-new-destination></add-new-destination>
 
   <!----- FOOTER -----> 
   <footer>
