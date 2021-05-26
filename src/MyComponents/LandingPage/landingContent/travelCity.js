@@ -16,6 +16,7 @@ class TravelCity extends LitElement {
       p {
         color: grey;
       }
+
       @media screen and (min-width: 320px) and (max-width: 768px) {
         img {
           width: 100%;

@@ -1,12 +1,12 @@
 import { LitElement, css, html } from 'lit-element';
-import '../../AddDestination/TravelaLionButton';
-import '../../AddDestination/TravelaLionForm';
-import '../../AddDestination/TravelaLionInput';
+import '../../LionWebComponents/TravelaLionButton';
+import '../../LionWebComponents/TravelaLionForm';
+import '../../LionWebComponents/TravelaLionInput';
 
 import { ajax } from '@lion/ajax';
 import { MinMaxLength, Required, MinLength } from '@lion/form-core';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
-import { IsRomania } from '../../AddDestination/isRomania';
+import { IsRomania } from '../../LionWebComponents/isRomania';
 
 class DestinationForm extends LitElement {
   static get styles() {

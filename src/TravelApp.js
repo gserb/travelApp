@@ -1,5 +1,10 @@
 import { LitElement, html, css } from 'lit-element';
-import { openWcLogo } from './open-wc-logo.js';
+import { Router } from '@vaadin/router';
+import './MyComponents/navBar/navBar';
+import './MyComponents/footer/footer';
+import './MyComponents/LandingPage/landingContent/DestinationForm';
+import './MyComponents/LandingPage/landingContent/travelCard';
+import './MyComponents/LandingPage/LandingPage';
 
 export class TravelApp extends LitElement {
   static get properties() {
@@ -11,71 +16,28 @@ export class TravelApp extends LitElement {
   static get styles() {
     return css`
       :host {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        font-size: calc(10px + 2vmin);
-        color: #1a2b42;
-        max-width: 960px;
-        margin: 0 auto;
-        text-align: center;
-        background-color: var(--travel-app-background-color);
-      }
-
-      main {
-        flex-grow: 1;
-      }
-
-      .logo > svg {
-        margin-top: 36px;
-        animation: app-logo-spin infinite 20s linear;
-      }
-
-      @keyframes app-logo-spin {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
-      }
-
-      .app-footer {
-        font-size: calc(12px + 0.5vmin);
-        align-items: center;
-      }
-
-      .app-footer a {
-        margin-left: 5px;
+        display: block;
       }
     `;
   }
 
-  constructor() {
-    super();
-    this.title = 'DevSchool app';
+  firstUpdated() {
+    const outlet = this.shadowRoot.getElementById('main');
+    const router = new Router(outlet);
+    router.setRoutes([
+      { path: '/', component: 'landing-page' },
+      {
+        component: 'travel-card',
+      },
+      { path: '/add-destination', component: 'destination-form' },
+    ]);
   }
 
   render() {
     return html`
-      <main>
-        <div class="logo">${openWcLogo}</div>
-        <h1>${this.title}</h1>
-
-        <p>Welcome traveller :)</p>
-      </main>
-
-      <!-- <p class="app-footer">
-        Made using
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/open-wc"
-          >open-wc</a
-        >.
-      </p> -->
+      <navbar-component></navbar-component>
+      <main id="main"></main>
+      <footer-component></footer-component>
     `;
   }
 }

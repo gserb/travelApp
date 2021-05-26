@@ -12,40 +12,12 @@
       src="https://kit.fontawesome.com/ff4f5d5ed6.js"
       crossorigin="anonymous"
     ></script>
+    <script src="src/travel-app.js" type="module"></script>
 
     <title>travel-app</title>
   </head>
 
   <body>
-    <navbar-component></navbar-component>
-    <main></main>
-    <footer-component></footer-component>
-
-    <script src="./src/MyComponents/navBar/navBar.js" type="module"></script>
-    <script
-      src="./src/MyComponents/LandingPage/LandingPage.js"
-      type="module"
-    ></script>
-    <script
-      src="./src/MyComponents/LandingPage/landingContent/DestinationForm.js"
-      type="module"
-    ></script>
-    <script
-      src="./src/MyComponents/LandingPage/landingContent/travelCard.js"
-      type="module"
-    ></script>
-    <script src="./src/MyComponents/footer/footer.js" type="module"></script>
-
-    <script type="module">
-      import { Router } from '@vaadin/router';
-
-      const main = document.querySelector('main');
-      const router = new Router(main);
-      router.setRoutes([
-        { path: '/', component: 'landing-page' },
-        { path: '/places-to-travel', component: 'travel-card' },
-        { path: '/add-destination', component: 'destination-form' },
-      ]);
-    </script>
+    <travel-app></travel-app>
   </body>
 </html>
