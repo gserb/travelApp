@@ -27,6 +27,7 @@ export class TravelApp extends LitElement {
     router.setRoutes([
       { path: '/', component: 'landing-page' },
       {
+        path: '/places-to-travel',
         component: 'travel-card',
       },
       { path: '/add-destination', component: 'destination-form' },

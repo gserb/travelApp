@@ -105,7 +105,7 @@ class TravelCard extends LitElement {
             <h2>Locations</h2>
             <ul>
               ${this.data.map(
-                item => html`
+                (item, index) => html`
                   <li class="box">
                     <travel-city .cityTravel=${item}> </travel-city>
                   </li>
