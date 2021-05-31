@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit-element';
-import '../src/travelCardItem';
+import './travelCardItem';
 
 class TravelCard extends LitElement {
   static get properties() {

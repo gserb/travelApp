@@ -1,13 +1,13 @@
 import { LitElement, css, html } from '@lion/core';
-import './LionWebComponents/lionForm';
-import './LionWebComponents/lionButton';
-import './LionWebComponents/formInput';
-import './Validators/isValidType';
+import '../components/lionForm';
+import '../components/lionButton';
+import '../components/formInput';
+import '../validators/isValidType';
 import { ajax } from '@lion/ajax';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
 import { Required, MinMaxLength, IsString } from '@lion/form-core';
-import { isValidType } from './Validators/isValidType';
-import { isValidUrl } from './Validators/isValidUrl';
+import { isValidType } from '../validators/isValidType';
+import { isValidUrl } from '../validators/isValidUrl';
 
 class AddNewDestination extends LitElement {
   static get properties() {
@@ -23,14 +23,6 @@ class AddNewDestination extends LitElement {
       new-destination-form {
         display: flex;
         padding: 40px;
-
-        flex-direction: column;
-        width: 50%;
-        align-items: center;
-      }
-      form {
-        display: flex;
-        align-self: center;
       }
     `;
   }

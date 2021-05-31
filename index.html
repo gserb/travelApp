@@ -1,151 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="Description" content="Put your description here." />
+    <base href="/" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
+    ></script>
+    <title>travel-app</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="Description" content="Put your description here.">
-  <base href="/">
-  <link rel="stylesheet" href="style.css" type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-  <title>travel-app</title>
-</head>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700');
+      @import url('https://fonts.googleapis.com/css?family=Lato:400,500,600,700');
+      :root {
+        --light: #fff;
+        --bg-color: #c5c3c4;
+        --yellow: #9a7417;
+        --orange: #c66b3d;
+        --blue: #023c40;
+        --dark: #000;
+        --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+        --bg-filter-opacity: 0.3;
+      }
 
-<body>
-  <script src="src/travelCard.js" type="module"></script>
-  <script type="module" src="src/travel-app.js"></script> 
-  <!-- <travel-app></travel-app> -->
+      * {
+        margin: o;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-  <header>
-    <nav class="main-nav">
-      <div class="logo"><a href="index.html">✈ | Travel App</a></div>
-      <ul>
-        <li><a href="addDestinations.html">Add destinations</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <div class="burger" href="javascript:void(0);" onclick="ResponsiveNavBar()">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
-    </nav>
-    <div class="hero-text">
-      <h1>WORLD is wide and LIFE is short</h1> 
-    </div>
-    <div class="hero-image-source">
-      Photo by 
-        <a href="https://unsplash.com/@timgarifov"><em>Timur Garifov</em></a>  on  
-        <a href="https://unsplash.com/"><em>Unsplash</em></a>
-    </div>
-      
-    <form id="#" class="travel-destination-form">
-      <div class="travel-destination-title">
-        <h1>Let us take you away</h1>
-      </div>
-      <div class="search-destination-content">
-        <div class="input-grp">
-          <label>From:</label>
-          <input type="text" class="search-input" placeholder="City" required="required">
-        </div>
-        <div class="input-grp">
-          <label>To:</label>
-          <input type="text" class="search-input" placeholder="City" required="required">
-        </div>
-        <div class="input-grp"> 
-          <label>Departing:</label>
-          <input type="date" class="search-input" required="required">
-        </div>
-        <div class="input-grp">
-          <label for="budget">Budget:</label>
-          <input type="number" min="100" class="search-input" placeholder="Budget " required="required">
-          <select id="budget" name="budget" class="search-input">
-            <option value="EUR">EUR</option>
-            <option value="EUR">USD</option>
-            <option value="EUR">LEI</option>
-          </select>
-        </div class="input-grp">
-      </div>
-      <div>
-      <br>
-        <button class="home-search-button">search</button>
-      </div>
-    </form>
-  </header>
+      html {
+        box-sizing: border-box;
+        color: var(--blue);
+        font-size: 16px;
+        font-family: 'Quicksand';
+        font-weight: 600;
+      }
 
-  <main class="wrapper">
- 
-    <section class="side-bar">
-      <ul>
-        <h2>News</h2>
-        <li><h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, amet.</h4></li>
-        <li><h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, amet.</h4></li>
-        <li><h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, amet.</h4></li>
-        <li><h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, amet.</h4></li>
-        <li><h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, amet.</h4></li>
-        <li><h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, amet.</h4></li>
-      </ul>
-    </section>
+      body {
+        background: var(--bg-color);
+        margin: 0;
+      }
 
-    <section class="about-us">
-      <h1 class="subtitle">A few words <span class="word-highlighter">about us</span></h1>
-      <p class="about-us-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates asperiores perspiciatis quidem voluptatem accusantium minima ea earum quod, error autem cupiditate vitae voluptas pariatur aperiam perferendis fuga ex cumque neque itaque provident exercitationem voluptatum quae non! Dolor sint consectetur aperiam?</p>
-      <h1 class="subtitle"><span class="word-highlighter">Why</span> choose us?</h1>
-      <div class="row">
-        <div class="reason-col">
-          <h2>Reason 1</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quis expedita eaque dolor. Et quae officiis sunt autem iure unde delectus voluptates, iste voluptatem asperiores. Numquam similique vel in tempore veritatis iusto aspernatur repellat. Perspiciatis pariatur commodi consequatur quas. Possimus.</p>
-        </div>
-        <div class="reason-col">
-          <h2>Reason 2</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quis expedita eaque dolor. Et quae officiis sunt autem iure unde delectus voluptates, iste voluptatem asperiores. Numquam similique vel in tempore veritatis iusto aspernatur repellat. Perspiciatis pariatur commodi consequatur quas. Possimus.</p>
-        </div>
-        <div class="reason-col">
-          <h2>Reason 3</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quis expedita eaque dolor. Et quae officiis sunt autem iure unde delectus voluptates, iste voluptatem asperiores. Numquam similique vel in tempore veritatis iusto aspernatur repellat. Perspiciatis pariatur commodi consequatur quas. Possimus.</p>
-        </div>
-      </div>
-    </section>
+      img {
+        max-width: 100%;
+      }
+    </style>
+  </head>
 
-    <section class="places">
-      <h1 class="subtitle">Popular 
-        <span class="word-highlighter">places</span></h1>
-      <div class="card-places">
-        <travel-card></travel-card>
-      </div> 
-    </section>
-  </main>
+  <body>
+    <travel-app></travel-app>
 
-  <footer>
-    <section class="footer">
-      <h2 class="newsletter-title">Newsletter Sign up
-        <div class="newsletter-text">Subscribe to our newsletter to get the best deals anywhere</div></h2>
-      <div class="newsletter-form">
-        <form id="newsletterForm">
-          <input type="text" class="newsletter-form-input" placeholder="Your Email Address" required="required">         
-          <button class="newsletter-button">→</button>
-        </form>
-      </div>
-      <div class="credits">© 2021 DevSchool ING ⋅ All Rights Reserved</div>
-      <div class="social">
-        <ul class="social-media-icons">
-          <li class="facebook fa fa-facebook"><a target="_blank" alt="facebook" href="#"></a></li>
-          <li class="Twitter fa fa-twitter"><a target="_blank" alt="twitter" href="#"></a></li>
-          <li class="Instagram fa fa-instagram"><a target="_blank" alt="instagram" href="#"></a></li>
-        </ul>
-      </div>
-    </section>
-  </footer> 
+    <script type="module" src="src/travel-app.js"></script>
+    <script src="src/javaScripts/scrollNavBar.js"></script>
 
-  <script>
-    fetch('https://devschool-2020.firebaseio.com/ana/places.json')
-      .then(response => response.json())
-      .then(data => {
-      console.log(data)
-      })
-    .catch(error => console.error(error))
-  </script>
-</body>
+    <script>
+      fetch('https://devschool-2020.firebaseio.com/ana/places.json')
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+        })
+        .catch(error => console.error(error));
+      window.addEventListener('scroll', function () {
+        var navBar = document.querySelector('nav-component');
+        navBar.classList.toggle('sticky', window.scrollY > 0);
+      });
+    </script>
+  </body>
 </html>
