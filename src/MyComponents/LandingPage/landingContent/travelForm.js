@@ -19,13 +19,14 @@ class TravelForm extends LitElement {
         background-color: rgba(240, 240, 240, 0.8);
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       }
+
       section.travelForm div {
         float: left;
         margin: 10px;
       }
       .travelForm select,
       input {
-        padding: 1.2em 2.5em;
+        padding: 1.2em;
         border-radius: 1.5em;
         outline: none;
         border: 3px solid rgb(200, 200, 200);
@@ -45,25 +46,37 @@ class TravelForm extends LitElement {
       }
 
       .travelForm input[type='button'] {
-        font-size: 1.5em;
-        padding: 1.5em 2em;
         border-radius: 1.5em;
+        margin-top: 1.5em;
+        padding: 2em 3em;
         color: white;
         background-color: #5b6bb1;
         border-style: none;
         cursor: pointer;
       }
-      @media screen and (min-width: 1025px) and (max-width: 1200px) {
+      @media screen and (min-width: 1025px) and (max-width: 1395px) {
         .travelForm {
           position: relative;
           width: 100vw;
-          /* font-size: 0.5em; */
           border: none;
           border-radius: 0;
+          padding: 0;
+          flex-direction: column;
+          text-align: center;
         }
-        .travelForm input,
-        select {
-          width: 60vw;
+        .travelForm input[type='number'] {
+          padding: 1.2em 7em;
+        }
+        .travelForm input[type='date'] {
+          padding: 1em 8em;
+        }
+        .travelForm select {
+          padding: 1em 8.7em;
+        }
+        .travelForm input[type='button'] {
+          margin: 0 auto;
+          padding: 2em 11em;
+          margin-top: 1em;
         }
       }
       @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -73,10 +86,23 @@ class TravelForm extends LitElement {
           border: none;
           font-size: 0.8em;
           border-radius: 0;
+          padding: 0;
+          flex-direction: column;
+          text-align: center;
         }
-        .travelForm input,
-        select {
-          width: 60vw;
+        .travelForm input[type='number'] {
+          padding: 1.2em 7em;
+        }
+        .travelForm input[type='date'] {
+          padding: 1em 8em;
+        }
+        .travelForm select {
+          padding: 1em 8.7em;
+        }
+        .travelForm input[type='button'] {
+          margin: 0 auto;
+          padding: 2em 11em;
+          margin-top: 1em;
         }
       }
       @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -84,24 +110,53 @@ class TravelForm extends LitElement {
           position: relative;
           width: 100vw;
           border: none;
+          font-size: 0.8em;
           border-radius: 0;
+          padding: 0;
+          flex-direction: column;
+          text-align: center;
         }
-        .travelForm input,
-        select {
-          width: 60vw;
+        .travelForm input[type='number'] {
+          padding: 1.2em 7em;
+        }
+        .travelForm input[type='date'] {
+          padding: 1em 8em;
+        }
+        .travelForm select {
+          padding: 1em 8.7em;
+        }
+        .travelForm input[type='button'] {
+          margin: 0 auto;
+          padding: 2em 11em;
+          margin-top: 1em;
         }
       }
+
       @media screen and (min-width: 320px) and (max-width: 480px) {
         .travelForm {
           position: relative;
+          width: 100%;
           border: none;
           margin: 0;
-          width: 100vw;
+          font-size: 0.8em;
           border-radius: 0;
+          padding: 0;
+          flex-direction: column;
+          text-align: center;
         }
-        .travelForm input,
-        select {
-          width: 60vw;
+        .travelForm input[type='number'] {
+          padding: 1.1em 3em;
+        }
+        .travelForm input[type='date'] {
+          padding: 1em 4em;
+        }
+        .travelForm select {
+          padding: 1em 4.7em;
+        }
+        .travelForm input[type='button'] {
+          margin: 0 auto;
+          padding: 2em 5em;
+          margin-top: 1em;
         }
       }
     `;
@@ -148,7 +203,9 @@ class TravelForm extends LitElement {
           <label for="checkOut">Check out Date</label>
           <input type="date" name="checkOut" />
         </div>
-        <input type="button" value="Book Now" />
+        <div>
+          <input type="button" value="Book Now" />
+        </div>
       </section>
     </form>`;
   }

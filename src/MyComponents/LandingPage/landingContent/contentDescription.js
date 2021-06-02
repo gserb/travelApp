@@ -65,6 +65,9 @@ class ContentDescription extends LitElement {
           margin: 0;
           margin-top: 1em;
         }
+        input[type='button'] {
+          margin-bottom: 2em;
+        }
       }
       @media screen and (min-width: 481px) and (max-width: 768px) {
         .contentDescription {
@@ -82,6 +85,9 @@ class ContentDescription extends LitElement {
           margin: 0;
           margin-top: 1em;
           font-size: 0.7em;
+        }
+        input[type='button'] {
+          margin-bottom: 2em;
         }
       }
       @media screen and (min-width: 320px) and (max-width: 480px) {
@@ -101,6 +107,9 @@ class ContentDescription extends LitElement {
           margin-top: 1em;
           font-size: 0.7em;
         }
+        input[type='button'] {
+          margin-bottom: 2em;
+        }
       }
     `;
   }
@@ -112,14 +121,13 @@ class ContentDescription extends LitElement {
   }
 
   render() {
+    const url =
+      'https://images.unsplash.com/photo-1568454537842-d933259bb258?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80';
     if (this._isLoading) {
       return 'Loading...';
     }
     return html`<article class="contentDescription">
-      <img
-        src="https://images.unsplash.com/photo-1568454537842-d933259bb258?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-        alt="Hiking Person"
-      />
+      <img src=${url} alt="Hiking Person" />
       <div class="mainContent">
         <h1>Amazing places to <br />enjoy your travel</h1>
         <p>

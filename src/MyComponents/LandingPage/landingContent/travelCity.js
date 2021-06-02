@@ -20,7 +20,7 @@ class TravelCity extends LitElement {
       @media screen and (min-width: 320px) and (max-width: 768px) {
         img {
           width: 100%;
-          height: 30vh;
+          height: 20vh;
         }
         h1,
         h3,

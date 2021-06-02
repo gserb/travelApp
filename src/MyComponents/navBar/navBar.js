@@ -97,6 +97,9 @@ class NavBar extends LitElement {
         nav {
           width: 80%;
         }
+        .hero h1 {
+          font-size: 4em;
+        }
       }
       @media screen and (min-width: 1025px) and (max-width: 1200px) {
         nav {

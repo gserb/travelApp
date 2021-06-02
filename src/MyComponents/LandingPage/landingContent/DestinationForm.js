@@ -19,7 +19,7 @@ class DestinationForm extends LitElement {
         padding: 1em 3em;
       }
       form {
-        width: 30vw;
+        width: 50vw;
 
         margin: 0 auto;
         padding: 1em 0;
@@ -68,6 +68,16 @@ class DestinationForm extends LitElement {
       }
       [type='error'] {
         color: red;
+      }
+      @media screen and (max-width: 768px) {
+        travela-lion-input {
+          font-size: 1.2em;
+        }
+      }
+      @media screen and (max-width: 440px) {
+        travela-lion-input {
+          font-size: 1em;
+        }
       }
     `;
   }
@@ -156,14 +166,13 @@ class DestinationForm extends LitElement {
   }
 
   async _postDestinations() {
-    const { response } = await ajax.fetchJson(
+    await ajax.fetchJson(
       `https://devschool-2020.firebaseio.com/Vlad/places.json`,
       {
         method: 'POST',
         body: this.destinations,
       }
     );
-    console.log(response);
   }
 }
 

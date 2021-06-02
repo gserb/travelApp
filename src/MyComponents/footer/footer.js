@@ -4,8 +4,6 @@ class Footer extends LitElement {
   static get styles() {
     return css`
       footer {
-        /* background-color: rgba(0, 82, 254, 255); */
-        /* background-color: rgb(38, 38, 204); */
         background-color: #8392da;
         color: white;
         width: 100vw;
@@ -43,8 +41,6 @@ class Footer extends LitElement {
       footer .getInTouch input[type='button'] {
         padding: 1.7em 3em;
         border-radius: 3em;
-        /* background-color: rgba(0, 82, 254, 255); */
-        /* background-color: rgb(38, 38, 204); */
         background-color: #6f85ce;
         color: white;
         font-weight: bold;
@@ -92,7 +88,7 @@ class Footer extends LitElement {
         footer .getInTouch input[type='button'] {
           position: relative;
           left: 5%;
-          background-color: red;
+          background-color: blue;
         }
       }
       @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -101,14 +97,13 @@ class Footer extends LitElement {
           justify-content: center;
         }
         footer .getInTouch input[type='email'] {
-          display: block;
-          width: 60vw;
-          font-size: 1em;
+          display: inline;
+          font-size: 0.7em;
         }
         footer .getInTouch input[type='button'] {
           position: relative;
-          left: 20%;
-          background-color: red;
+          left: 5%;
+          background-color: blue;
         }
         footer .contacts {
           flex-wrap: wrap;
@@ -118,16 +113,20 @@ class Footer extends LitElement {
         footer .getInTouch {
           font-size: 0.7em;
           justify-content: center;
+          display: flex;
+          flex-direction: column;
         }
         footer .getInTouch input[type='email'] {
-          display: block;
-          width: 60vw;
           font-size: 0.7em;
+          width: 50%;
+          margin: 0 auto;
         }
         footer .getInTouch input[type='button'] {
           position: relative;
-          left: 20%;
-          background-color: red;
+          left: 0;
+          background-color: blue;
+          width: 50%;
+          margin: 0 auto;
         }
         footer .contacts {
           flex-wrap: wrap;
