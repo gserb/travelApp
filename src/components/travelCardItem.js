@@ -11,8 +11,8 @@ class TravelCardItem extends LitElement {
     return css`
       .card {
         position: relative;
-        max-width: 300px;
-        height: 450px;
+        max-width: 280px;
+        height: 400px;
         background: var(--light);
         margin: 30px 15px;
         padding: 5px 0px;

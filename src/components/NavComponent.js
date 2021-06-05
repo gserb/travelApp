@@ -6,7 +6,7 @@ export class NavComponent extends LitElement {
     return css`
 
       .nav-bar {
-        max-width: 1430px;
+        max-width: 1200px;
         height: 6vh;
         line-height: 4vh;
         transition: all 0.4s ease;
@@ -60,11 +60,11 @@ export class NavComponent extends LitElement {
       }
 
       .nav-bar .logo a:nth-child(2):hover {
-        color: var(--yellow);
+        color: var(--yellow-100);
       }
 
       .nav-bar .nav-list ul  li:not(:nth-child(5)) :hover{
-        color: var(--yellow);
+        color: var(--yellow-100);
       
       }
 
@@ -336,9 +336,9 @@ export class NavComponent extends LitElement {
         <div class="logo"><a href="/">✈ |</a><a href="/">Travel App</a></div>
         <div class="nav-list">
           <ul>
-            <li><a href="/add">Add destinations</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="#">Places</a></li>
+            <li><a href="/add">Add destinations</a></li>
             <li><a href="#">Contact</a></li>
             <li><a>|</a></li>
             <li><a href="#">Login</a></li>

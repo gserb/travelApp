@@ -4,7 +4,6 @@ export class FooterComponent extends LitElement {
   static get styles() {
     return css`
       footer {
-        background-color: var(--blue);
       }
 
       .footer {
@@ -61,6 +60,9 @@ export class FooterComponent extends LitElement {
         grid-area: social;
         align-self: center;
         justify-self: flex-end;
+      }
+      .footer .social ul {
+        margin: 0;
       }
 
       button {

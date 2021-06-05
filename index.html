@@ -6,12 +6,15 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
+
     <meta name="Description" content="Put your description here." />
     <base href="/" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
     <script
       defer
       src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
@@ -23,12 +26,14 @@
       @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700');
       @import url('https://fonts.googleapis.com/css?family=Lato:400,500,600,700');
       :root {
-        --light: #fff;
-        --bg-color: #c5c3c4;
-        --yellow: #9a7417;
-        --orange: #c66b3d;
-        --blue: #023c40;
-        --dark: #000;
+        --light: rgba(255, 255, 255, 1);
+        --bg-color: rgba(197, 195, 196, 1);
+        --yellow-100: rgba(154, 116, 23, 1);
+        --yellow-50: rgba(154, 116, 23, 0.5);
+        --orange: rgba(198, 107, 61, 1);
+        --blue: rgba(2, 60, 64, 1);
+        --blue-50: rgba(2, 60, 64, 0.2);
+        --dark: rgba(0, 0, 0, 1);
         --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
         --bg-filter-opacity: 0.3;
       }
@@ -48,7 +53,7 @@
       }
 
       body {
-        background: var(--bg-color);
+        background: var(--light);
         margin: 0;
       }
 
@@ -60,8 +65,9 @@
 
   <body>
     <travel-app></travel-app>
-
     <script type="module" src="src/travel-app.js"></script>
+    <script src="src/javaScripts/scrollNavBar.js"></script>
+
     <script src="src/javaScripts/scrollNavBar.js"></script>
 
     <script>
@@ -71,10 +77,6 @@
           console.log(data);
         })
         .catch(error => console.error(error));
-      window.addEventListener('scroll', function () {
-        var navBar = document.querySelector('nav-component');
-        navBar.classList.toggle('sticky', window.scrollY > 0);
-      });
     </script>
   </body>
 </html>

@@ -13,10 +13,11 @@ class TravelCard extends LitElement {
       ul {
         position: relative;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        margin-bottom: 40px;
+        margin: 0 0 40px;
+        padding: 0;
         list-style: none;
       }
     `;

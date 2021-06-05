@@ -5,7 +5,7 @@ export class TravelDestinationForm extends LitElement {
     return css`
       .travel-destination-form {
         text-align: center;
-        max-width: 1430px;
+        max-width: 1200px;
         margin: auto;
         padding: 0 30px;
       }
@@ -46,7 +46,7 @@ export class TravelDestinationForm extends LitElement {
       }
 
       .form-content button {
-        background-color: var(--yellow);
+        background-color: var(--yellow-100);
         color: var(--light);
         width: 100%;
         height: 50px;
@@ -55,6 +55,10 @@ export class TravelDestinationForm extends LitElement {
         border-radius: 0 40px 40px 0;
         cursor: pointer;
         border: none;
+      }
+
+      .form-content button:hover {
+        background-color: var(--blue);
       }
 
       @media screen and (max-width: 768px) {

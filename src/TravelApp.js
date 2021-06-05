@@ -15,32 +15,24 @@ export class TravelApp extends LitElement {
   static get styles() {
     return css`
       .page-wrapper {
-        display: grid;
-        grid-template-areas:
-          'header'
-          'main'
-          'footer';
       }
-      nav-component {
-        position: fixed;
-        grid-area: header;
-        z-index: 2;
-        width: 100%;
-      }
-
-      header.sticky {
-        background: var(--light);
-      }
-
-      main {
-        grid-area: header/header/main/main;
-        z-index: 1;
+      #navBar {
+        display: block;
         margin: 0;
       }
 
-      footer-component {
-        grid-area: footer;
+      header.sticky {
+      }
+
+      main {
+        display: block;
+        margin: 0;
+      }
+
+      #footer {
         background-color: var(--blue);
+        display: block;
+        margin: 0;
       }
     `;
   }
@@ -63,9 +55,9 @@ export class TravelApp extends LitElement {
   render() {
     return html`
       <div class="page-wrapper">
-        <nav-component class=""></nav-component>
+        <nav-component id="navBar"></nav-component>
         <main id="main"></main>
-        <footer-component></footer-component>
+        <footer-component id="footer"></footer-component>
       </div>
     `;
   }
