@@ -74,25 +74,25 @@ class TravelCard extends LitElement {
   static get properties() {
     return {
       loading: { type: Boolean },
-      data: { type: Array },
+      placesToTravel: { type: Array },
     };
   }
 
   connectedCallback() {
     super.connectedCallback();
-    if (!this.data) {
-      this.fetchData();
+    if (!this.placesToTravel) {
+      this.fetchplacesToTravel();
     }
   }
 
-  async fetchData() {
+  async fetchplacesToTravel() {
     this.loading = true;
     const response = await fetch(
       `https://devschool-2020.firebaseio.com/Vlad/places.json`
     );
     const jsonResponse = await response.json();
-    this.data = jsonResponse;
-    this.data = Object.values(this.data);
+    this.placesToTravel = jsonResponse;
+    this.placesToTravel = Object.values(this.placesToTravel);
     this.loading = false;
   }
 
@@ -104,7 +104,7 @@ class TravelCard extends LitElement {
             <h1>Destinations to explore!</h1>
             <h2>Locations</h2>
             <ul>
-              ${this.data.map(
+              ${this.placesToTravel.map(
                 item => html`
                   <li class="box">
                     <travel-city .cityTravel=${item}> </travel-city>
