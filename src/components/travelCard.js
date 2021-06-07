@@ -11,9 +11,8 @@ class TravelCard extends LitElement {
   static get styles() {
     return css`
       ul {
-        position: relative;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         margin: 0 0 40px;

@@ -34,8 +34,8 @@ class TravelCardItem extends LitElement {
         height: 100%;
         background: linear-gradient(
           to bottom,
-          rgba(0, 0, 0, 0.2),
-          rgba(0, 0, 0, 0.5)
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0.8)
         );
         transition: 0.5s all;
         z-index: 2;
@@ -69,8 +69,19 @@ class TravelCardItem extends LitElement {
       }
 
       .btn {
-        padding: 5px 10px;
+        font-size: 16px;
+        color: #ffffff;
+        padding: 8px 16px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        background-color: var(--yellow-100);
+        border-radius: 2px;
+        border-color: white;
         cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: var(--blue);
       }
 
       .card .card-text a {

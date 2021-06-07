@@ -145,14 +145,21 @@ export class NavComponent extends LitElement {
         }
 
         .burger i {
-          background-color: #fff;
+          background-color: var(--blue);
           border-radius: 4px;
           content: '';
           display: block;
           width: 100%;
           height: 3px;
         }
-
+        
+        
+        .menu-opened {
+            height: 100%;
+            background-color: #000;
+            transition-delay: 0.25s;
+        }
+        
         .burger i:nth-child(1) {
           -webkit-animation: outT 0.8s backwards;
           animation: outT 0.8s backwards;
@@ -337,9 +344,9 @@ export class NavComponent extends LitElement {
         <div class="nav-list">
           <ul>
             <li><a href="#">About</a></li>
-            <li><a href="#">Places</a></li>
-            <li><a href="/add">Add destinations</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="/places">Places</a></li>
+            <li><a href="/add">Add places</a></li>
+            <li><a href="/contact">Contact</a></li>
             <li><a>|</a></li>
             <li><a href="#">Login</a></li>
           </ul>

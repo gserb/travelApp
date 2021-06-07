@@ -3,6 +3,7 @@ import '../components/lionForm';
 import '../components/lionButton';
 import '../components/formInput';
 import '../validators/isValidType';
+import '../components/travelCardItem';
 import { ajax } from '@lion/ajax';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
 import { Required, MinMaxLength, IsString } from '@lion/form-core';
@@ -20,8 +21,16 @@ class AddNewDestination extends LitElement {
 
   static get styles() {
     return css`
+      .content {
+        text-align: center;
+        max-width: 800px;
+        margin: 8vh auto;
+      }
+
       h1 {
-        color: white;
+        margin: 10vh 0;
+        text-align: center;
+        font-size: 24px;
       }
 
       new-destination-form {
@@ -31,6 +40,11 @@ class AddNewDestination extends LitElement {
         width: 100%;
         max-width: 500px;
         box-sizing: border-box;
+      }
+
+      new-destination-form h1 {
+        color: var(--light);
+        margin: 0;
       }
 
       label {
@@ -51,7 +65,7 @@ class AddNewDestination extends LitElement {
 
       form-button {
         display: block;
-        width: 60%;
+        width: 50%;
         margin: 40px auto 0;
         font-size: 17px;
         line-height: 30px;
@@ -66,7 +80,6 @@ class AddNewDestination extends LitElement {
 
       form-button:hover {
         background-color: rgba(1, 1, 1, 0.5);
-        border: solid 1px white;
       }
 
       input[type='text']:hover {
@@ -84,54 +97,57 @@ class AddNewDestination extends LitElement {
 
   render() {
     return html`
-      <new-destination-form>
-        <h1>Add a new destination:</h1>
-        <form @submit=${this._handleFormSubmit}>
-          <form-input
-            name="type"
-            placeholder="City"
-            label="Type"
-            palceholder="City/ Resort/ Mountain"
-            .fieldName=${'type'}
-            .validators=${[new Required(), new IsString(), new isValidType()]}
-          ></form-input>
-          <form-input
-            name="name"
-            placeholder="Bucharest"
-            label="City"
-            .fieldName=${'name'}
-            .validators=${[new Required(), new IsString()]}
-          ></form-input>
-          <form-input
-            name="country"
-            placeholder="Romania"
-            label="Country"
-            .fieldName=${'country'}
-            .validators=${[new Required(), new IsString()]}
-          ></form-input>
-          <form-input
-            name="description"
-            placeholder="Add a description"
-            label="Description"
-            .fieldName=${'description'}
-            .validators=${[
-              new Required(),
-              new MinMaxLength({
-                min: 10,
-                max: 100,
-              }),
-            ]}
-          ></form-input>
-          <form-input
-            name="imageUrl"
-            placeholder="Add image URL"
-            label="Image"
-            .fieldName=${'imageUrl'}
-            .validators=${[new Required(), new isValidUrl()]}
-          ></form-input>
-          <form-button type="submit">Add destination</form-button>
-        </form>
-      </new-destination-form>
+      <div class="content">
+        <h1>ADD A NEW DESTINATION</h1>
+        <new-destination-form>
+          <h1>Add a new destination:</h1>
+          <form @submit=${this._handleFormSubmit}>
+            <form-input
+              name="type"
+              placeholder="City"
+              label="Type"
+              palceholder="City/ Resort/ Mountain"
+              .fieldName=${'type'}
+              .validators=${[new Required(), new IsString(), new isValidType()]}
+            ></form-input>
+            <form-input
+              name="name"
+              placeholder="Bucharest"
+              label="City"
+              .fieldName=${'name'}
+              .validators=${[new Required(), new IsString()]}
+            ></form-input>
+            <form-input
+              name="country"
+              placeholder="Romania"
+              label="Country"
+              .fieldName=${'country'}
+              .validators=${[new Required(), new IsString()]}
+            ></form-input>
+            <form-input
+              name="description"
+              placeholder="Add a description"
+              label="Description"
+              .fieldName=${'description'}
+              .validators=${[
+                new Required(),
+                new MinMaxLength({
+                  min: 10,
+                  max: 100,
+                }),
+              ]}
+            ></form-input>
+            <form-input
+              name="imageUrl"
+              placeholder="Add image URL"
+              label="Image"
+              .fieldName=${'imageUrl'}
+              .validators=${[new Required(), new isValidUrl()]}
+            ></form-input>
+            <form-button type="submit">Add destination</form-button>
+          </form>
+        </new-destination-form>
+      </div>
     `;
   }
 

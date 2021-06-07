@@ -6,21 +6,23 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
-
     <meta name="Description" content="Put your description here." />
     <base href="/" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+      integrity="undefined"
+      crossorigin="anonymous"
+    />
     <script
       src="https://kit.fontawesome.com/a076d05399.js"
       crossorigin="anonymous"
     ></script>
-
     <script
       defer
       src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
     ></script>
     <title>travel-app</title>
-
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
       @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700');
@@ -66,10 +68,6 @@
   <body>
     <travel-app></travel-app>
     <script type="module" src="src/travel-app.js"></script>
-    <script src="src/javaScripts/scrollNavBar.js"></script>
-
-    <script src="src/javaScripts/scrollNavBar.js"></script>
-
     <script>
       fetch('https://devschool-2020.firebaseio.com/ana/places.json')
         .then(response => response.json())

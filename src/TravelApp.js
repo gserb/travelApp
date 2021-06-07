@@ -2,6 +2,8 @@ import { LitElement, html, css } from 'lit-element';
 import { Router } from '@vaadin/router';
 import './pages/HomePage';
 import './pages/AddPage.js';
+import './pages/PlacesPage';
+import './pages/ContactPage';
 import './Components/FooterComponent.js';
 import './Components/NavComponent.js';
 
@@ -16,9 +18,15 @@ export class TravelApp extends LitElement {
     return css`
       .page-wrapper {
       }
+
       #navBar {
         display: block;
         margin: 0;
+      }
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
       }
 
       header.sticky {
@@ -48,6 +56,8 @@ export class TravelApp extends LitElement {
     router.setRoutes([
       { path: '/', component: 'home-page' },
       { path: '/add', component: 'add-new-destination' },
+      { path: '/places', component: 'places-page' },
+      { path: '/contact', component: 'contact-page' },
       { path: '(.*)', component: 'home-page' },
     ]);
   }
