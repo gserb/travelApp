@@ -2,8 +2,8 @@ import { LitElement, css, html } from '@lion/core';
 import '../components/lionForm';
 import '../components/lionButton';
 import '../components/formInput';
-import '../validators/isValidType';
 import '../components/travelCardItem';
+import '../validators/isValidUrl';
 import { ajax } from '@lion/ajax';
 import { loadDefaultFeedbackMessages } from '@lion/validate-messages';
 import { Required, MinMaxLength, IsString } from '@lion/form-core';
@@ -21,6 +21,10 @@ class AddNewDestination extends LitElement {
 
   static get styles() {
     return css`
+      * {
+        color: black;
+      }
+
       .content {
         text-align: center;
         max-width: 800px;
@@ -52,6 +56,7 @@ class AddNewDestination extends LitElement {
         padding: 20px 0 8px;
         color: #fff;
         text-shadow: 1px 1px 1px #666;
+        text-align: start;
       }
 
       input {
@@ -98,9 +103,9 @@ class AddNewDestination extends LitElement {
   render() {
     return html`
       <div class="content">
-        <h1>ADD A NEW DESTINATION</h1>
+        <h1>ADD NEW DESTINATIONS</h1>
         <new-destination-form>
-          <h1>Add a new destination:</h1>
+          <h1>New destination:</h1>
           <form @submit=${this._handleFormSubmit}>
             <form-input
               name="type"
@@ -144,7 +149,7 @@ class AddNewDestination extends LitElement {
               .fieldName=${'imageUrl'}
               .validators=${[new Required(), new isValidUrl()]}
             ></form-input>
-            <form-button type="submit">Add destination</form-button>
+            <form-button type="submit">Add</form-button>
           </form>
         </new-destination-form>
       </div>

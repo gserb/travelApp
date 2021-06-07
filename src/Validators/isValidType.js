@@ -1,10 +1,8 @@
-//Custom validator exercise
-
 import { Validator } from '@lion/form-core';
 
 export class isValidType extends Validator {
   static get validatorName() {
-    return 'IsRomsnia';
+    return 'IsValidType';
   }
 
   execute(value) {
