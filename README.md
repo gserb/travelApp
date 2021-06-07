@@ -145,7 +145,7 @@ curl -X GET 'https://devschool-2020.firebaseio.com/radu/places/placeId.json'
 }
 ```
 
-## Update place
+## Update destination
 
 ### Request
 
@@ -171,7 +171,7 @@ curl -X GET 'https://devschool-2020.firebaseio.com/radu/places/placeId.json'
 }
 ```
 
-## Delete certain place
+## Delete certain destination
 
 ### Request
 
@@ -186,7 +186,7 @@ curl -X GET 'https://devschool-2020.firebaseio.com/radu/places/placeId.json'
 null
 ```
 
-## Delete all places
+## Delete all destionations
 
 ### Request
 
