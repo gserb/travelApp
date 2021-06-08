@@ -31,6 +31,7 @@ export class TravelApp extends LitElement {
         component: 'travel-card',
       },
       { path: '/add-destination', component: 'destination-form' },
+      { path: '(.*)', component: 'landing-page' },
     ]);
   }
 

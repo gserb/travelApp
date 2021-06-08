@@ -1,33 +1,26 @@
-const playwright = require('playwright');
+import { html, fixture, expect } from '@open-wc/testing';
 
-(async () => {
-  const browserType = ['chromium'];
-  const browser = await playwright[browserType].launch({
-    headless: false,
+import '../src/travel-app';
+
+describe('TravelApp', () => {
+  let element;
+  beforeEach(async () => {
+    element = await fixture(html`<travel-app></travel-app>`);
   });
 
-  const context = await browser.newContext();
-
-  const page = await context.newPage();
-
-  await page.screenshot({
-    path: `screenshot-${browserType}.png`,
+  it('renders a navbar-component', () => {
+    expect(element.shadowRoot.querySelector('navbar-component')).to.exist;
   });
 
-  await page.goto('https://travelatravelapp.netlify.app/');
+  it('renders a main element', () => {
+    expect(element.shadowRoot.querySelector('main')).to.exist;
+  });
 
-  const [request] = await Promise.all([
-    page.waitForEvent('requestfinished'),
-    page.goto('https://travelatravelapp.netlify.app/places-to-travel'),
-  ]);
-  console.log(request.timing());
+  it('renders a footer-component', () => {
+    expect(element.shadowRoot.querySelector('footer-component')).to.exist;
+  });
 
-  const fontSize = await page.$eval(
-    'div',
-    el => window.getComputedStyle(el).fontSize
-  );
-  expect(fontSize === '16px').toBeTruthy();
-  console.log(fontSize);
-
-  await browser.close();
-})();
+  it('passes the a11y audit', async () => {
+    await expect(element).shadowDom.to.be.accessible();
+  });
+});
