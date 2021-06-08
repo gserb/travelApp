@@ -28,6 +28,10 @@ export class ContactPage extends LitElement {
         font-size: 36px;
       }
 
+      h3 {
+        color: var(--yellow-100);
+      }
+
       .container {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -195,6 +199,7 @@ export class ContactPage extends LitElement {
                 ></form-input>
                 <form-input
                   name="email"
+                  type="email"
                   placeholder="Email"
                   label="Email"
                 ></form-input>

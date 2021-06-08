@@ -155,26 +155,22 @@ export class FooterComponent extends LitElement {
 
   render() {
     return html`
-      <section class="footer">
+      <footer class="footer">
         <div class="newsletter">
           <h4>Newsletter Sign up</h4>
           <p>Subscribe to our newsletter to get the best deals anywhere.</p>
           <form id="form">
-            <input type="text" placeholder="Your Email Address" required="required"></input>
-            <button class="button">→</button>
+            <input type="email" placeholder="Your Email Address" required="required" ></input>
+            <button type="submit" class="button">→</button>
           </form>
         </div>
         <div class="quickLinks">
           <h4>
             Quick Links
           </h4>
-          <ul >
+          <ul class="links">
             <li><a href="#about_us">About us</a></li>
-          </ul>
-          <ul >
             <li><a href="/contact">Contact us</a></li>
-          </ul>
-          <ul>
             <li><a href="#">Privacy Policy</a></li>
           </ul>
         </div>
@@ -199,7 +195,7 @@ export class FooterComponent extends LitElement {
             </li>
           </ul>
         </div>
-      </section>
+  </footer>
     `;
   }
 }
