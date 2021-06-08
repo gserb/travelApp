@@ -30,7 +30,6 @@ class TravelForm extends LitElement {
         border-radius: 1.5em;
         outline: none;
         border: 3px solid rgb(200, 200, 200);
-        color: rgba(200, 200, 200, 0.9);
         font-weight: bold;
       }
       .travelForm input[type='button']:hover {
@@ -54,6 +53,7 @@ class TravelForm extends LitElement {
         border-style: none;
         cursor: pointer;
       }
+
       @media screen and (min-width: 1025px) and (max-width: 1395px) {
         .travelForm {
           position: relative;
@@ -167,6 +167,7 @@ class TravelForm extends LitElement {
       _isLoading: { type: Boolean },
     };
   }
+
   connectedCallback() {
     super.connectedCallback();
   }

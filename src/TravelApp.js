@@ -7,12 +7,6 @@ import './MyComponents/LandingPage/landingContent/travelCard';
 import './MyComponents/LandingPage/LandingPage';
 
 export class TravelApp extends LitElement {
-  static get properties() {
-    return {
-      title: { type: String },
-    };
-  }
-
   static get styles() {
     return css`
       :host {

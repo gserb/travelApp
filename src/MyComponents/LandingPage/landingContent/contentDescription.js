@@ -29,7 +29,7 @@ class ContentDescription extends LitElement {
       .contentDescription .mainContent p {
         margin-bottom: 0.2em;
         font-size: 1.2em;
-        color: rgb(155, 155, 155);
+        color: rgb(50, 50s, 50s);
         line-height: 2em;
       }
       .contentDescription .mainContent input {

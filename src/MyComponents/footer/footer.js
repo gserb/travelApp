@@ -22,6 +22,7 @@ class Footer extends LitElement {
       footer .getInTouch p {
         font-size: 1.2em;
         margin-bottom: 1.7em;
+        font-weight: 800;
       }
       footer .getInTouch input[type='email'] {
         padding: 3em 0em;
@@ -65,6 +66,10 @@ class Footer extends LitElement {
         width: 100vw;
         justify-content: space-around;
       }
+      footer .contacts h3 {
+        font-weight: 800;
+        font-size: 1.2em;
+      }
       footer .contacts ul {
         display: flex;
       }
@@ -73,6 +78,8 @@ class Footer extends LitElement {
         margin-right: 2em;
         font-weight: bold;
         cursor: pointer;
+        font-weight: 800;
+        font-size: 1.2em;
       }
       footer .contacts ul li:hover {
         color: rgb(38, 38, 204);
@@ -135,6 +142,7 @@ class Footer extends LitElement {
       }
     `;
   }
+
   static get properties() {
     return {
       _isLoading: {
