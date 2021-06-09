@@ -102,7 +102,7 @@ class TravelCardItem extends LitElement {
         <div class="card-text">
           <h1>${this.destination.name}</h1>
           <p>${this.destination.description}</p>
-          <button href="#" class="btn">Book now</button>
+          <a href="/place" class="btn">Book now</a>
         </div>
       </div>
     `;

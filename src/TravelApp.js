@@ -3,6 +3,7 @@ import { Router } from '@vaadin/router';
 import './pages/HomePage';
 import './pages/AddPage.js';
 import './pages/PlacesPage';
+import './pages/PlacePage';
 import './pages/ContactPage';
 import './Components/FooterComponent.js';
 import './Components/NavComponent.js';
@@ -58,6 +59,7 @@ export class TravelApp extends LitElement {
       { path: '/add', component: 'add-new-destination' },
       { path: '/places', component: 'places-page' },
       { path: '/contact', component: 'contact-page' },
+      { path: '/place', component: 'place-page' },
       { path: '(.*)', component: 'home-page' },
     ]);
   }

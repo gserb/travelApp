@@ -108,7 +108,7 @@ curl -X GET 'https://devschool-2020.firebaseio.com/ana/places.json'
 ### Request
 
 ```
-curl -X GET 'https://devschool-2020.firebaseio.com/radu/places/placeId.json'
+curl -X GET 'https://devschool-2020.firebaseio.com/ana/places/placeId.json'
 ```
 
 ### Response
