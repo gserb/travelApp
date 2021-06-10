@@ -179,8 +179,8 @@ class TravelForm extends LitElement {
     return html`<form>
       <section class="travelForm">
         <div class="destinations">
-          <label for="locationsToTravel">Destination</label>
-          <select>
+          <label for="destination">Destination</label>
+          <select id="destination">
             <option value="" id="defaultOption" disabled selected hidden>
               <span>Select Location</span>
             </option>
