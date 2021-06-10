@@ -9,7 +9,7 @@ describe('NavbarComponent', () => {
   });
 
   it('renders an ul list with 6 list items', () => {
-    const ulList = element.shadowRoot.querySelector('nav');
+    const ulList = element.shadowRoot.querySelector('ul');
     expect(ulList).to.exist;
     expect(ulList.children).to.have.lengthOf(6);
   });
