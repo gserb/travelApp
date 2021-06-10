@@ -34,6 +34,7 @@ export default merge(baseConfig, {
       targets: [
         { src: './_redirects', dest: 'dist' },
         { src: './src', dest: 'dist' },
+        { src: './travela.css', dest: 'dist' },
       ],
     }),
   ],
