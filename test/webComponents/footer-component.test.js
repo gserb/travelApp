@@ -9,7 +9,7 @@ describe('FooterComponent', () => {
   });
   it('renders the message correctly', async () => {
     const el = await fixture(
-      `<div class="getInTouch"><h1>${'Get in touch'}</h1></div>`
+      `<div class="getInTouch"><h1>${'Get in Touch'}</h1></div>`
     );
     expect(el).lightDom.to.equal('<h1>Get in Touch</h1>');
   });
