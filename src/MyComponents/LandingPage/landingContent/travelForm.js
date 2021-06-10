@@ -180,7 +180,7 @@ class TravelForm extends LitElement {
       <section class="travelForm">
         <div class="destinations">
           <label for="locationsToTravel">Destination</label>
-          <select class="locationsToTravel">
+          <select>
             <option value="" id="defaultOption" disabled selected hidden>
               <span>Select Location</span>
             </option>

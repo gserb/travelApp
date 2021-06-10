@@ -179,7 +179,7 @@ class Footer extends LitElement {
         <input type="button" value="Subscribe" />
       </div>
       <div class="contacts">
-        <h3>&#169; 2020 india cafe all rights reserved</h3>
+        <h1>&#169; 2020 india cafe all rights reserved</h1>
         <ul>
           <li>Home</li>
           <li>Tour</li>
