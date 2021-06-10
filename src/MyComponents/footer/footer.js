@@ -97,6 +97,9 @@ class Footer extends LitElement {
           left: 5%;
           background-color: blue;
         }
+        footer .contacts h3 {
+          margin-left: 2em;
+        }
       }
       @media screen and (min-width: 481px) and (max-width: 768px) {
         footer .getInTouch {
@@ -114,6 +117,7 @@ class Footer extends LitElement {
         }
         footer .contacts {
           flex-wrap: wrap;
+          overflow-x: hidden;
         }
       }
       @media screen and (min-width: 320px) and (max-width: 480px) {
@@ -137,7 +141,9 @@ class Footer extends LitElement {
         }
         footer .contacts {
           flex-wrap: wrap;
-          font-size: 0.7em;
+          font-size: 0.6em;
+          width: 100vw;
+          overflow-x: hidden;
         }
       }
     `;

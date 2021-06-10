@@ -110,6 +110,9 @@ class ContentDescription extends LitElement {
         input[type='button'] {
           margin-bottom: 2em;
         }
+        .contentDescription .mainContent h1 {
+          font-size: 4em;
+        }
       }
     `;
   }
@@ -131,9 +134,9 @@ class ContentDescription extends LitElement {
       <div class="mainContent">
         <h1>Amazing places to <br />enjoy your travel</h1>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br />
-          Veritatis velit incidunt ut deleniti voluptates <br />
-          consectetur nemo reprehenderit culpa dolor laborum.
+          New experiences. Routine is the killer of the soul, and there's <br />
+          nothing better than the feeling of experiencing something <br />
+          new in a new place
         </p>
         <input type="button" value="Explore More" />
       </div>

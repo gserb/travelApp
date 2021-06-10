@@ -93,6 +93,7 @@ class NavBar extends LitElement {
         height: 80vh;
         width: 100vw;
       }
+
       @media screen and (min-width: 1201px) {
         nav {
           width: 80%;
@@ -119,22 +120,29 @@ class NavBar extends LitElement {
       }
       @media screen and (min-width: 481px) and (max-width: 768px) {
         nav {
-          text-align: center;
+          flex-direction: column;
           margin-top: 5em;
+          text-align: center;
         }
         nav ul {
-          font-size: 1em;
           flex-direction: column;
+          margin: -2em;
+          width: 100vw;
+          overflow-x: hidden;
         }
         nav ul li {
           margin-left: 1em;
           line-height: 1.5em;
           display: inline-block;
         }
-
+        .hero {
+          margin-top: 13em;
+        }
         .hero h1 {
-          font-size: 1.8em;
-          margin-top: 10em;
+          font-size: 2em;
+        }
+        .hero input {
+          margin-top: 0;
         }
       }
       @media screen and (min-width: 320px) and (max-width: 480px) {
@@ -146,6 +154,8 @@ class NavBar extends LitElement {
         nav ul {
           flex-direction: column;
           margin: -2em;
+          width: 100vw;
+          overflow-x: hidden;
         }
         nav ul li {
           line-height: 1.5em;
@@ -181,7 +191,7 @@ class NavBar extends LitElement {
       <nav>
         <h1>Travela</h1>
         <ul>
-          <li><a href="/">Home</a></li>
+          <li><a href="/" class="active">Home</a></li>
           <li><a href="#">Tour</a></li>
           <li><a href="#">Hotel</a></li>
           <li><a href="/places-to-travel">Places to travel</a></li>
