@@ -6,13 +6,11 @@ export class NavComponent extends LitElement {
     return css`
 
       .nav-bar {
-        max-width: 1200px;
         height: 6vh;
         line-height: 4vh;
         transition: all 0.4s ease;
         display: flex;
-        margin: auto;
-        padding: 0 30px;
+        margin: auto 15%;
         justify-content: space-between;
       }
 

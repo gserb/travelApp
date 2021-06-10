@@ -12,7 +12,7 @@ export class FooterComponent extends LitElement {
         color: var(--light);
         display: grid;
         grid-template-areas: 'newsletter quick-links' 'credits social-links';
-        margin: 0 10%;
+        margin: 0 15%;
         align-items: flex-end;
         column-gap: 40px;
         padding-bottom: 10vh;
