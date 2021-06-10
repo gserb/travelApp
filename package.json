@@ -21,7 +21,7 @@
     "format": "eslint --ext .js,.html . --fix --ignore-path .gitignore && prettier \"**/*.js\" --write --ignore-path .gitignore",
     "test": "web-test-runner --coverage",
     "test:watch": "web-test-runner --watch",
-    "build": "rimraf dist && rollup -c rollup.config.js && cp travela.css dist && cp _redirects dist",
+    "build": "rimraf dist && rollup -c rollup.config.js",
     "start:build": "npm run build && web-dev-server --root-dir dist --app-index index.html --open --compatibility none",
     "start": "web-dev-server --app-index index.html"
   },
