@@ -194,7 +194,7 @@ class NavBar extends LitElement {
       <nav>
         <h1>Travela</h1>
         <ul>
-          <li><a href="/" class="active">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="#">Tour</a></li>
           <li><a href="#">Hotel</a></li>
           <li><a href="/places-to-travel">Places to travel</a></li>
