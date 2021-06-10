@@ -81,11 +81,11 @@ class TravelCard extends LitElement {
   connectedCallback() {
     super.connectedCallback();
     if (!this.placesToTravel) {
-      this.fetchplacesToTravel();
+      this.fetchPlacesToTravel();
     }
   }
 
-  async fetchplacesToTravel() {
+  async fetchPlacesToTravel() {
     this.loading = true;
     const response = await fetch(
       `https://devschool-2020.firebaseio.com/Vlad/places.json`
