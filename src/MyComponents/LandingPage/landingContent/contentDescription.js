@@ -49,6 +49,11 @@ class ContentDescription extends LitElement {
         transition: 1s;
         border: none;
       }
+      @media screen and (min-width: 1025px) {
+        .mainContent input[type='button'] {
+          margin-bottom: 2em;
+        }
+      }
       @media screen and (min-width: 769px) and (max-width: 1024px) {
         .contentDescription {
           display: flex;
@@ -65,7 +70,7 @@ class ContentDescription extends LitElement {
           margin: 0;
           margin-top: 1em;
         }
-        input[type='button'] {
+        .mainContent input[type='button'] {
           margin-bottom: 2em;
         }
       }
@@ -86,7 +91,7 @@ class ContentDescription extends LitElement {
           margin-top: 1em;
           font-size: 0.7em;
         }
-        input[type='button'] {
+        .mainContent input[type='button'] {
           margin-bottom: 2em;
         }
       }
@@ -107,7 +112,7 @@ class ContentDescription extends LitElement {
           margin-top: 1em;
           font-size: 0.7em;
         }
-        input[type='button'] {
+        .mainContent input[type='button'] {
           margin-bottom: 2em;
         }
         .contentDescription .mainContent h1 {

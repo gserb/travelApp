@@ -26,7 +26,7 @@ class Footer extends LitElement {
       }
       footer .getInTouch input[type='email'] {
         padding: 3em 0em;
-        width: 40%;
+        width: 60%;
         border-radius: 4em;
         position: relative;
         border: none;
@@ -47,7 +47,7 @@ class Footer extends LitElement {
         font-weight: bold;
         font-size: 1.2em;
         position: absolute;
-        right: 30%;
+        right: 20%;
         margin-top: 0.2em;
         border: none;
         cursor: pointer;
@@ -90,12 +90,15 @@ class Footer extends LitElement {
         footer .getInTouch input[type='email'] {
           width: 60vw;
         }
+        footer .getInTouch input[type='button'] {
+          right: 20%;
+        }
       }
       @media screen and (min-width: 769px) and (max-width: 1024px) {
         footer .getInTouch input[type='button'] {
           position: relative;
           left: 5%;
-          background-color: blue;
+          background-color: #1b223f;
         }
         footer .contacts h3 {
           margin-left: 2em;
@@ -113,7 +116,7 @@ class Footer extends LitElement {
         footer .getInTouch input[type='button'] {
           position: relative;
           left: 5%;
-          background-color: blue;
+          background-color: #1b223f;
         }
         footer .contacts {
           flex-wrap: wrap;
@@ -135,7 +138,7 @@ class Footer extends LitElement {
         footer .getInTouch input[type='button'] {
           position: relative;
           left: 0;
-          background-color: blue;
+          background-color: #1b223f;
           width: 50%;
           margin: 0 auto;
         }

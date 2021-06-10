@@ -19,7 +19,7 @@ class NavBar extends LitElement {
       nav ul {
         display: flex;
         align-items: center;
-        margin-top: 2.2em;
+        margin-top: 2em;
       }
       nav ul li {
         list-style-type: none;
@@ -38,7 +38,8 @@ class NavBar extends LitElement {
         text-decoration: none;
         color: black;
       }
-      nav ul input {
+      nav .bookBtn input {
+        margin-top: 2em;
         padding: 1em 2em;
         border-radius: 1em;
         font-size: 1.3em;
@@ -48,7 +49,7 @@ class NavBar extends LitElement {
         font-weight: 600;
         cursor: pointer;
       }
-      nav ul input:hover {
+      nav .bookBtn input:hover {
         background-color: #d0d3df;
         color: #3e4875;
         transition: 1s;
@@ -130,6 +131,10 @@ class NavBar extends LitElement {
           width: 100vw;
           overflow-x: hidden;
         }
+        nav .bookBtn input {
+          margin-left: 0.5em;
+        }
+
         nav ul li {
           margin-left: 1em;
           line-height: 1.5em;
@@ -160,9 +165,7 @@ class NavBar extends LitElement {
         nav ul li {
           line-height: 1.5em;
         }
-        nav ul input {
-          margin-right: 1.5em;
-        }
+
         .hero {
           margin-top: 13em;
         }
@@ -197,8 +200,10 @@ class NavBar extends LitElement {
           <li><a href="/places-to-travel">Places to travel</a></li>
           <li><a href="/add-destination">Add Destination</a></li>
           <li><a href="#contacts">Contact Us</a></li>
-          <input type="button" value="Book now" />
         </ul>
+        <div class="bookBtn">
+          <input type="button" value="Book now" />
+        </div>
       </nav>
       <div class="hero">
         <h1>Discover the world with us</h1>
