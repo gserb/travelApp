@@ -9,7 +9,7 @@ class TravelForm extends LitElement {
         margin: 0 auto;
         justify-content: space-evenly;
         flex-wrap: wrap;
-        border: 5px solid rgba(60, 60, 255, 0.2);
+        border: 5px solid #3e4875;
         padding: 5em 4em;
         border-radius: 3em;
         position: absolute;
@@ -49,7 +49,7 @@ class TravelForm extends LitElement {
         margin-top: 1.5em;
         padding: 2em 3em;
         color: white;
-        background-color: #5b6bb1;
+        background-color: #3e4875;
         border-style: none;
         cursor: pointer;
       }
@@ -195,14 +195,13 @@ class TravelForm extends LitElement {
           <label for="member">Member</label>
           <input type="number" name="member" id="member" />
         </div>
-
-        <div class="checkIn">
-          <label for="checkIn">Check in Date</label>
-          <input type="date" name="checkIn" />
+        <div>
+          <label for="checkin">Check in Date</label>
+          <input type="date" name="checkin" id="checkin" />
         </div>
-        <div class="checkOut">
-          <label for="checkOut">Check out Date</label>
-          <input type="date" name="checkOut" />
+        <div>
+          <label for="checkout">Check out Date</label>
+          <input type="date" name="checkout" id="checkout" />
         </div>
         <div>
           <input type="button" value="Book Now" />

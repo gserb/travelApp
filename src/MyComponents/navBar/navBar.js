@@ -43,14 +43,14 @@ class NavBar extends LitElement {
         border-radius: 1em;
         font-size: 1.3em;
         border-style: none;
-        background-color: #5b6bb1;
+        background-color: #3e4875;
         color: white;
         font-weight: 600;
         cursor: pointer;
       }
       nav ul input:hover {
         background-color: #d0d3df;
-        color: #5b6bb1;
+        color: #3e4875;
         transition: 1s;
       }
 
@@ -71,7 +71,7 @@ class NavBar extends LitElement {
         border-radius: 1em;
         border-style: none;
         color: white;
-        background-color: #5b6bb1;
+        background-color: #3e4875;
         font-size: large;
         position: relative;
         left: 50%;
@@ -82,7 +82,7 @@ class NavBar extends LitElement {
 
       .hero input:hover {
         background-color: white;
-        color: #5b6bb1;
+        color: #3e4875;
         transition: 1s;
       }
       .parallax {

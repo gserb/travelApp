@@ -14,7 +14,7 @@ class ContentDescription extends LitElement {
         width: 50vw;
         height: 100vh;
         border-radius: 0% 200% 70% 0%;
-        background-color: #5b6bb1;
+        background-color: #3e4875;
       }
       .contentDescription .mainContent {
         width: 50vw;
@@ -37,7 +37,7 @@ class ContentDescription extends LitElement {
         padding: 1.5em 3em;
         border-radius: 1.5em;
         color: white;
-        background-color: #5b6bb1;
+        background-color: #3e4875;
         font-weight: bold;
         font-size: 1.2em;
         cursor: pointer;

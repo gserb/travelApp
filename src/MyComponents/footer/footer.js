@@ -4,7 +4,7 @@ class Footer extends LitElement {
   static get styles() {
     return css`
       footer {
-        background-color: #8392da;
+        background-color: #3e4875;
         color: white;
         width: 100vw;
       }
@@ -42,7 +42,7 @@ class Footer extends LitElement {
       footer .getInTouch input[type='button'] {
         padding: 1.7em 3em;
         border-radius: 3em;
-        background-color: #6f85ce;
+        background-color: #3e4875;
         color: white;
         font-weight: bold;
         font-size: 1.2em;
