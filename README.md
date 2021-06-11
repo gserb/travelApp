@@ -10,7 +10,7 @@
 
 ## Summary
 
-The project is made with Web Components. The API I used is my own API that I created with Insomnia App. You can check that below at the API Assignment Section for more details of every request.
+The project is made with Web Components. The API I used is my own API, for integration purposes I tested it with Insomnia App. You can check that below at the API Assignment Section for more details of every request.
 
 Features
 
